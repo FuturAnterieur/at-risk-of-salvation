@@ -1,4 +1,6 @@
 mod game_loader;
+mod factorial;
+mod test_factorial;
 
 use std::fs;
 
