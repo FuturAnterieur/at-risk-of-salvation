@@ -1,6 +1,9 @@
 mod game_loader;
 mod factorial;
 mod test_factorial;
+mod probability_parser;
+mod graph;
+
 
 use std::fs;
 
@@ -15,4 +18,5 @@ fn main() {
 
     println!("Full second square data : {}", serde_json::to_string(&sakya_pandita.squares[1]).expect("Could not serialize square 1!!!"));
 
+    let graph = graph::Graph::new(&sakya_pandita);
 }
