@@ -11,4 +11,6 @@ fn main() {
     println!("First square data : {}", &sakya_pandita.squares[0].name);
     println!("Second square data : {}", &sakya_pandita.squares[1].number);
 
+    println!("Full second square data : {}", serde_json::to_string(&sakya_pandita.squares[1]).expect("Could not serialize square 1!!!"));
+
 }
