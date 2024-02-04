@@ -10,11 +10,11 @@ pub struct Edge {
 }
 
 impl Edge {
-    pub fn new(drc : &str, dest : &u32) -> Self {
+    pub fn new(drc : &str, dest : &u32, die_face_num : &u8) -> Self {
         let ret = Self{
             dice_roll_code:drc.to_string(), 
-            dice_roll_probability: probability_parser::get_proba_from_code(drc),
-            expected_rolls_required:probability_parser::get_expected_rolls_from_code(drc),
+            dice_roll_probability: probability_parser::get_proba_from_code(drc, die_face_num),
+            expected_rolls_required:probability_parser::get_expected_rolls_from_code(drc, die_face_num),
             destination:dest.clone()};
         ret
     }
@@ -43,7 +43,7 @@ impl Graph{
         for node_data in &game_data.squares {
             let mut edges = Vec::<Edge>::new();
             for edge_data in &node_data.paths {
-                edges.push(Edge::new(&edge_data.0, edge_data.1))
+                edges.push(Edge::new(&edge_data.0, edge_data.1, &game_data.die_faces))
             }
 
             ret.nodes.insert(node_data.number, Node::new(&node_data.number, edges));

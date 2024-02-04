@@ -7,7 +7,7 @@ mod min_heap;
 mod test_min_heap;
 mod shortest_path;
 mod test_shortest_path;
-
+mod test_proba;
 
 use std::fs;
 
@@ -21,6 +21,4 @@ fn main() {
     println!("Second square data : {}", &sakya_pandita.squares[1].number);
 
     println!("Full second square data : {}", serde_json::to_string(&sakya_pandita.squares[1]).expect("Could not serialize square 1!!!"));
-
-    let graph = graph::Graph::new(&sakya_pandita);
 }
