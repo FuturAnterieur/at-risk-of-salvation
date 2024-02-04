@@ -3,6 +3,8 @@ mod factorial;
 mod test_factorial;
 mod probability_parser;
 mod graph;
+mod min_heap;
+mod test_min_heap;
 
 
 use std::fs;

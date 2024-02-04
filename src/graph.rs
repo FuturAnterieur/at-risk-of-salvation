@@ -1,5 +1,5 @@
 use crate::game_loader;
-use std::collections::LinkedList;
+use std::collections::HashMap;
 use crate::probability_parser;
 
 pub struct Edge {
@@ -21,30 +21,30 @@ impl Edge {
 }
 
 pub struct Node{
-    number : u32, //when the JSON will contain all the squares this will be redundant
+    number : u32,
     edges : Vec<Edge>,
 }
 
 impl Node {
-    pub fn new(num : u32, edgies: Vec<Edge>) -> Self {
-        Self{number:num, edges:edgies}
+    pub fn new(num : &u32, edgies: Vec<Edge>) -> Self {
+        Self{number:num.clone(), edges:edgies}
     }
 }
 
 pub struct Graph {
-    nodes : Vec<Node>,
+    nodes : HashMap<u32, Node>, //when the JSON will be complete it will be safe to make this a Vec
 }
 
 impl Graph{
     pub fn new(game_data : &game_loader::Game) -> Self {
-        let mut ret = Self{nodes: Vec::<Node>::new()};
+        let mut ret = Self{nodes: HashMap::<u32, Node>::new()};
         for node_data in &game_data.squares {
             let mut edges = Vec::<Edge>::new();
             for edge_data in &node_data.paths {
                 edges.push(Edge::new(&edge_data.0, edge_data.1))
             }
 
-            ret.nodes.push(Node::new(node_data.number, edges));
+            ret.nodes.insert(node_data.number, Node::new(&node_data.number, edges));
         }
         ret
     }
