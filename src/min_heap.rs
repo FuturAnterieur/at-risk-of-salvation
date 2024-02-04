@@ -30,4 +30,23 @@ impl Ord for NodeDistance {
     }
 }
 
-pub type NodeDistanceMinHeap = BinaryHeap<NodeDistance>;
+pub struct NodeDistanceMinHeap(BinaryHeap<NodeDistance>);
+
+impl NodeDistanceMinHeap {
+
+    pub fn new() -> Self {
+        NodeDistanceMinHeap{0:BinaryHeap::<NodeDistance>::new()}
+    }
+
+    pub fn push(&mut self, num : u32, dist : f64) {
+        self.0.push(NodeDistance{node_num:num, distance:Reverse::<NotNan::<f64>>(NotNan::new(dist).expect(""))})
+    }
+
+    pub fn pop(&mut self) -> Option<NodeDistance> {
+        self.0.pop()
+    }
+
+    pub fn is_empty(&self) -> bool {
+        self.0.is_empty()
+    }
+}

@@ -5,6 +5,8 @@ mod probability_parser;
 mod graph;
 mod min_heap;
 mod test_min_heap;
+mod shortest_path;
+mod test_shortest_path;
 
 
 use std::fs;

@@ -3,10 +3,10 @@ use std::collections::HashMap;
 use crate::probability_parser;
 
 pub struct Edge {
-    dice_roll_code:String,
-    dice_roll_probability:f64,
-    expected_rolls_required:f64,
-    destination:u32,
+    pub dice_roll_code:String,
+    pub dice_roll_probability:f64,
+    pub expected_rolls_required:f64,
+    pub destination:u32,
 }
 
 impl Edge {
@@ -20,9 +20,11 @@ impl Edge {
     }
 }
 
+
+//also calculate the expected amount of turns passed on each square???? MIGHT BE VERY USEFUL
 pub struct Node{
-    number : u32,
-    edges : Vec<Edge>,
+    pub number : u32,
+    pub edges : Vec<Edge>,
 }
 
 impl Node {
@@ -47,5 +49,21 @@ impl Graph{
             ret.nodes.insert(node_data.number, Node::new(&node_data.number, edges));
         }
         ret
+    }
+
+    pub fn edges_for_node(&self, node_num:&u32) -> Option<&Vec<Edge>> {
+        match self.nodes.get(node_num) {
+            Some(node) => Some(&node.edges),
+            None => None,
+        }
+    }
+
+    pub fn node_nums(&self) -> Vec<u32> {
+        let mut result = Vec::<u32>::new();
+        for node in &self.nodes {
+            result.push(node.0.clone());
+        }
+
+        result
     }
 }
