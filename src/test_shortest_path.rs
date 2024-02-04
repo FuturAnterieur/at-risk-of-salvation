@@ -14,6 +14,10 @@ mod test_shortest_path {
         let dijkstra_result = shortest_path::dijkstra(&g, &1, &4, false);
 
         assert_eq!(dijkstra_result.is_some(), true);
-        assert_eq!(dijkstra_result.unwrap().total_distance, 2.0_f64);
+        let res = dijkstra_result.unwrap();
+        assert_eq!(res.total_distance, 2.0_f64);
+        assert_eq!(res.predecessors.len(), 3);
+        assert_eq!(res.predecessors, vec![4,2,1]);
+
     }
 }
