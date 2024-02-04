@@ -3,8 +3,6 @@
 #[cfg(test)]
 mod tests {
     use crate::min_heap;
-    use std::cmp::Reverse;
-    use ordered_float::NotNan;
     #[test]
     fn test_min_heap() {
         let mut my_heap = min_heap::NodeDistanceMinHeap::new();

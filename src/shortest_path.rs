@@ -2,6 +2,12 @@ use crate::graph;
 use crate::min_heap;
 use std::collections::HashMap;
 
+pub enum EdgeDistanceMetric {
+    Constant,
+    ExpectedRolls,
+}
+
+
 pub struct ShortestPathResultForNode {
     pub predecessors: Vec<u32>,
     pub total_distance : f64,  //probably measure in expected rolls, the distance metric for edges
@@ -9,7 +15,7 @@ pub struct ShortestPathResultForNode {
 }
 
 
-pub fn dijkstra(graph : &graph::Graph, start_node_num :&u32, dest_node_num :&u32, use_dist_values : bool) -> Option<ShortestPathResultForNode> {
+pub fn dijkstra(graph : &graph::Graph, start_node_num :&u32, dest_node_num :&u32, metric : EdgeDistanceMetric) -> Option<ShortestPathResultForNode> {
     
     let node_nums = graph.node_nums();
     
@@ -35,9 +41,9 @@ pub fn dijkstra(graph : &graph::Graph, start_node_num :&u32, dest_node_num :&u32
 
         for edge in graph.edges_for_node(&closest_node_pair.node_num).unwrap() {
             let alternative_distance = distances.get(&closest_node_pair.node_num).unwrap() 
-                + match use_dist_values {
-                    true => edge.expected_rolls_required,
-                    false => 1.0_f64,
+                + match metric {
+                    EdgeDistanceMetric::ExpectedRolls => edge.expected_rolls_required,
+                    EdgeDistanceMetric::Constant => 1.0_f64,
                 };
 
             if &alternative_distance < distances.get(&edge.destination).unwrap() {
