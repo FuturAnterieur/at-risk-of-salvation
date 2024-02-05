@@ -1,0 +1,62 @@
+{
+    "die_faces":6,
+    "starting_square":24,
+    "winning_square":52,
+    "squares": [
+        {
+            "number" : 17,
+            "name" : "Jambu Island - The Southern Continent",
+            "description" : "One has the great fortune to be born in a human condition on earth.",
+            "paths":
+            {       
+                    "One":52,
+                    "Two":25,
+                    "Three":26,
+                    "Four":38,
+                    "Five":22,
+                    "Six":6
+            }
+        },
+        {
+            "number" : 24,
+            "name" : "The Heavenly Highway",
+            "description" : "The opportunity has arrived, so hard to obtain, \nFor accomplishing the welfare of living beings; \nIf I fail to take advantage of it, \nWhen will the chance come again?",
+            "paths":
+            {       
+                    "One":27,
+                    "Two":17,
+                    "Three":15,
+                    "Four":11,
+                    "Five":10,
+                    "Six":6
+            }
+        },
+        {
+            "number":27,
+            "name": "Heaven of the Four Great Kings",
+            "description" : "One is born in the broadly based lower classes of divinity who rule the lower slopes of Mount Meru, the seven chains of mountains around it, and the skies.",
+            "paths":{
+                "One":28,
+                "Two":17,
+                "Three":23,
+                "Four":18,
+                "Five":10,
+                "Six":6
+            }
+        },
+        {
+            "number":52,
+            "name" : "Mahāyāna, Lesser Path of Accumulation",
+            "description" : "Beginning the Greater Vehicle, one conceives the intention of reaching enlightenment for the sake of all living beings.",
+            "paths":{
+                "One":54,
+                "Two":53,
+                "Three":30,
+                "Four":38,
+                "Five":11,
+                "Six":7
+            }
+        }
+    ]
+}
+

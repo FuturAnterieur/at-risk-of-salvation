@@ -1,0 +1,44 @@
+{
+    "die_faces":6,
+    "squares": [
+        {
+            "number" : 1,
+            "name" : "Vajra Hell - left corner",
+            "description" : "Uh-oh spaghetti-oh",
+            "paths":
+            {       
+                    "One":2
+            }
+        },
+        {
+            "number" : 2,
+            "name" : "Upper corner",
+            "description" : "The opportunity has arrived, so hard to obtain, for accomplishing the welfare of living beings; If I fail to take advantage of it, When will the chance come again?",
+            "paths":
+            {       
+                    "One":3,
+                    "Two":4
+                    
+            }
+        },
+        {
+            "number" : 3,
+            "name" : "Lower corner",
+            "description" : "Metheny Land",
+            "paths":
+            {       
+                    "One":4
+            }
+        },
+        {
+            "number" : 4,
+            "name" : "Right corner",
+            "description" : "Achievement earned!",
+            "paths":
+            {       
+            }
+        }
+
+    ]
+}
+
