@@ -14,6 +14,8 @@ pub struct Square {
 #[derive(Deserialize, Serialize)]
 pub struct Game {
     pub die_faces: u8,
+    pub winning_square:u32,
+    pub starting_square:u32,
     pub squares:Vec<Square>,
 }
 

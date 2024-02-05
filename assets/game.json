@@ -1,5 +1,7 @@
 {
-    "die_faces":20,
+    "die_faces":6,
+    "starting_square":24,
+    "winning_square":52,
     "squares": [
         {
             "number" : 17,
@@ -27,6 +29,32 @@
                     "Four":11,
                     "Five":10,
                     "Six":6
+            }
+        },
+        {
+            "number":27,
+            "name": "Heaven of the Four Great Kings",
+            "description" : "One is born in the broadly based lower classes of divinity who rule the lower slopes of Mount Meru, the seven chains of mountains around it, and the skies.",
+            "paths":{
+                "One":28,
+                "Two":17,
+                "Three":23,
+                "Four":18,
+                "Five":10,
+                "Six":6
+            }
+        },
+        {
+            "number":52,
+            "name" : "Mahāyāna, Lesser Path of Accumulation",
+            "description" : "Beginning the Greater Vehicle, one conceives the intention of reaching enlightenment for the sake of all living beings.",
+            "paths":{
+                "One":54,
+                "Two":53,
+                "Three":30,
+                "Four":38,
+                "Five":11,
+                "Six":7
             }
         }
     ]

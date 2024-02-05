@@ -51,7 +51,7 @@ impl Interface for CommandLineInterface {
         let sakya_pandita = game_loader::build_game_from_json_string(contents.as_str()).expect("Could not parse game JSON string");
 
         let g = graph::Graph::new(&sakya_pandita);
-        let mut current_square_num = 24;
+        let mut current_square_num = sakya_pandita.starting_square;
 
         loop {
             let current_square_opt = sakya_pandita.squares.iter().find(|square| square.number == current_square_num);
@@ -63,12 +63,14 @@ impl Interface for CommandLineInterface {
             println!("-- {} -- {}", &current_square.number, &current_square.name);
             println!("{}", &current_square.description);
 
-            if current_square_num == 17 {
+            if current_square_num == sakya_pandita.winning_square {
                 println!("This is the end of your journey.");
                 break;
             }
 
-            let chances_of_reaching_end = 1.0_f64 / shortest_path::dijkstra(&g, &current_square_num, &17, shortest_path::EdgeDistanceMetric::ExpectedRolls).unwrap().total_distance;
+            let mut predecessors = shortest_path::dijkstra(&g, &current_square_num, &sakya_pandita.winning_square, shortest_path::EdgeDistanceMetric::ExpectedRolls).unwrap().predecessors;
+            predecessors.reverse();
+            let chances_of_reaching_end = g.path_probability(&predecessors);
             println!("Your odds of following the shortest path to the end are {:.7}%.", chances_of_reaching_end*100_f64);
 
             println!("Your choices are :");

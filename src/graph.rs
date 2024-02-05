@@ -66,4 +66,19 @@ impl Graph{
 
         result
     }
+
+    pub fn path_probability(&self, path : &Vec<u32>) -> f64 {
+        let mut result = 1.0_f64;
+
+        for i in 0..path.len() - 1 {
+            let node_num = path[i];
+            let node = self.nodes.get(&node_num).unwrap();
+            let edge = node.edges.iter().find(|desc| desc.destination == path[i+1]);
+            if edge.is_none() {
+                return result
+            }
+            result = result * edge.unwrap().dice_roll_probability;
+        }
+        result
+    }
 }
