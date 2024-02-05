@@ -46,7 +46,11 @@ pub fn dijkstra(graph : &graph::Graph, start_node_num :&u32, dest_node_num :&u32
                     EdgeDistanceMetric::Constant => 1.0_f64,
                 };
 
-            if &alternative_distance < distances.get(&edge.destination).unwrap() {
+            let dest_distance = distances.get(&edge.destination);
+
+            if dest_distance.is_none() { continue; }
+
+            if &alternative_distance < dest_distance.unwrap() {
                 heap.push(edge.destination.clone(), alternative_distance.clone());
                 *distances.entry(edge.destination.clone()).or_insert(f64::INFINITY) = alternative_distance;
                 //get_mut could also be used

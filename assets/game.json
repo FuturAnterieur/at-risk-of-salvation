@@ -1,5 +1,5 @@
 {
-    "die_faces":6,
+    "die_faces":20,
     "squares": [
         {
             "number" : 17,
@@ -18,7 +18,7 @@
         {
             "number" : 24,
             "name" : "The Heavenly Highway",
-            "description" : "The opportunity has arrived, so hard to obtain, for accomplishing the welfare of living beings; If I fail to take advantage of it, When will the chance come again?",
+            "description" : "The opportunity has arrived, so hard to obtain, \nFor accomplishing the welfare of living beings; \nIf I fail to take advantage of it, \nWhen will the chance come again?",
             "paths":
             {       
                     "One":27,

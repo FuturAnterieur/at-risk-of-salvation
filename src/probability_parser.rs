@@ -1,6 +1,6 @@
 use conv::*;
 
-fn digit_text_to_int(text : &str) -> i16 {
+pub fn digit_text_to_int(text : &str) -> i16 {
     match text {
         "One" => 1,
         "1" => 1,
@@ -20,9 +20,9 @@ fn digit_text_to_int(text : &str) -> i16 {
 
 
 pub fn get_proba_from_code(code: &str, die_face_num :&u8) -> f64 {
-    let mut v : Vec<&str> = code.split(" or ").filter(
-        |name|  (0..=(i16::from(die_face_num.clone()))).contains(&digit_text_to_int(name)) 
-    ).collect();
+    let mut v : Vec<i16> = code.split(" or ").map(|name| digit_text_to_int(name))
+        .filter(|value|  (0..=(i16::from(die_face_num.clone()))).contains(value)) 
+    .collect();
     v.sort_unstable_by(|a, b| a.partial_cmp(b).unwrap());
     v.dedup();
 
