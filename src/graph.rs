@@ -83,6 +83,6 @@ impl Graph{
             global_event.rolls.push(edge.unwrap().requirement.clone());
             
         }
-        global_event.success_probability()
+        global_event.success_probability_for_one_turn()
     }
 }

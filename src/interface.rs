@@ -5,7 +5,7 @@ use std::io;
 use crate::game_loader;
 use crate::graph;
 use crate::shortest_path;
-use crate::dice_event_parser::digit_text_to_int;
+use crate::dice_event_parser::int_to_digit_text;
 
 pub struct KarmicCatastrophe
 {
@@ -43,18 +43,12 @@ impl CommandLineInterface {
         CommandLineInterface{}
     }
 
-    fn show_edges_choices(&self, edge_drc_code : Vec<&String>) -> String {
-        let mut all_distinct_digits = Vec::<&str>::new();
-        for drc_code in edge_drc_code {
-            let digits_text : Vec<&str> = drc_code.split(" or ").collect();
-            all_distinct_digits.extend(digits_text);
-        }
-        
-        all_distinct_digits.sort_by(
-            |a,b| digit_text_to_int(a).partial_cmp(&digit_text_to_int(b)).unwrap()
-        );
+    fn show_edges_choices(&self, edges : &Vec::<graph::Edge>) -> String {
+        let mut all_distinct_digits : Vec<i16> = edges.iter().map(|edge| edge.requirement.enumerate_roll_values()).flatten().collect();
+        all_distinct_digits.sort();
         all_distinct_digits.dedup();
-        all_distinct_digits.iter().fold("".to_string(), |res, x| res + ", " + x)
+        let all_names : Vec<&str> = all_distinct_digits.iter().map(|value| int_to_digit_text(value.clone()) ).collect();
+        all_names.join(", ")
     }
 }
 
@@ -95,9 +89,9 @@ impl Interface for CommandLineInterface {
 
             println!("Your choices are :");
             
-            let edges_in_order : Vec<&String> = current_square.paths.keys().collect();
+            let edges = g.edges_for_node(&current_square.number);
             
-            println!("{}", self.show_edges_choices(edges_in_order));
+            println!("{}", self.show_edges_choices(edges.unwrap()));
             let mut choice = String::new();
 
             match io::stdin()

@@ -19,6 +19,17 @@ pub fn digit_text_to_int(text : &str) -> i16 {
     }
 }
 
+pub fn int_to_digit_text(value : i16) -> &'static str {
+    match value {
+        1 => "One",
+        2 => "Two",
+        3 => "Three",
+        4 => "Four",
+        5 => "Five",
+        6 => "Six",
+        _ => "None"
+    }
+}
 
 pub fn parse_event_code(code: &str, die_face_num :&u8) -> Arc<dyn dice_event::DiceRollRequirement> {
     //parse single event
