@@ -42,6 +42,20 @@ impl CommandLineInterface {
     pub fn new() -> Self {
         CommandLineInterface{}
     }
+
+    fn show_edges_choices(&self, edge_drc_code : Vec<&String>) -> String {
+        let mut all_distinct_digits = Vec::<&str>::new();
+        for drc_code in edge_drc_code {
+            let digits_text : Vec<&str> = drc_code.split(" or ").collect();
+            all_distinct_digits.extend(digits_text);
+        }
+        
+        all_distinct_digits.sort_by(
+            |a,b| digit_text_to_int(a).partial_cmp(&digit_text_to_int(b)).unwrap()
+        );
+        all_distinct_digits.dedup();
+        all_distinct_digits.iter().fold("".to_string(), |res, x| res + ", " + x)
+    }
 }
 
 
@@ -80,14 +94,10 @@ impl Interface for CommandLineInterface {
             println!("Your odds of following the shortest path to the end are {:.7}%.", chances_of_reaching_end*100_f64);
 
             println!("Your choices are :");
-            let mut edges_in_order : Vec<&String> = current_square.paths.keys().collect();
-            edges_in_order.sort_by(
-                |a,b| digit_text_to_int(a).partial_cmp(&digit_text_to_int(b)).unwrap()
-            );
-            for edge in edges_in_order {
-                println!("{}", edge)
-            }
-
+            
+            let edges_in_order : Vec<&String> = current_square.paths.keys().collect();
+            
+            println!("{}", self.show_edges_choices(edges_in_order));
             let mut choice = String::new();
 
             match io::stdin()
@@ -106,4 +116,8 @@ impl Interface for CommandLineInterface {
         
         Ok(())
     }
+}
+
+impl CommandLineInterface {
+
 }
