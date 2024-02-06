@@ -1,4 +1,5 @@
 use crate::dice_event;
+use std::sync::Arc;
 
 pub fn digit_text_to_int(text : &str) -> i16 {
     match text {
@@ -19,7 +20,7 @@ pub fn digit_text_to_int(text : &str) -> i16 {
 }
 
 
-pub fn parse_event_code(code: &str, die_face_num :&u8) -> Box<dyn dice_event::DiceRollRequirement> {
+pub fn parse_event_code(code: &str, die_face_num :&u8) -> Arc<dyn dice_event::DiceRollRequirement> {
     //parse single event
     let mut v : Vec<i16> = code.split(" or ").map(|name| digit_text_to_int(name))
         .filter(|value|  (0..=(i16::from(die_face_num.clone()))).contains(value)) 
@@ -27,5 +28,5 @@ pub fn parse_event_code(code: &str, die_face_num :&u8) -> Box<dyn dice_event::Di
     v.sort_unstable_by(|a, b| a.partial_cmp(b).unwrap());
     v.dedup();
 
-    Box::new(dice_event::SingleDiceRollRequirement{possible_values : v, die_faces: die_face_num.clone()})
+    Arc::new(dice_event::SingleDiceRollRequirement{possible_values : v, die_faces: die_face_num.clone()})
 }

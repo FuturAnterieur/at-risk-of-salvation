@@ -1,12 +1,13 @@
 use crate::dice_event::DiceRollRequirement;
 use crate::game_loader;
-use std::collections::HashMap;
 use crate::dice_event_parser;
 use crate::dice_event;
+use std::sync::Arc;
+use std::collections::HashMap;
 
 pub struct Edge {
     pub dice_roll_code:String,
-    pub requirement : Box<dyn dice_event::DiceRollRequirement>,
+    pub requirement : Arc<dyn dice_event::DiceRollRequirement>,
     pub destination:u32,
 }
 
@@ -70,7 +71,7 @@ impl Graph{
 
     pub fn path_probability(&self, path : &Vec<u32>) -> f64 {
         //let mut result = 1.0_f64;
-        let mut global_event = dice_event::SuccessiveDiceRollsRequirement{rolls: Vec::<Box::<dyn dice_event::DiceRollRequirement>>::new(), sequential : dice_event::Sequential::Yes, consecutive: dice_event::Consecutive::Yes};
+        let mut global_event = dice_event::SuccessiveDiceRollsRequirement{rolls: Vec::<Arc::<dyn dice_event::DiceRollRequirement>>::new(), sequential : dice_event::Sequential::Yes, consecutive: dice_event::Consecutive::Yes};
 
         for i in 0..path.len() - 1 {
             let node_num = path[i];
@@ -79,8 +80,7 @@ impl Graph{
             if edge.is_none() {
                 continue;
             }
-            //TODO : do something smarter!!! Boxes cannot be copied of course, that would mean two Boxes pointing to the same thing.
-            global_event.rolls.push(dice_event_parser::parse_event_code(&edge.unwrap().dice_roll_code, &6));
+            global_event.rolls.push(edge.unwrap().requirement.clone());
             
         }
         global_event.success_probability()

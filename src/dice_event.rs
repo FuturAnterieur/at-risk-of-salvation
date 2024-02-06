@@ -1,4 +1,5 @@
 use conv::*;
+use std::sync::Arc;
 
 pub trait DiceRollRequirement {
     fn success_probability(&self) -> f64;
@@ -32,7 +33,7 @@ pub enum Consecutive {
 }
 
 pub struct SuccessiveDiceRollsRequirement {
-    pub rolls : Vec<Box<dyn DiceRollRequirement>>,
+    pub rolls : Vec<Arc<dyn DiceRollRequirement>>,
     pub sequential : Sequential,
     pub consecutive : Consecutive,
 
