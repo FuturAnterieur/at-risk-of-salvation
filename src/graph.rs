@@ -1,20 +1,21 @@
+use crate::dice_event::DiceRollRequirement;
 use crate::game_loader;
 use std::collections::HashMap;
-use crate::probability_parser;
+use crate::dice_event_parser;
+use crate::dice_event;
 
 pub struct Edge {
     pub dice_roll_code:String,
-    pub dice_roll_probability:f64,
-    pub expected_rolls_required:f64,
+    pub requirement : Box<dyn dice_event::DiceRollRequirement>,
     pub destination:u32,
 }
 
 impl Edge {
     pub fn new(drc : &str, dest : &u32, die_face_num : &u8) -> Self {
+        
         let ret = Self{
             dice_roll_code:drc.to_string(), 
-            dice_roll_probability: probability_parser::get_proba_from_code(drc, die_face_num),
-            expected_rolls_required:probability_parser::get_expected_rolls_from_code(drc, die_face_num),
+            requirement: dice_event_parser::parse_event_code(drc, die_face_num),
             destination:dest.clone()};
         ret
     }
@@ -68,17 +69,20 @@ impl Graph{
     }
 
     pub fn path_probability(&self, path : &Vec<u32>) -> f64 {
-        let mut result = 1.0_f64;
+        //let mut result = 1.0_f64;
+        let mut global_event = dice_event::SuccessiveDiceRollsRequirement{rolls: Vec::<Box::<dyn dice_event::DiceRollRequirement>>::new(), sequential : dice_event::Sequential::Yes, consecutive: dice_event::Consecutive::Yes};
 
         for i in 0..path.len() - 1 {
             let node_num = path[i];
             let node = self.nodes.get(&node_num).unwrap();
             let edge = node.edges.iter().find(|desc| desc.destination == path[i+1]);
             if edge.is_none() {
-                return result
+                continue;
             }
-            result = result * edge.unwrap().dice_roll_probability;
+            //TODO : do something smarter!!! Boxes cannot be copied of course, that would mean two Boxes pointing to the same thing.
+            global_event.rolls.push(dice_event_parser::parse_event_code(&edge.unwrap().dice_roll_code, &6));
+            
         }
-        result
+        global_event.success_probability()
     }
 }

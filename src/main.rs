@@ -1,6 +1,6 @@
 mod game_loader;
 mod factorial;
-mod probability_parser;
+mod dice_event_parser;
 mod graph;
 mod min_heap;
 mod shortest_path;

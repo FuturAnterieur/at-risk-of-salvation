@@ -42,7 +42,7 @@ pub fn dijkstra(graph : &graph::Graph, start_node_num :&u32, dest_node_num :&u32
         for edge in graph.edges_for_node(&closest_node_pair.node_num).unwrap() {
             let alternative_distance = distances.get(&closest_node_pair.node_num).unwrap() 
                 + match metric {
-                    EdgeDistanceMetric::ExpectedRolls => edge.expected_rolls_required,
+                    EdgeDistanceMetric::ExpectedRolls => edge.requirement.expected_attempts(),
                     EdgeDistanceMetric::Constant => 1.0_f64,
                 };
 

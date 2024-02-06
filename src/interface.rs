@@ -5,7 +5,7 @@ use std::io;
 use crate::game_loader;
 use crate::graph;
 use crate::shortest_path;
-use crate::probability_parser::digit_text_to_int;
+use crate::dice_event_parser::digit_text_to_int;
 
 pub struct KarmicCatastrophe
 {
