@@ -1,4 +1,5 @@
 use conv::*;
+use crate::dice_event;
 
 pub fn digit_text_to_int(text : &str) -> i16 {
     match text {

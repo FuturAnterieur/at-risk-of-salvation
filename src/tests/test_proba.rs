@@ -1,5 +1,5 @@
 #[cfg(test)]
-mod tests {
+mod test_proba {
     use crate::probability_parser;
     use assert_float_eq::*;
     

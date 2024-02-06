@@ -1,7 +1,7 @@
 
 
 #[cfg(test)]
-mod tests {
+mod test_min_heap{
     use crate::min_heap;
     #[test]
     fn test_min_heap() {

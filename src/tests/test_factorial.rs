@@ -1,7 +1,7 @@
 
 
 #[cfg(test)]
-mod tests {
+mod test_factorial {
     #[test]
     fn test_factorial() {
         let mut calculator = crate::factorial::FactorialCalculator::new();

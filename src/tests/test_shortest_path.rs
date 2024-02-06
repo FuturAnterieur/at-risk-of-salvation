@@ -1,6 +1,6 @@
 
 #[cfg(test)]
-mod tests {
+mod test_shortest_path {
     use crate::graph;
     use crate::game_loader;
     use crate::shortest_path;

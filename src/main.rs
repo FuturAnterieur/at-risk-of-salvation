@@ -1,14 +1,12 @@
 mod game_loader;
 mod factorial;
-mod test_factorial;
 mod probability_parser;
 mod graph;
 mod min_heap;
-mod test_min_heap;
 mod shortest_path;
-mod test_shortest_path;
-mod test_proba;
 mod interface;
+mod dice_event;
+mod tests;
 
 use crate::interface::Interface;
 
