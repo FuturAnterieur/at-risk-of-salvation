@@ -4,6 +4,35 @@
     "winning_square":52,
     "squares": [
         {
+            "number":14,
+            "name" : "Demon Island",
+            "description" : "These ferocious man-eating demons (rākṣasas) frequent the night -- haunting cemeteries, attacking people, and devouring children. Demon Island is identified as Śrī Laṅkā, southeast of India. From killing they become monstrous and malformed; from giving to others they grow powerful.",
+            "paths": 
+            {
+                "One" : 25,
+                "Two":  42,
+                "Three":17,
+                "Four": 15,
+                "Five": 5,
+                "Six":  3
+            }
+        },
+
+        {
+            "number":15,
+            "name" : "Asuras",
+            "description" : "One is born among the \"antigods\", so known for their intense jealousy of the gods of thirty-three, who got them drunk and cast them out of heaven. \nEver deceiftul and deluding,\nhe does no other harm;\nfond of quarreling, yet generous,\nhe'll become an asura lord.",
+            "paths": 
+            {
+                "One" : 28,
+                "Two": 14,
+                "Three":21,
+                "Four":11,
+                "Five":10,
+                "Six":4
+            }
+        },
+        {
             "number" : 17,
             "name" : "Jambu Island - The Southern Continent",
             "description" : "One has the great fortune to be born in a human condition on earth.",
@@ -44,6 +73,20 @@
                 "Six":6
             }
         },
+        {
+            "number":28,
+            "name": "Heaven of the Thirty-three (Trāyastriṃśa)",
+            "description" : "One dwells in a region, at the summit of Mount Meru, with thirty-three divine neighborhoods. The devas of this level are large and powerful, with supernatural sensory faculties. Although these gods take refuge in the Buddha, their pleasure is too great to allow for religious practice. In consequence, they are unable to prevent rebirth in a lower state when good karma is exhausted.",
+            "paths":{
+                "One":29,
+                "Two":17,
+                "Three":20,
+                "Four":22,
+                "Five":11,
+                "Six":7
+            }
+        },
+
         {
             "number":52,
             "name" : "Mahāyāna, Lesser Path of Accumulation",
