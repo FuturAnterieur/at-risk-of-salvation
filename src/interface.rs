@@ -5,6 +5,7 @@ use std::io;
 use crate::game_loader;
 use crate::graph;
 use crate::shortest_path;
+use crate::player_status;
 use crate::dice_event_parser::int_to_digit_text;
 
 pub struct KarmicCatastrophe
@@ -59,6 +60,10 @@ impl Interface for CommandLineInterface {
         let sakya_pandita = game_loader::build_game_from_json_string(contents.as_str()).expect("Could not parse game JSON string");
 
         let g = graph::Graph::new(&sakya_pandita);
+
+        let ps = player_status::PlayerStatus{name:"Neo".to_string(), 
+        rolls_on_current_square : Vec::<i16>::new(),
+        remaining_reqs_for_each_edge : Vec::<player_status::RemainingRequirementsForEdge>::new()};
         
         let mut current_square_num = sakya_pandita.starting_square;
         let mut next_square_num = current_square_num.clone();

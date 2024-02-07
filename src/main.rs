@@ -6,6 +6,7 @@ mod min_heap;
 mod shortest_path;
 mod interface;
 mod dice_event;
+mod player_status;
 mod tests;
 
 use crate::interface::Interface;

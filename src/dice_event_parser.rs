@@ -39,5 +39,5 @@ pub fn parse_event_code(code: &str, die_face_num :&u8) -> Arc<dyn dice_event::Di
     v.sort_unstable_by(|a, b| a.partial_cmp(b).unwrap());
     v.dedup();
 
-    Arc::new(dice_event::SingleDiceRollRequirement{possible_values : v, die_faces: die_face_num.clone()})
+    Arc::new(dice_event::SingleRollMultipleValueRequirement{possible_values : v, die_faces: die_face_num.clone()})
 }
