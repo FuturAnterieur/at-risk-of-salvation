@@ -93,7 +93,7 @@ impl DiceRollRequirement for SuccessiveRollsInMultipleTurnsRequirement  {
         }
 
         
-        // Combinatorial factorial division
+        // Combinatorial factorial division : 21!/(6! * 5! * 4! * 3! * 2! * 1!)
         let factorial_num = Natural::factorial(u64::value_from(self.rolls.len()).expect("OH NO"));
         let factorial_denom_it = value_partitions.iter().map(|pair | Natural::factorial(u64::from(pair.1.clone())));  
         let factorial_denom : Natural = factorial_denom_it.product();
@@ -104,11 +104,9 @@ impl DiceRollRequirement for SuccessiveRollsInMultipleTurnsRequirement  {
         let proba_denom : Natural = Natural::from(6u32).pow(u64::value_from(self.rolls.len()).expect("OH NO"));
         let proba_quotient : Rational = Rational::from_naturals(Natural::from(1u32), proba_denom);
 
-        //factorial_div * (1.0_f64/6.0_f64).pow(self.rolls.len())
         let rational_result = Rational::from(factorial_quotient) * proba_quotient;
 
         f64::rounding_from(rational_result, RoundingMode::Floor).0
-        //return self.rolls.iter().map(|roll|roll.success_probability_for_one_turn()).fold(1.0_f64, |prod, x| prod * x);
     }
     fn expected_turns(&self) -> f64 {
         1.0_f64 / self.success_probability_for_one_turn() //due to accumulation of previous values this is way more complicated than that

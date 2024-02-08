@@ -4,6 +4,35 @@
     "winning_square":52,
     "squares": [
         {
+            "number":11,
+            "name" : "Animals",
+            "description" : "Residing mostly in the great oceans, animals are created as a result pf previous stupidity -- intentional ignorance. The serpent is said to be born from anger, the lion from pride, the dog from arrogance... and the horse from unpaid debts.",
+            "paths" : 
+            {
+                "One" : 27,
+                "Two":  17,
+                "Three":12,
+                "Four": 13,
+                "Five": 10,
+                "Six":  5
+            }
+        },
+        {
+            "number": 13,
+            "name" : "World of the Nāgas",
+            "description" : "These water serpents are human from the waist up, rather like mer creatures. They store great treasures of wealth and precious stones, and sometimes books of secret teachings in underwater palaces. Like other wealthy beings, however, they are dangerous and volatile.",
+            "paths" : 
+            {
+                "One" : 28,
+                "Two":  27,
+                "Three":15,
+                "Four": 21,
+                "Five": 11,
+                "Six":  10
+            }
+        },
+
+        {
             "number":14,
             "name" : "Demon Island",
             "description" : "These ferocious man-eating demons (rākṣasas) frequent the night -- haunting cemeteries, attacking people, and devouring children. Demon Island is identified as Śrī Laṅkā, southeast of India. From killing they become monstrous and malformed; from giving to others they grow powerful.",
@@ -58,6 +87,18 @@
                     "Four":11,
                     "Five":10,
                     "Six":6
+            }
+        },
+        {
+            "number" : 25,
+            "name" : "Beginning the Tantra",
+            "description" : "One sets forth toward enligtenment in the vehicle of mantra, the diamond path, the secret way of the practice of spells (vidyā). Without the proper commitments this road leads to madness and hell.",
+            "paths":
+            {       
+                    "One":72,
+                    "Two":33,
+                    "Three or Four or Five":25,
+                    "Six":38
             }
         },
         {

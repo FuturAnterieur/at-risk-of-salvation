@@ -65,13 +65,14 @@ pub fn dijkstra(graph : &graph::Graph, start_node_num :&u32, dest_node_num :&u32
     
     //TODO : create vector of predecessors
     let mut predecessors = Vec::<u32>::new();
-    let mut current_node = dest_node_num;
-    predecessors.push(current_node.clone());
-    while let Some(next_node) = previous.get(current_node) {
-        predecessors.push(next_node.clone());
-        current_node = next_node;
+    if previous.get(dest_node_num).is_some() && previous.get(dest_node_num).unwrap().clone() != 0 {
+        let mut current_node = dest_node_num;
+        predecessors.push(current_node.clone());
+        while let Some(next_node) = previous.get(current_node) {
+            predecessors.push(next_node.clone());
+            current_node = next_node;
+        }
     }
-    
 
     let result = ShortestPathResultForNode{predecessors:predecessors, total_distance:distances.get(&dest_node_num).unwrap().clone()};
 

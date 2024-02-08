@@ -73,6 +73,10 @@ impl Graph{
     pub fn path_probability(&self, path : &Vec<u32>) -> f64 {
         //let mut result = 1.0_f64;
         let mut global_event = dice_event::ConsecutiveSequentialRollsRequirement{rolls: Vec::<Arc::<dyn DiceRollRequirement>>::new()};
+        
+        if path.len() < 2 {
+            return 0.0_f64
+        }
 
         for i in 0..path.len() - 1 {
             let node_num = path[i];
