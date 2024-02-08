@@ -1,4 +1,5 @@
 use crate::dice_event::DiceRollRequirement;
+use crate::dice_event::SingleValueRequirement;
 use crate::game_loader;
 use crate::dice_event_parser;
 use crate::dice_event;
@@ -71,7 +72,7 @@ impl Graph{
 
     pub fn path_probability(&self, path : &Vec<u32>) -> f64 {
         //let mut result = 1.0_f64;
-        let mut global_event = dice_event::SuccessiveDiceRollsRequirement{rolls: Vec::<Arc::<dyn dice_event::DiceRollRequirement>>::new(), sequential : dice_event::Sequential::Yes, consecutive: dice_event::Consecutive::Yes};
+        let mut global_event = dice_event::ConsecutiveSequentialRollsRequirement{rolls: Vec::<Arc::<dyn DiceRollRequirement>>::new()};
 
         for i in 0..path.len() - 1 {
             let node_num = path[i];

@@ -1,6 +1,8 @@
 use crate::graph;
 use crate::min_heap;
 use std::collections::HashMap;
+use std::cmp::Reverse;
+use ordered_float::NotNan;
 
 pub enum EdgeDistanceMetric {
     Constant,
@@ -37,7 +39,9 @@ pub fn dijkstra(graph : &graph::Graph, start_node_num :&u32, dest_node_num :&u32
         // if only dest is needed : 
         //if &closest_node_pair.node_num == dest_node_num {break;}
 
-        if distances.get(&closest_node_pair.node_num).unwrap() < &closest_node_pair.distance.0 { continue; }
+        let recorded_distance = distances.get(&closest_node_pair.node_num).unwrap();
+
+        if NotNan::<f64>::new(recorded_distance.clone()).expect("") < closest_node_pair.distance.0 { continue; }
 
         for edge in graph.edges_for_node(&closest_node_pair.node_num).unwrap() {
             let alternative_distance = distances.get(&closest_node_pair.node_num).unwrap() 
