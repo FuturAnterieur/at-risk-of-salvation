@@ -2,8 +2,7 @@
 
 //lalrpop_mod!(pub dice);
 
-use crate::dice;
-use crate::ast;
+use crate::lalrpop::dice;
 use crate::dice_event_parser;
 
 #[test]

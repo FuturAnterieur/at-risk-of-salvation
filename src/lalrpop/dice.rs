@@ -1,7 +1,7 @@
 // auto-generated: "lalrpop 0.20.0"
-// sha3: 26ca6ccd71f7e21e82adf8a34a064469a487a1a6735b6a4f5bf0240ca4816145
+// sha3: 37c622abfca3c5d39c409028f3c1eb82b9145186c3869523110441a0ccccd315
 use std::str::FromStr;
-use crate::ast::DiceRollExpr;
+use crate::lalrpop::ast::DiceRollExpr;
 #[allow(unused_extern_crates)]
 extern crate lalrpop_util as __lalrpop_util;
 #[allow(unused_imports)]
@@ -14,7 +14,7 @@ extern crate alloc;
 mod __parse__DiceRollExpr {
 
     use std::str::FromStr;
-    use crate::ast::DiceRollExpr;
+    use crate::lalrpop::ast::DiceRollExpr;
     #[allow(unused_extern_crates)]
     extern crate lalrpop_util as __lalrpop_util;
     #[allow(unused_imports)]
@@ -736,7 +736,7 @@ pub use self::__parse__DiceRollExpr::DiceRollExprParser;
 mod __parse__Factor {
 
     use std::str::FromStr;
-    use crate::ast::DiceRollExpr;
+    use crate::lalrpop::ast::DiceRollExpr;
     #[allow(unused_extern_crates)]
     extern crate lalrpop_util as __lalrpop_util;
     #[allow(unused_imports)]
@@ -1442,7 +1442,7 @@ pub use self::__parse__Factor::FactorParser;
 mod __parse__Num {
 
     use std::str::FromStr;
-    use crate::ast::DiceRollExpr;
+    use crate::lalrpop::ast::DiceRollExpr;
     #[allow(unused_extern_crates)]
     extern crate lalrpop_util as __lalrpop_util;
     #[allow(unused_imports)]
@@ -2141,7 +2141,7 @@ pub use self::__parse__Num::NumParser;
 mod __intern_token {
     #![allow(unused_imports)]
     use std::str::FromStr;
-    use crate::ast::DiceRollExpr;
+    use crate::lalrpop::ast::DiceRollExpr;
     #[allow(unused_extern_crates)]
     extern crate lalrpop_util as __lalrpop_util;
     #[allow(unused_imports)]

@@ -1,6 +1,6 @@
 use crate::dice_event;
 use std::sync::Arc;
-use crate::ast::DiceRollExpr;
+use crate::lalrpop::ast::DiceRollExpr;
 
 pub fn digit_text_to_int(text : &str) -> i16 {
     match text {
