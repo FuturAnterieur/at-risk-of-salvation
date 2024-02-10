@@ -1,8 +1,17 @@
 {
     "die_faces":6,
     "starting_square":24,
-    "winning_square":52,
+    "winning_square":53,
     "squares": [
+        {
+            "number":1,
+            "name":"Vajra Hell",
+            "description":"Crossed double vajras bar your exit from this very special hell. This is the destination of those who abuse the tantric path through distraction or selfishness. This is a hell of the most frightful demonic images, the most fearful hell, for its suffering is paranoia rather than physical pain -- difficult for anyone else to assuage. Fear for oneself makes it almost impossible to see through the images and escape.",
+            "paths":{
+                "accum: 1 + 2 x 2 + 3 x 3 + 4 x 4 + 5 x 5 + 6 x 6" : 9,
+                "waiting":1
+            }   
+        },
         {
             "number":11,
             "name" : "Animals",
@@ -127,6 +136,18 @@
                 "Six":7
             }
         },
+        {
+            "number":33,
+            "name":"Tantra, Lesser Path of Accumulation",
+            "description":"Here, at the beginning of substantial tantric practice, one engages in the tantra of activity (kriya-tantra). If reality is the play of appearances, molded by karma but arising from emptiness, the aim of tantra is its eventual reformation.\nThe danger is that one may practice magic without compassion. Hence this path may lead to the most harrowing of hellish states.",
+            "paths":{
+                "One":41,
+                "Two":42,
+                "Three or Four":33,
+                "Five":16,
+                "Six":1
+            }
+        },
 
         {
             "number":52,
@@ -139,6 +160,30 @@
                 "Four":38,
                 "Five":11,
                 "Six":7
+            }
+        },
+        {
+            "number":53,
+            "name":"Mahāyāna, Middle Path of Accumulation",
+            "description":"The grosser distractions become stilled, and meditation rises to an intermdediate level on the way to concentration. At this stage, before the higher awarenesses have been obtained, one has only the intention of being useful to others, but one is able to do very little actual good.",
+            "paths":{
+                "One":55,
+                "Two":54,
+                "Three":37,
+                "Four":40,
+                "Five":15,
+                "Six":8
+            }
+        },
+        {
+            "number":72,
+            "name" : "Wisdom-Holder of the Eight Siddhis",
+            "description" : "One has taken the path of siddhi, magical attainment, as opposed to that of study. Some lamas consider these siddhi as equivalent to the Path of Accumulation. Others insist thatone follow the orthodox tantric path.",
+            "paths":{
+                "One":67,
+                "Two":41,
+                "Three":33,
+                "Four to Six":72
             }
         }
     ]

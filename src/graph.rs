@@ -17,7 +17,7 @@ impl Edge {
         
         let ret = Self{
             dice_roll_code:drc.to_string(), 
-            requirement: dice_event_parser::parse_event_code(drc, die_face_num),
+            requirement: dice_event_parser::parse_dice_roll_expr_ast(drc, die_face_num),
             destination:dest.clone()};
         ret
     }

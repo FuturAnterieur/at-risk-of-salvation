@@ -20,6 +20,31 @@ pub trait DiceRollRequirement {
     fn num_dice_rolls_allowed(&self) -> usize;
 }
 
+pub struct InvalidRequirement {
+}
+
+impl DiceRollRequirement for InvalidRequirement {
+    fn success_probability_for_one_turn(&self) -> f64 {
+        0.0_f64
+    }
+
+    fn expected_turns(&self) -> f64 {
+        1.0_f64
+    }
+
+    fn enumerate_roll_values(&self) -> Vec<i16> {
+        Vec::<i16>::new()
+    }
+
+    fn fullfill_with(&mut self, single_roll : &i16) -> bool {
+        false
+    }
+
+    fn num_dice_rolls_allowed(&self) -> usize {
+        0
+    }
+}
+
 pub struct SingleValueRequirement {
     pub required_value : i16,
     pub die_faces : u8,

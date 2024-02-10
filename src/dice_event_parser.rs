@@ -1,6 +1,7 @@
-use crate::dice_event;
+use crate::dice_event::{self, InvalidRequirement, SingleValueRequirement};
 use std::sync::Arc;
 use crate::lalrpop::ast::DiceRollExpr;
+use crate::lalrpop;
 
 pub fn digit_text_to_int(text : &str) -> i16 {
     match text {
@@ -32,30 +33,28 @@ pub fn int_to_digit_text(value : i16) -> &'static str {
     }
 }
 
-pub fn parse_event_code(code: &str, die_face_num :&u8) -> Arc<dyn dice_event::DiceRollRequirement> {
-    //parse single event
-    let mut v : Vec<i16> = code.split(" or ").map(|name| digit_text_to_int(name))
-        .filter(|value|  (0..=(i16::from(die_face_num.clone()))).contains(value)) 
-    .collect();
-    v.sort_unstable_by(|a, b| a.partial_cmp(b).unwrap());
-    v.dedup();
-
-    Arc::new(dice_event::SingleRollMultipleValueRequirement{possible_values : v, die_faces: die_face_num.clone()})
-}
-
-pub fn parse_dice_roll_expr_ast(code: &DiceRollExpr, num_faces : &u8) -> Arc<dyn dice_event::DiceRollRequirement> {
-    match &code {
+pub fn parse_dice_roll_expr_ast(code_str: &str, num_faces : &u8) -> Arc<dyn dice_event::DiceRollRequirement> {
+    let code = lalrpop::dice::DiceRollExprParser::new().parse(&code_str);
+    if code.is_err() {
+        println!("Warning : could not parse the following dice event code : {}", code_str);
+        return Arc::new(InvalidRequirement{});
+    }
+    
+    match code.expect("SHOULD NOT HAPPEN").as_ref() {
         DiceRollExpr::SingleValue(val) => Arc::new(dice_event::SingleValueRequirement{required_value: val.clone(), die_faces: num_faces.clone()}),
         DiceRollExpr::OrExpr(left, right ) => {
             let mut left_parse = sub_parse_dice_roll_or_expr(left);
-            let mut right_parse = sub_parse_dice_roll_or_expr(right);
+            let right_parse = sub_parse_dice_roll_or_expr(right);
             left_parse.extend(right_parse.iter());
-            left_parse.sort();
-            left_parse.dedup();
+            let mut filtered : Vec<i16> = left_parse.into_iter().filter(|val| val >= &1 && val <= &i16::from(num_faces.clone())).collect();
+            filtered.sort();
+            filtered.dedup();
 
-            return Arc::new(dice_event::SingleRollMultipleValueRequirement{possible_values: left_parse, die_faces : num_faces.clone()})
-        }
-            
+            return Arc::new(dice_event::SingleRollMultipleValueRequirement{possible_values: filtered, die_faces : num_faces.clone()})
+        },
+        DiceRollExpr::ToExpr(beg, end) => {
+           return Arc::new(dice_event::SingleRollMultipleValueRequirement{die_faces: num_faces.clone(),
+                            possible_values:(beg.clone()..=end.clone()).collect() });}
     }
 }
 
@@ -67,6 +66,7 @@ pub fn sub_parse_dice_roll_or_expr(code: &DiceRollExpr) -> Vec<i16> {
             let right_parse = sub_parse_dice_roll_or_expr(right);
             left_parse.extend(right_parse.iter());
             return left_parse
-        }
+        },
+        DiceRollExpr::ToExpr(beg, end) => (beg.clone()..=end.clone()).collect()
     }
 }

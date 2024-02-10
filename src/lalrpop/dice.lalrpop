@@ -8,8 +8,9 @@ pub DiceRollExpr: Box<DiceRollExpr> = {
     Factor,
 };
 
-pub Factor: Box<DiceRollExpr> = {
+Factor: Box<DiceRollExpr> = {
     <n:Num> => Box::new(DiceRollExpr::SingleValue(n)),
+    <m:Num> "to" <n:Num> => Box::new(DiceRollExpr::ToExpr(m,n)),
 };
 
 pub Num: i16 = {
