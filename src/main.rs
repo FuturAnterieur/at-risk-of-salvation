@@ -9,6 +9,7 @@ mod dice_event;
 mod player_status;
 mod tests;
 mod ast;
+mod dice;
 
 use crate::interface::Interface;
 
