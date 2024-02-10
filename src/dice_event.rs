@@ -10,7 +10,7 @@ use malachite::num::arithmetic::traits::Pow;
 //use malachite::num::basic::traits::OneHalf;
 use malachite::rounding_modes::RoundingMode;
 use malachite::num::conversion::traits::RoundingFrom;
-use malachite::Integer;
+//use malachite::Integer;
 
 pub trait DiceRollRequirement {
     fn success_probability_for_one_turn(&self) -> f64;

@@ -1,0 +1,23 @@
+use std::str::FromStr;
+use crate::ast::DiceRollExpr;
+
+grammar;
+
+pub DiceRollExpr: Box<DiceRollExpr> = {
+    <a:DiceRollExpr> "or" <b:Factor> => Box::new(DiceRollExpr::OrExpr(a, b)),
+    Factor,
+};
+
+pub Factor: Box<DiceRollExpr> = {
+    <n:Num> => Box::new(DiceRollExpr::SingleValue(n)),
+};
+
+pub Num: i16 = {
+    "One" => 1,
+    "Two" => 2,
+    "Three" => 3,
+    "Four" => 4,
+    "Five" => 5,
+    "Six" => 6,
+    <s:r"[0-9]+"> => i16::from_str(s).unwrap(),
+};
