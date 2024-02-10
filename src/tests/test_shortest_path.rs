@@ -17,8 +17,8 @@ mod test_shortest_path {
         assert_eq!(dijkstra_result.is_some(), true);
         let res = dijkstra_result.unwrap();
         assert_float_absolute_eq!(res.total_distance, 12.0_f64);
-        assert_eq!(res.predecessors.len(), 3);
-        assert_eq!(res.predecessors, vec![4,2,1]);
+        assert_eq!(res.predecessors.len(), 2);
+        assert_eq!(res.predecessors, vec![2,1]);
 
     }
 }

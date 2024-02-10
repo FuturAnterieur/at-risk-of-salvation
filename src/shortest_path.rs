@@ -28,7 +28,7 @@ pub fn dijkstra(graph : &graph::Graph, start_node_num :&u32, dest_node_num :&u32
     distances.insert(start_node_num.clone(), 0_f64);
     for node_num in node_nums {
         if &node_num != start_node_num { 
-            previous.insert(node_num.clone(), 0); //0 is undefined
+            //previous.insert(node_num.clone(), 0); //0 is undefined
             distances.insert(node_num.clone(), f64::INFINITY);
         }
         heap.push(node_num.clone(), distances.get(&node_num).unwrap().clone());
@@ -63,16 +63,14 @@ pub fn dijkstra(graph : &graph::Graph, start_node_num :&u32, dest_node_num :&u32
         }   
     }
     
-    //TODO : create vector of predecessors
+    
     let mut predecessors = Vec::<u32>::new();
-    if previous.get(dest_node_num).is_some() && previous.get(dest_node_num).unwrap().clone() != 0 {
-        let mut current_node = dest_node_num;
-        predecessors.push(current_node.clone());
-        while let Some(next_node) = previous.get(current_node) {
-            predecessors.push(next_node.clone());
-            current_node = next_node;
-        }
+    let mut current_node = dest_node_num;
+    while let Some(next_node) = previous.get(current_node) {
+        predecessors.push(next_node.clone());
+        current_node = next_node;
     }
+    
 
     let result = ShortestPathResultForNode{predecessors:predecessors, total_distance:distances.get(&dest_node_num).unwrap().clone()};
 

@@ -6,7 +6,7 @@ use crate::game_loader;
 use crate::graph;
 use crate::shortest_path;
 use crate::player_status;
-use crate::dice_event_parser::int_to_digit_text;
+use crate::dice_event_parser::{int_to_digit_text, digit_text_to_int};
 
 pub struct KarmicCatastrophe
 {
@@ -51,6 +51,15 @@ impl CommandLineInterface {
         let all_names : Vec<&str> = all_distinct_digits.iter().map(|value| int_to_digit_text(value.clone()) ).collect();
         all_names.join(", ")
     }
+
+    fn determine_next_node(&self, edges : &Vec::<graph::Edge>, selected_option : &str) -> Option<u32> {
+        let selected_option_value = digit_text_to_int(selected_option);
+        let selected_edge_idx = edges.iter().map(|edge| edge.requirement.enumerate_roll_values()).position(|roll_values| roll_values.contains(&selected_option_value));
+        match selected_edge_idx {
+            Some(idx) => Some(edges[idx].destination.clone()),
+            None => None
+        }
+    }
 }
 
 
@@ -89,6 +98,7 @@ impl Interface for CommandLineInterface {
 
             let mut predecessors = shortest_path::dijkstra(&g, &current_square.number, &sakya_pandita.winning_square, shortest_path::EdgeDistanceMetric::ExpectedRolls).unwrap().predecessors;
             predecessors.reverse();
+            predecessors.push(sakya_pandita.winning_square);
             let chances_of_reaching_end = g.path_probability(&predecessors);
             println!("Your odds of following the shortest path to the end are {:.7}%.", chances_of_reaching_end*100_f64);
 
@@ -106,7 +116,7 @@ impl Interface for CommandLineInterface {
             }
 
             let true_choice = choice.trim().to_string();
-            let maybe_next_node = current_square.paths.get(&true_choice);
+            let maybe_next_node = self.determine_next_node(edges.unwrap(), &true_choice);
             match maybe_next_node {
                 Some(next_node) => next_square_num = next_node.clone(),
                 None => return Err(KarmicCatastrophe{message : "Your choice lies only in nothingness.".to_string()}),
