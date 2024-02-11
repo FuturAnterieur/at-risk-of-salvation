@@ -6,7 +6,7 @@ grammar;
 pub AllDiceRollsExpr : Box<AllDiceRollsExpr> = {
     <a:DiceRollExpr> => Box::new(AllDiceRollsExpr::SingleRoll(a)),
     <opt:SuccessiveRollsOptions> ":" <b:SuccessiveDiceRollExpr> => Box::new(AllDiceRollsExpr::SuccessiveRolls(opt, b)),
-    <b:SuccessiveDiceRollExpr> => Box::new(AllDiceRollsExpr::SuccessiveRolls(SuccessiveRollsOptions::NotCumulative, b)),
+    <b:SuccessiveDiceRollExpr> => Box::new(AllDiceRollsExpr::SuccessiveRolls(SuccessiveRollsOptions::Cumulative, b)),
 }
 
 
@@ -22,7 +22,8 @@ Factor: Box<DiceRollExpr> = {
 
 pub SuccessiveDiceRollExpr: Box<SuccessiveDiceRollExpr> = {
     <a:SuccessiveDiceRollExpr> "+" <b:SuccessiveFactor> => Box::new(SuccessiveDiceRollExpr::AndExpr(a,b)),
-    <a:SuccessiveFactor> "+" <b:SuccessiveFactor> => Box::new(SuccessiveDiceRollExpr::AndExpr(a,b)),
+    <n:Num> "+" <b:SuccessiveFactor> => Box::new(SuccessiveDiceRollExpr::AndExpr(Box::new(SuccessiveDiceRollExpr::SingleValue(n)),b)),
+    <q:Quantity> "x" <n:Num> => Box::new(SuccessiveDiceRollExpr::MulExpr(q,n)),
 };
 
 SuccessiveFactor: Box<SuccessiveDiceRollExpr> = {

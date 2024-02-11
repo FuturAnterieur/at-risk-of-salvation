@@ -101,15 +101,15 @@ impl FulfillableRequirement for SingleRollMultipleValueRequirement {
 }
 
 pub struct SuccessiveRollsInMultipleTurnsRequirement {
-    pub rolls : Vec<SingleValueRequirement>,
-
+    pub rolls : Vec<i16>,
+    pub die_faces : u8,
 }
 
 impl DiceRollRequirement for SuccessiveRollsInMultipleTurnsRequirement  {
     fn success_probability_for_one_turn(&self) -> f64 {
         let mut value_partitions = HashMap::<i16, u32>::new();
         for roll in &self.rolls {
-            *value_partitions.entry(roll.required_value.clone()).or_insert(0) += 1;
+            *value_partitions.entry(roll.clone()).or_insert(0) += 1;
         }
 
         
@@ -133,11 +133,10 @@ impl DiceRollRequirement for SuccessiveRollsInMultipleTurnsRequirement  {
     }
     fn enumerate_roll_values(&self) -> Vec<i16> {
         //let mut all_values = self.rolls.iter().map(|roll| roll.enumerate_roll_values()).fold(Vec::<i16>::new(), |mut accum, vec| {accum.extend(vec); accum}); //that compiled too btw
-        let mut all_values : Vec<i16> = self.rolls.iter().map(|roll| roll.enumerate_roll_values()).flatten().collect();
-        
-        all_values.sort();
-        all_values.dedup();
-        all_values
+        let mut vec = self.rolls.clone();
+        vec.sort();
+        vec.dedup();
+        vec
     }
 
 }
@@ -145,7 +144,7 @@ impl DiceRollRequirement for SuccessiveRollsInMultipleTurnsRequirement  {
 impl FulfillableRequirement for SuccessiveRollsInMultipleTurnsRequirement {
     fn fullfill_with(&mut self, single_value : &i16) -> bool {
         
-        let idx =  self.rolls.iter_mut().position(|roll| roll.fullfill_with(single_value));
+        let idx =  self.rolls.iter_mut().position(|roll| roll == single_value);
         if idx.is_some() {
          self.rolls.remove(idx.unwrap());
         }             

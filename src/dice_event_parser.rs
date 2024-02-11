@@ -1,7 +1,8 @@
-use crate::dice_event;
+use crate::dice_event::{self, SingleValueRequirement};
 use std::sync::Arc;
-use crate::lalrpop::ast::{AllDiceRollsExpr, DiceRollExpr};
+use crate::lalrpop::ast::{AllDiceRollsExpr, DiceRollExpr, SuccessiveRollsOptions, SuccessiveDiceRollExpr};
 use crate::lalrpop;
+use conv::ValueFrom;
 
 pub fn int_to_digit_text(value : i16) -> &'static str {
     match value {
@@ -40,7 +41,27 @@ pub fn parse_dice_roll_expr_ast(code_str: &str, num_faces : &u8) -> Arc<dyn dice
             return Arc::new(dice_event::SingleRollMultipleValueRequirement{die_faces: num_faces.clone(),
                                 possible_values:(beg.clone()..=end.clone()).collect() });}
             },
-        AllDiceRollsExpr::SuccessiveRolls(_options, _expr) => Arc::new(dice_event::InvalidRequirement{})
+        AllDiceRollsExpr::SuccessiveRolls(options, expr) => {
+            match options {
+                SuccessiveRollsOptions::NotCumulative => Arc::new(dice_event::InvalidRequirement{}), //unimplemented for now
+                SuccessiveRollsOptions::Cumulative => {
+                    match expr.as_ref() {
+                        SuccessiveDiceRollExpr::SingleValue(val ) => Arc::new(dice_event::SingleValueRequirement{required_value: val.clone(), die_faces: num_faces.clone()}),
+                        SuccessiveDiceRollExpr::MulExpr(quantity, val) => {
+                            let vec : Vec<i16> = std::iter::repeat(val.clone()).take(usize::value_from(quantity.clone()).expect("OH NO")).collect();
+                            return Arc::new(dice_event::SuccessiveRollsInMultipleTurnsRequirement{rolls:vec, die_faces:num_faces.clone()});
+                        }
+                        SuccessiveDiceRollExpr::AndExpr(left, right) => {
+                            let mut left_parse = sub_parse_dice_roll_and_expr(left);
+                            let right_parse = sub_parse_dice_roll_and_expr(right);
+                            left_parse.extend(right_parse.iter());
+                            return Arc::new(dice_event::SuccessiveRollsInMultipleTurnsRequirement{rolls:left_parse, die_faces:num_faces.clone()});
+                        }
+                    }
+                }
+            }
+        }
+        
     }
 }
 
@@ -54,5 +75,21 @@ pub fn sub_parse_dice_roll_or_expr(code: &DiceRollExpr) -> Vec<i16> {
             return left_parse
         },
         DiceRollExpr::ToExpr(beg, end) => (beg.clone()..=end.clone()).collect()
+    }
+}
+
+pub fn sub_parse_dice_roll_and_expr(code : &SuccessiveDiceRollExpr) -> Vec<i16> {
+    match &code {
+        SuccessiveDiceRollExpr::SingleValue(val) => vec![val.clone()],
+        SuccessiveDiceRollExpr::MulExpr(q, val) =>
+        {
+            std::iter::repeat(val.clone()).take(usize::value_from(q.clone()).expect("OH NO")).collect()
+        },
+        SuccessiveDiceRollExpr::AndExpr(left, right) => {
+            let mut left_parse = sub_parse_dice_roll_and_expr(left);
+            let right_parse = sub_parse_dice_roll_and_expr(right);
+            left_parse.extend(right_parse.iter());
+            return left_parse
+        }
     }
 }

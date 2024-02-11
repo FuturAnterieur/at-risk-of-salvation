@@ -26,12 +26,17 @@ fn dice() {
 
 #[test]
 fn dice2() {
+    
     assert!(dice::SuccessiveDiceRollExprParser::new().parse("3 x Three + 1 + Two + 4 x 4").is_ok());
-    assert!(dice::AllDiceRollsExprParser::new().parse("accum : 3 x Three + 1 + Two + 4 x 4").is_ok());
-    assert!(dice::AllDiceRollsExprParser::new().parse("3 x Three + 1 + Two + 4 x 4").is_ok());
-    assert!(dice::AllDiceRollsExprParser::new().parse("1 + Two").is_ok());
-    assert!(dice::AllDiceRollsExprParser::new().parse("1 + Two x 2").is_err());
-    assert!(dice::AllDiceRollsExprParser::new().parse("1 + 2 x Two + 6").is_ok());
-    assert!(dice::AllDiceRollsExprParser::new().parse("5 + 20 + 21 + 3 + 4").is_ok());
+    let parser = dice::AllDiceRollsExprParser::new();
+    
+    assert!(parser.parse("accum : 3 x Three + 1 + Two + 4 x 4").is_ok());
+    assert!(parser.parse("3 x Three + 1 + Two + 4 x 4").is_ok());
+    assert!(parser.parse("1 + Two").is_ok());
+    assert!(parser.parse("1 + Two x 2").is_err());
+    assert!(parser.parse("1 + 2 x Two + 6").is_ok());
+    assert!(parser.parse("5 + 20 + 21 + 3 + 4").is_ok());
+    assert!(parser.parse("3 x Two").is_ok());
+    assert!(parser.parse("3 x Two + 21").is_ok());
 }
 }
