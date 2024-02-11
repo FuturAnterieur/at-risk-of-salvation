@@ -14,7 +14,7 @@ Up to now, this is a command line interactive program simulating a one-player ga
 
 The game displays a textual description of each square, which is an abridged version of the one found in the book that inspired the project. I'm aware of potential copyright issues on this side. If anyone takes umbrage with it, just let me know.
 
-To make things more interesting, the program is also configured to calculate probabilites associated to dice rolls. For now, it uses a graph algorithm and probability calculations to display, on each turn, the probability of the player following the shortest path to the goal square from his current square.
+To make things more interesting, the program is also configured to calculate probabilites associated with dice rolls. For now, it uses a graph algorithm and probability calculations to display, on each turn, the probability of the player following the shortest path to the goal square from his current square.
 
 ## In the future
 

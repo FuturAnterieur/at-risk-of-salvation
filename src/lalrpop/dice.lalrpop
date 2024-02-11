@@ -38,11 +38,11 @@ pub Num: i16 = {
     "Four" => 4,
     "Five" => 5,
     "Six" => 6,
-    <s:r"[0-9]+"> => i16::from_str(s).unwrap(),
+    <s:r"[0-9]+"> => i16::from_str(s).unwrap_or(-1),
 };
 
 pub Quantity: u32 = {
-    r"[0-9]+" => u32::from_str(<>).unwrap()
+    r"[0-9]+" => u32::from_str(<>).unwrap_or(0)
 };
 
 pub SuccessiveRollsOptions: SuccessiveRollsOptions = {

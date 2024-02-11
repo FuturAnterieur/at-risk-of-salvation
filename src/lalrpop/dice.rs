@@ -1,5 +1,5 @@
 // auto-generated: "lalrpop 0.20.0"
-// sha3: 2394b9a64752c28d0dc1b6099f3cfd2f01b1dd09f455460857ed5f05fb5b4793
+// sha3: 3e8fe0607f56f6a90b2eb754c55df3c84254251fba2bf0d7825f6fec389c2e3f
 use std::str::FromStr;
 use crate::lalrpop::ast::{DiceRollExpr, SuccessiveDiceRollExpr, AllDiceRollsExpr, SuccessiveRollsOptions};
 #[allow(unused_extern_crates)]
@@ -7336,7 +7336,7 @@ fn __action23<
     (_, s, _): (usize, &'input str, usize),
 ) -> i16
 {
-    i16::from_str(s).unwrap()
+    i16::from_str(s).unwrap_or(-1)
 }
 
 #[allow(unused_variables)]
@@ -7348,7 +7348,7 @@ fn __action24<
     (_, __0, _): (usize, &'input str, usize),
 ) -> u32
 {
-    u32::from_str(__0).unwrap()
+    u32::from_str(__0).unwrap_or(0)
 }
 
 #[allow(unused_variables)]
