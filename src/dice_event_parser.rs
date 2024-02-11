@@ -15,7 +15,7 @@ pub fn int_to_digit_text(value : i16) -> &'static str {
     }
 }
 
-pub fn parse_dice_roll_expr_ast(code_str: &str, num_faces : &u8) -> Arc<dyn dice_event::DiceRollRequirement> {
+pub fn parse_dice_roll_expr_ast(code_str: &str, num_faces : &u8) -> Arc<dyn dice_event::FulfillableRequirement> {
     let code = lalrpop::dice::AllDiceRollsExprParser::new().parse(&code_str);
     if code.is_err() {
         println!("Warning : could not parse the following dice event code : {}", code_str);

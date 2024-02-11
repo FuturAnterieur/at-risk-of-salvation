@@ -16,9 +16,12 @@ pub trait DiceRollRequirement {
     fn success_probability_for_one_turn(&self) -> f64;
     fn expected_turns(&self) -> f64;
     fn enumerate_roll_values(&self) -> Vec<i16>;
-    fn fullfill_with(&mut self, single_roll : &i16) -> bool;
-    fn num_dice_rolls_allowed(&self) -> usize;
 }
+
+pub trait FulfillableRequirement : DiceRollRequirement {
+    fn fullfill_with(&mut self, single_roll : &i16) -> bool;
+}
+
 
 pub struct InvalidRequirement {
 }
@@ -35,13 +38,11 @@ impl DiceRollRequirement for InvalidRequirement {
     fn enumerate_roll_values(&self) -> Vec<i16> {
         Vec::<i16>::new()
     }
+}
 
+impl FulfillableRequirement for InvalidRequirement {
     fn fullfill_with(&mut self, single_roll : &i16) -> bool {
         false
-    }
-
-    fn num_dice_rolls_allowed(&self) -> usize {
-        0
     }
 }
 
@@ -68,13 +69,11 @@ impl DiceRollRequirement for SingleValueRequirement {
     fn enumerate_roll_values(&self) -> Vec<i16> {
         vec![self.required_value.clone()]
     }
+}
 
+impl FulfillableRequirement for SingleValueRequirement {
     fn fullfill_with(&mut self, single_roll : &i16) -> bool {
         single_roll == &self.required_value
-    }
-
-    fn num_dice_rolls_allowed(&self) -> usize {
-        1
     }
 }
 
@@ -93,17 +92,13 @@ impl DiceRollRequirement for SingleRollMultipleValueRequirement {
     fn enumerate_roll_values(&self) -> Vec<i16> {
         self.possible_values.clone()
     }
-
-    fn fullfill_with(&mut self, single_value : &i16) -> bool {
-        self.possible_values.contains(&single_value)
-    }
-
-    fn num_dice_rolls_allowed(&self) -> usize {
-        1
-    }
 }
 
-
+impl FulfillableRequirement for SingleRollMultipleValueRequirement {
+    fn fullfill_with(&mut self, single_roll : &i16) -> bool {
+        self.possible_values.contains(&single_roll)
+    }
+}
 
 pub struct SuccessiveRollsInMultipleTurnsRequirement {
     pub rolls : Vec<SingleValueRequirement>,
@@ -145,25 +140,22 @@ impl DiceRollRequirement for SuccessiveRollsInMultipleTurnsRequirement  {
         all_values
     }
 
+}
+
+impl FulfillableRequirement for SuccessiveRollsInMultipleTurnsRequirement {
     fn fullfill_with(&mut self, single_value : &i16) -> bool {
         
-       let idx =  self.rolls.iter_mut().position(|roll| roll.fullfill_with(single_value));
-       if idx.is_some() {
-        self.rolls.remove(idx.unwrap());
-       }             
-
-       idx.is_some() 
-    }
-
-    fn num_dice_rolls_allowed(&self) -> usize {
-        //Unused AFAIK
-        self.rolls.len()
-    }
-
+        let idx =  self.rolls.iter_mut().position(|roll| roll.fullfill_with(single_value));
+        if idx.is_some() {
+         self.rolls.remove(idx.unwrap());
+        }             
+ 
+        idx.is_some() 
+     }
 }
 
 pub struct ConsecutiveSequentialRollsRequirement {
-    pub rolls : Vec<Arc<dyn DiceRollRequirement>>,
+    pub rolls : Vec<Arc<dyn FulfillableRequirement>>,
 }
 
 impl DiceRollRequirement for ConsecutiveSequentialRollsRequirement {
@@ -182,15 +174,4 @@ impl DiceRollRequirement for ConsecutiveSequentialRollsRequirement {
         all_values.dedup();
         all_values
     }
-
-    fn fullfill_with(&mut self, single_roll : &i16) -> bool {
-        //UNUSED AFAIK
-        false
-    }
-
-    fn num_dice_rolls_allowed(&self) -> usize {
-        self.rolls.iter().map(|roll| roll.num_dice_rolls_allowed()).sum()
-    }
-
-    
 }

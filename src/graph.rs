@@ -8,7 +8,7 @@ use std::collections::HashMap;
 
 pub struct Edge {
     pub dice_roll_code:String,
-    pub requirement : Arc<dyn dice_event::DiceRollRequirement>,
+    pub requirement : Arc<dyn dice_event::FulfillableRequirement>,
     pub destination:u32,
 }
 
@@ -75,7 +75,7 @@ impl Graph{
             return 0.0_f64;
         }
 
-        let mut global_event = dice_event::ConsecutiveSequentialRollsRequirement{rolls: Vec::<Arc::<dyn DiceRollRequirement>>::new()};
+        let mut global_event = dice_event::ConsecutiveSequentialRollsRequirement{rolls: Vec::<Arc::<dyn dice_event::FulfillableRequirement>>::new()};
         
         for i in 0..path.len() - 1 {
             let node_num = path[i];
