@@ -83,6 +83,8 @@ impl Interface for CommandLineInterface {
         let mut current_square_num = sakya_pandita.starting_square;
         let mut next_square_num = current_square_num.clone();
 
+        println!("Welcome to the game. At any point you may type Quit to exit.");
+
         loop {
             let current_square_opt = sakya_pandita.squares.iter().find(|square| square.number == next_square_num);
             if current_square_opt.is_none() {
@@ -115,17 +117,24 @@ impl Interface for CommandLineInterface {
             println!("{}", self.show_edges_choices(edges.unwrap()));
             let mut choice = String::new();
 
-            match io::stdin()
-            .read_line(&mut choice) {
-                Ok(_size) => (),
-                Err(why) => return Err(KarmicCatastrophe{message : format!("Your answer does not please the emptiness : {}", why)})
-            }
+            loop {
+                loop {
+                    match io::stdin().read_line(&mut choice) {
+                        Ok(_size) => break,
+                        Err(_why) => println!("An error impeded the transmission of thought. Please type something, as long as it is different.")
+                    }
+                }
+                
+                let true_choice = choice.trim().to_string();
+                if true_choice == "Quit" {
+                    return Ok(());
+                }
 
-            let true_choice = choice.trim().to_string();
-            let maybe_next_node = self.determine_next_node(edges.unwrap(), &true_choice);
-            match maybe_next_node {
-                Some(next_node) => next_square_num = next_node.clone(),
-                None => println!("Your voice resounds loudly, but your desires are unclear.")
+                let maybe_next_node = self.determine_next_node(edges.unwrap(), &true_choice);
+                match maybe_next_node {
+                    Some(next_node) => {next_square_num = next_node.clone(); break;},
+                    None => {choice.clear(); println!("Your voice resounds loudly, but your desires are unclear. Please type something else.");}
+                }
             }
         }
         
