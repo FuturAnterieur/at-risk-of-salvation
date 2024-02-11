@@ -6,7 +6,8 @@ use crate::game_loader;
 use crate::graph;
 use crate::shortest_path;
 use crate::player_status;
-use crate::dice_event_parser::{int_to_digit_text, digit_text_to_int};
+use crate::dice_event_parser::int_to_digit_text;
+use crate::lalrpop::dice::NumParser;
 
 pub struct KarmicCatastrophe
 {
@@ -53,11 +54,16 @@ impl CommandLineInterface {
     }
 
     fn determine_next_node(&self, edges : &Vec::<graph::Edge>, selected_option : &str) -> Option<u32> {
-        let selected_option_value = digit_text_to_int(selected_option);
-        let selected_edge_idx = edges.iter().map(|edge| edge.requirement.enumerate_roll_values()).position(|roll_values| roll_values.contains(&selected_option_value));
-        match selected_edge_idx {
-            Some(idx) => Some(edges[idx].destination.clone()),
-            None => None
+        let selected_option_value = NumParser::new().parse(selected_option);
+        match selected_option_value {
+            Err(why) => None,
+            Ok(val) => {
+                let selected_edge_idx = edges.iter().map(|edge| edge.requirement.enumerate_roll_values()).position(|roll_values| roll_values.contains(&val));
+                match selected_edge_idx {
+                    None => None,
+                    Some(idx) => Some(edges[idx].destination.clone()),
+                }
+            }
         }
     }
 }
@@ -119,7 +125,7 @@ impl Interface for CommandLineInterface {
             let maybe_next_node = self.determine_next_node(edges.unwrap(), &true_choice);
             match maybe_next_node {
                 Some(next_node) => next_square_num = next_node.clone(),
-                None => return Err(KarmicCatastrophe{message : "Your choice lies only in nothingness.".to_string()}),
+                None => println!("Your voice resounds loudly, but your desires are unclear.")
             }
         }
         

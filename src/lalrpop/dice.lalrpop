@@ -1,7 +1,13 @@
 use std::str::FromStr;
-use crate::lalrpop::ast::DiceRollExpr;
+use crate::lalrpop::ast::{DiceRollExpr, SuccessiveDiceRollExpr, AllDiceRollsExpr, SuccessiveRollsOptions};
 
 grammar;
+
+pub AllDiceRollsExpr : Box<AllDiceRollsExpr> = {
+    <a:DiceRollExpr> => Box::new(AllDiceRollsExpr::SingleRoll(a)),
+    <opt:SuccessiveRollsOptions> ":" <b:SuccessiveDiceRollExpr> => Box::new(AllDiceRollsExpr::SuccessiveRolls(opt, b)),
+}
+
 
 pub DiceRollExpr: Box<DiceRollExpr> = {
     <a:DiceRollExpr> "or" <b:Factor> => Box::new(DiceRollExpr::OrExpr(a, b)),
@@ -13,6 +19,17 @@ Factor: Box<DiceRollExpr> = {
     <m:Num> "to" <n:Num> => Box::new(DiceRollExpr::ToExpr(m,n)),
 };
 
+pub SuccessiveDiceRollExpr: Box<SuccessiveDiceRollExpr> = {
+    <a:SuccessiveDiceRollExpr> "+" <b:SuccessiveFactor> => Box::new(SuccessiveDiceRollExpr::AndExpr(a,b)),
+    SuccessiveFactor,
+};
+
+SuccessiveFactor: Box<SuccessiveDiceRollExpr> = {
+    <n:Num> => Box::new(SuccessiveDiceRollExpr::SingleValue(n)),
+    <q:Quantity> "x" <n:Num> => Box::new(SuccessiveDiceRollExpr::MulExpr(q,n)),
+};
+
+
 pub Num: i16 = {
     "One" => 1,
     "Two" => 2,
@@ -22,3 +39,12 @@ pub Num: i16 = {
     "Six" => 6,
     <s:r"[0-9]+"> => i16::from_str(s).unwrap(),
 };
+
+pub Quantity: u32 = {
+    r"[0-9]+" => u32::from_str(<>).unwrap()
+};
+
+pub SuccessiveRollsOptions: SuccessiveRollsOptions = {
+    "one-chance" => SuccessiveRollsOptions::NotCumulative,
+    "accum" => SuccessiveRollsOptions::Cumulative,
+}

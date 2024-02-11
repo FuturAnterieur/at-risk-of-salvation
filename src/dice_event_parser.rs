@@ -1,25 +1,7 @@
 use crate::dice_event::{self, InvalidRequirement, SingleValueRequirement};
 use std::sync::Arc;
-use crate::lalrpop::ast::DiceRollExpr;
+use crate::lalrpop::ast::{AllDiceRollsExpr, DiceRollExpr};
 use crate::lalrpop;
-
-pub fn digit_text_to_int(text : &str) -> i16 {
-    match text {
-        "One" => 1,
-        "1" => 1,
-        "Two" => 2,
-        "2" => 2,
-        "Three" => 3,
-        "3" => 3,
-        "Four" => 4,
-        "4" => 4,
-        "Five" => 5,
-        "5" => 5,
-        "Six" => 6,
-        "6" => 6,
-        _ => -1,
-    }
-}
 
 pub fn int_to_digit_text(value : i16) -> &'static str {
     match value {
@@ -34,27 +16,31 @@ pub fn int_to_digit_text(value : i16) -> &'static str {
 }
 
 pub fn parse_dice_roll_expr_ast(code_str: &str, num_faces : &u8) -> Arc<dyn dice_event::DiceRollRequirement> {
-    let code = lalrpop::dice::DiceRollExprParser::new().parse(&code_str);
+    let code = lalrpop::dice::AllDiceRollsExprParser::new().parse(&code_str);
     if code.is_err() {
         println!("Warning : could not parse the following dice event code : {}", code_str);
         return Arc::new(InvalidRequirement{});
     }
     
     match code.expect("SHOULD NOT HAPPEN").as_ref() {
-        DiceRollExpr::SingleValue(val) => Arc::new(dice_event::SingleValueRequirement{required_value: val.clone(), die_faces: num_faces.clone()}),
-        DiceRollExpr::OrExpr(left, right ) => {
-            let mut left_parse = sub_parse_dice_roll_or_expr(left);
-            let right_parse = sub_parse_dice_roll_or_expr(right);
-            left_parse.extend(right_parse.iter());
-            let mut filtered : Vec<i16> = left_parse.into_iter().filter(|val| val >= &1 && val <= &i16::from(num_faces.clone())).collect();
-            filtered.sort();
-            filtered.dedup();
+        AllDiceRollsExpr::SingleRoll(expr) => 
+            match expr.as_ref() {
+                DiceRollExpr::SingleValue(val) => Arc::new(dice_event::SingleValueRequirement{required_value: val.clone(), die_faces: num_faces.clone()}),
+                DiceRollExpr::OrExpr(left, right ) => {
+                    let mut left_parse = sub_parse_dice_roll_or_expr(left);
+                    let right_parse = sub_parse_dice_roll_or_expr(right);
+                    left_parse.extend(right_parse.iter());
+                    let mut filtered : Vec<i16> = left_parse.into_iter().filter(|val| val >= &1 && val <= &i16::from(num_faces.clone())).collect();
+                    filtered.sort();
+                    filtered.dedup();
 
-            return Arc::new(dice_event::SingleRollMultipleValueRequirement{possible_values: filtered, die_faces : num_faces.clone()})
-        },
-        DiceRollExpr::ToExpr(beg, end) => {
-           return Arc::new(dice_event::SingleRollMultipleValueRequirement{die_faces: num_faces.clone(),
-                            possible_values:(beg.clone()..=end.clone()).collect() });}
+                    return Arc::new(dice_event::SingleRollMultipleValueRequirement{possible_values: filtered, die_faces : num_faces.clone()})
+                },
+                DiceRollExpr::ToExpr(beg, end) => {
+            return Arc::new(dice_event::SingleRollMultipleValueRequirement{die_faces: num_faces.clone(),
+                                possible_values:(beg.clone()..=end.clone()).collect() });}
+            },
+        AllDiceRollsExpr::SuccessiveRolls(options, expr) => Arc::new(InvalidRequirement{})
     }
 }
 

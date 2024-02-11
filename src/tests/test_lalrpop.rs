@@ -1,8 +1,7 @@
-//use lalrpop_util::lalrpop_mod;
 
-//lalrpop_mod!(pub dice);
 
-use crate::lalrpop::dice;
+mod test {
+    use crate::lalrpop::dice;
 use crate::dice_event_parser;
 
 #[test]
@@ -23,4 +22,11 @@ fn dice() {
 
     let rolls4 = dice_event_parser::parse_dice_roll_expr_ast("1 or 3 to 7 or 10 to 12", &20).enumerate_roll_values();
     assert_eq!(rolls4, vec![1,3,4,5,6,7,10,11,12]);
+}
+
+#[test]
+fn dice2() {
+    assert!(dice::SuccessiveDiceRollExprParser::new().parse("3 x Three + 1 + Two + 4 x 4").is_ok());
+    assert!(dice::AllDiceRollsExprParser::new().parse("accum : 3 x Three + 1 + Two + 4 x 4").is_ok());
+}
 }
