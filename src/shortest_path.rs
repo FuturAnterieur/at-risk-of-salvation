@@ -1,7 +1,6 @@
 use crate::graph;
 use crate::min_heap;
 use std::collections::HashMap;
-use std::cmp::Reverse;
 use ordered_float::NotNan;
 
 pub enum EdgeDistanceMetric {

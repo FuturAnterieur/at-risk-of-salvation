@@ -1,4 +1,4 @@
-use crate::dice_event::{self, InvalidRequirement, SingleValueRequirement};
+use crate::dice_event;
 use std::sync::Arc;
 use crate::lalrpop::ast::{AllDiceRollsExpr, DiceRollExpr};
 use crate::lalrpop;
@@ -19,7 +19,7 @@ pub fn parse_dice_roll_expr_ast(code_str: &str, num_faces : &u8) -> Arc<dyn dice
     let code = lalrpop::dice::AllDiceRollsExprParser::new().parse(&code_str);
     if code.is_err() {
         println!("Warning : could not parse the following dice event code : {}", code_str);
-        return Arc::new(InvalidRequirement{});
+        return Arc::new(dice_event::InvalidRequirement{});
     }
     
     match code.expect("SHOULD NOT HAPPEN").as_ref() {
@@ -40,7 +40,7 @@ pub fn parse_dice_roll_expr_ast(code_str: &str, num_faces : &u8) -> Arc<dyn dice
             return Arc::new(dice_event::SingleRollMultipleValueRequirement{die_faces: num_faces.clone(),
                                 possible_values:(beg.clone()..=end.clone()).collect() });}
             },
-        AllDiceRollsExpr::SuccessiveRolls(options, expr) => Arc::new(InvalidRequirement{})
+        AllDiceRollsExpr::SuccessiveRolls(_options, _expr) => Arc::new(dice_event::InvalidRequirement{})
     }
 }
 

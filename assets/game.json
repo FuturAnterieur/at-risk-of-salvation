@@ -71,6 +71,15 @@
             }
         },
         {
+            "number":16,
+            "name":"Rudra Black Freedom",
+            "description":"This is the criminal yogi, who accomplishes the worldy occult powers (siddhi) -- pacifying, prospering, subjugating, and destroying -- from a desire for power. When he died he was hurled into lower states of rebirth for many ages, finally appearing as the fierce non-Buddhist god Rudra. His only escape from himself is conversion by a tantric bodhisattva.",
+            "paths":{
+                "One or Three to Six" : 16,
+                "Two" : 34
+            }
+        },
+        {
             "number" : 17,
             "name" : "Jambu Island - The Southern Continent",
             "description" : "One has the great fortune to be born in a human condition on earth.",
@@ -147,6 +156,20 @@
                 "Five":16,
                 "Six":1
             }
+        },
+        {
+            "number":35,
+            "name":"The Realm of Form (Rūpa-Dhātu)",
+            "description" : "Soaring high over Mount Meru beyond the realm of Sense Desire, these stations of exalted consciousness are the product of \"immovable\" (aniñja) karma, neither good nor bad. In fact, the seventeen levels of this realm correspond to the subtleties of progress in meditation. At the top is a class of beings totally \"thoughtless\" (asamjñi-sattva).\nThey themselves mistake their state for Nirvana, but it is merely a state of trance and without true knowledge of the world; when a thought at last arises due to their previous karma, they fall back to the realm of Sense Desire.",
+            "paths":{
+                "One":37,
+                "Two":52,
+                "Three":36,
+                "Four":30,
+                "Five":17,
+                "Six":27
+            }
+
         },
 
         {

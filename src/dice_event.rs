@@ -41,7 +41,7 @@ impl DiceRollRequirement for InvalidRequirement {
 }
 
 impl FulfillableRequirement for InvalidRequirement {
-    fn fullfill_with(&mut self, single_roll : &i16) -> bool {
+    fn fullfill_with(&mut self, _single_roll : &i16) -> bool {
         false
     }
 }
@@ -53,7 +53,7 @@ pub struct SingleValueRequirement {
 
 impl SingleValueRequirement {
     pub fn new(val : i16) -> Self {
-        SingleValueRequirement{required_value:val, die_faces:6}
+        SingleValueRequirement{required_value:val, die_faces: 6}
     }
 }
 

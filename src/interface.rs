@@ -56,7 +56,7 @@ impl CommandLineInterface {
     fn determine_next_node(&self, edges : &Vec::<graph::Edge>, selected_option : &str) -> Option<u32> {
         let selected_option_value = NumParser::new().parse(selected_option);
         match selected_option_value {
-            Err(why) => None,
+            Err(_why) => None,
             Ok(val) => {
                 let selected_edge_idx = edges.iter().map(|edge| edge.requirement.enumerate_roll_values()).position(|roll_values| roll_values.contains(&val));
                 match selected_edge_idx {
@@ -76,7 +76,7 @@ impl Interface for CommandLineInterface {
 
         let g = graph::Graph::new(&sakya_pandita);
 
-        let ps = player_status::PlayerStatus{name:"Neo".to_string(), 
+        let _ps = player_status::PlayerStatus{name:"Neo".to_string(), 
         rolls_on_current_square : Vec::<i16>::new(),
         remaining_reqs_for_each_edge : Vec::<player_status::RemainingRequirementsForEdge>::new()};
         

@@ -2,7 +2,7 @@
 
 mod test {
     use crate::lalrpop::dice;
-use crate::dice_event_parser;
+    use crate::dice_event_parser;
 
 #[test]
 fn dice() {

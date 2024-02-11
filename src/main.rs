@@ -1,5 +1,4 @@
 mod game_loader;
-mod factorial;
 mod dice_event_parser;
 mod graph;
 mod min_heap;
