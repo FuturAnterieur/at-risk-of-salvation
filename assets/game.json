@@ -1,7 +1,7 @@
 {
     "die_faces":6,
     "starting_square":24,
-    "winning_square":53,
+    "winning_square":9,
     "squares": [
         {
             "number":1,
@@ -11,6 +11,16 @@
                 "accum: 1 + 2 x 2 + 3 x 3 + 4 x 4 + 5 x 5 + 6 x 6" : 9,
                 "waiting":1
             }   
+        },
+        {
+            "number":9,
+            "name":"Lord of the Dead (Yama)",
+            "description": "With great power and cruelty one has become Yama (or his sister Yamī), lord and judge of the dead, or one of his police demons (rākṣasas). Ordinary persons must confront him when they die, gazing into his mirror of karma.\nYama himself has a subjective aspect, and a concealed aspect in that he is inherent in consciousness that is defiled by desire, hatred and ignorance.",
+            "paths":{
+                "One":42,
+                "Two":34,
+                "Three to Six":9
+            }
         },
         {
             "number":11,
@@ -120,6 +130,18 @@
             }
         },
         {
+            "number":26,
+            "name":"Wheel-Turning King (Cakravartin)",
+            "description":"The great monarch of manking unites the entire world under a righteous government. The wheel of authority appears like the sun in the eastern sky of his youth. The dynasty of the wheel-turning king appears just after the golden age of the world, which is harmonious anarchym with no need of government. The Cakravartin has great physical strenght as well as the \"divine eye\" : the vision of past and future lives.",
+            "paths":{
+                "One":29,
+                "Two":28,
+                "Three":17,
+                "Four":20,
+                "Five or Six":13
+            }
+        },
+        {
             "number":27,
             "name": "Heaven of the Four Great Kings",
             "description" : "One is born in the broadly based lower classes of divinity who rule the lower slopes of Mount Meru, the seven chains of mountains around it, and the skies.",
@@ -145,6 +167,33 @@
                 "Six":7
             }
         },
+        {
+            "number":29,
+            "name":"Heaven Without Fighting (Yāma)",
+            "description":"Even larger and more powerful than the gods of the Thirty-three, the Yāma devas are completely beyond the strife of the world and secure in their possession of heaven. The seeds of their past moral conduct, the essence of which is self-control and avoindance of conflict, blossom into the delights of the Realm of Desire.",
+            "paths" :{
+                "One":30,
+                "Two":31,
+                "Three":17,
+                "Four":23,
+                "Five":12,
+                "Six":10
+            }
+        },
+        {
+            "number":30,
+            "name":"The Joyful (Tuṣita) Heaven",
+            "description":"Although only the fourth of six heavens in the realm of sense desire, this is the most promising for one's future, for it is traditionally the penultimate abode of the bodhisattva, the station before his final birth in human form. A newborn Tibetan child has reported that the inhabitants drink nectar (amr̥ta), that the flowers are white and grand, and that the buildings, even the earth, are strewn with jewels.\nFor the ordinary devas of this realm, still bound to sense desires, sexuality is a matter of holding hands.",
+            "paths" : {
+                "One" : 64,
+                "Two" : 63,
+                "Three" : 55,
+                "Four" : 54,
+                "Five" : 53,
+                "Six" : 52
+            }
+        },
+
         {
             "number":33,
             "name":"Tantra, Lesser Path of Accumulation",
@@ -201,7 +250,7 @@
         {
             "number":72,
             "name" : "Wisdom-Holder of the Eight Siddhis",
-            "description" : "One has taken the path of siddhi, magical attainment, as opposed to that of study. Some lamas consider these siddhi as equivalent to the Path of Accumulation. Others insist thatone follow the orthodox tantric path.",
+            "description" : "One has taken the path of siddhi, magical attainment, as opposed to that of study. Some lamas consider these siddhi as equivalent to the Path of Accumulation. Others insist that one follow the orthodox tantric path.",
             "paths":{
                 "One":67,
                 "Two":41,
