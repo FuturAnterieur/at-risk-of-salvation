@@ -4,7 +4,7 @@
     "winning_square":9,
     "squares": [
         {
-            "number":1,
+            "number": 1,
             "name":"Vajra Hell",
             "description":"Crossed double vajras bar your exit from this very special hell. This is the destination of those who abuse the tantric path through distraction or selfishness. This is a hell of the most frightful demonic images, the most fearful hell, for its suffering is paranoia rather than physical pain -- difficult for anyone else to assuage. Fear for oneself makes it almost impossible to see through the images and escape.",
             "paths":{
@@ -13,7 +13,7 @@
             }   
         },
         {
-            "number":9,
+            "number": 9,
             "name":"Lord of the Dead (Yama)",
             "description": "With great power and cruelty one has become Yama (or his sister Yamī), lord and judge of the dead, or one of his police demons (rākṣasas). Ordinary persons must confront him when they die, gazing into his mirror of karma.\nYama himself has a subjective aspect, and a concealed aspect in that he is inherent in consciousness that is defiled by desire, hatred and ignorance.",
             "paths":{
@@ -183,7 +183,7 @@
         {
             "number":30,
             "name":"The Joyful (Tuṣita) Heaven",
-            "description":"Although only the fourth of six heavens in the realm of sense desire, this is the most promising for one's future, for it is traditionally the penultimate abode of the bodhisattva, the station before his final birth in human form. A newborn Tibetan child has reported that the inhabitants drink nectar (amr̥ta), that the flowers are white and grand, and that the buildings, even the earth, are strewn with jewels.\nFor the ordinary devas of this realm, still bound to sense desires, sexuality is a matter of holding hands.",
+            "description":"Although only the fourth of six heavens in the realm of sense desire, this is the most promising for one's future, for it is traditionally the penultimate abode of the bodhisattva, the station before his final birth in human form.",
             "paths" : {
                 "One" : 64,
                 "Two" : 63,
@@ -193,7 +193,32 @@
                 "Six" : 52
             }
         },
-
+        {
+            "number":31,
+            "name":"Delighting in Emanations (Nirmāṇa-rati)",
+            "description":"In this divine mansion, floating high above the summit of Mount Meru, the gods have no need of desirable objects to be present before them, for their very wish becomes reality. So in the process of increasing abstraction represented by the levels of godhead, they are sufficiently detached from the bonds of the material world as to be able to enjoy the emanations of their own minds. The karma giving rise to this state is a sublime moral refinement and intense generosity.",
+            "paths":{
+                "One" : 52,
+                "Two" : 30,
+                "Three" : 43,
+                "Four" : 32,
+                "Five" : 22,
+                "Six" : 12
+            }
+        },
+        {
+            "number":32,
+            "name":"Ruling the Emanations of Others (Paranirmita-Vaśavartin)",
+            "description":"In these ethereal mansions, four levels above the summit of Mont Meru, dwell the supreme deities of the world of sense desires. Their mental powers are such that whatever they may wish for is anticipated by the other classes of gods, who magically emanate it for their pleasure. The king of this relam is Māra. As lord of the Realm of Desire, this powerful creature is extremely jealous of those who might try to escape it. The successful meditator, passing through his distractions, attains the Realm of Form.",
+            "paths":{
+                "One" : 30,
+                "Two" : 35,
+                "Three" : 28,
+                "Four" : 18,
+                "Five" : 10,
+                "Six" : 32
+            }
+        },
         {
             "number":33,
             "name":"Tantra, Lesser Path of Accumulation",
@@ -204,6 +229,17 @@
                 "Three or Four":33,
                 "Five":16,
                 "Six":1
+            }
+        },
+        {
+            "number":34,
+            "name":" Mahākāla",
+            "description":"You have become the \"great black one\", with aggressive and wrathful energies turned to protect the Dharma. He may be Yama, lord of death, in a new role, or the great yogi Rudra-Shiva converted to the true Dharma, his ferocious and passionate powers working now to purify the karma of aggression.",
+            "paths":{
+                "One":61,
+                "Two":81,
+                "Three":70,
+                "Four to Six":34
             }
         },
         {

@@ -1,5 +1,5 @@
 // auto-generated: "lalrpop 0.20.0"
-// sha3: 2aedfa48a685ed27919162fe49ff66f0d60cea9c091b341fc5a658ce89e81794
+// sha3: a90e50b3a86aba281f3abf17f7632ae8348e77e0c4458976f2c463d6b239cd2a
 use std::str::FromStr;
 use crate::lalrpop::ast::{DiceRollExpr, SuccessiveDiceRollExpr, AllDiceRollsExpr, SuccessiveRollsOptions};
 #[allow(unused_extern_crates)]
@@ -35,80 +35,82 @@ mod __parse__AllDiceRollsExpr {
     }
     const __ACTION: &[i8] = &[
         // State 0
-        0, 0, 16, 17, 18, 19, 20, 21, 22, 23, 0, 0, 0, 24,
+        0, 0, 16, 17, 18, 19, 20, 21, 22, 23, 0, 0, 24, 0, 25,
         // State 1
-        0, 0, 16, 17, 18, 19, 20, 21, 0, 0, 0, 0, 0, 27,
+        0, 0, 16, 17, 18, 19, 20, 21, 0, 0, 0, 0, 0, 0, 28,
         // State 2
-        0, 0, 16, 17, 18, 19, 20, 21, 0, 0, 0, 0, 0, 24,
+        0, 0, 16, 17, 18, 19, 20, 21, 0, 0, 0, 0, 0, 0, 25,
         // State 3
-        0, 0, 16, 17, 18, 19, 20, 21, 0, 0, 0, 0, 0, 27,
+        0, 0, 16, 17, 18, 19, 20, 21, 0, 0, 0, 0, 0, 0, 28,
         // State 4
-        0, 0, 16, 17, 18, 19, 20, 21, 0, 0, 0, 0, 0, 27,
+        0, 0, 16, 17, 18, 19, 20, 21, 0, 0, 0, 0, 0, 0, 28,
         // State 5
-        0, 0, 16, 17, 18, 19, 20, 21, 0, 0, 0, 0, 0, 24,
+        0, 0, 16, 17, 18, 19, 20, 21, 0, 0, 0, 0, 0, 0, 25,
         // State 6
-        0, 0, 16, 17, 18, 19, 20, 21, 0, 0, 0, 0, 0, 24,
+        0, 0, 16, 17, 18, 19, 20, 21, 0, 0, 0, 0, 0, 0, 25,
         // State 7
-        0, 0, 16, 17, 18, 19, 20, 21, 0, 0, 0, 0, 0, 27,
+        0, 0, 16, 17, 18, 19, 20, 21, 0, 0, 0, 0, 0, 0, 28,
         // State 8
-        0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+        0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
         // State 9
-        0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 2, 0, 0, 0,
+        0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 2, 0, 0, 0, 0,
         // State 10
-        0, 0, 0, 0, 0, 0, 0, 0, 0, 0, -5, 0, 0, 0,
+        0, 0, 0, 0, 0, 0, 0, 0, 0, 0, -6, 0, 0, 0, 0,
         // State 11
-        3, 0, 0, 0, 0, 0, 0, 0, 0, 0, -6, 4, 0, 0,
+        3, 0, 0, 0, 0, 0, 0, 0, 0, 0, -7, 4, 0, 0, 0,
         // State 12
-        0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 5, 0,
+        0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 5, 0,
         // State 13
-        6, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+        6, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
         // State 14
-        0, 7, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+        0, 7, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
         // State 15
-        -12, 0, 0, 0, 0, 0, 0, 0, 0, 0, -12, -12, 0, 0,
+        -13, 0, 0, 0, 0, 0, 0, 0, 0, 0, -13, -13, 0, 0, 0,
         // State 16
-        -11, 0, 0, 0, 0, 0, 0, 0, 0, 0, -11, -11, 0, 0,
+        -12, 0, 0, 0, 0, 0, 0, 0, 0, 0, -12, -12, 0, 0, 0,
         // State 17
-        -8, 0, 0, 0, 0, 0, 0, 0, 0, 0, -8, -8, 0, 0,
+        -9, 0, 0, 0, 0, 0, 0, 0, 0, 0, -9, -9, 0, 0, 0,
         // State 18
-        -13, 0, 0, 0, 0, 0, 0, 0, 0, 0, -13, -13, 0, 0,
+        -14, 0, 0, 0, 0, 0, 0, 0, 0, 0, -14, -14, 0, 0, 0,
         // State 19
-        -10, 0, 0, 0, 0, 0, 0, 0, 0, 0, -10, -10, 0, 0,
+        -11, 0, 0, 0, 0, 0, 0, 0, 0, 0, -11, -11, 0, 0, 0,
         // State 20
-        -9, 0, 0, 0, 0, 0, 0, 0, 0, 0, -9, -9, 0, 0,
+        -10, 0, 0, 0, 0, 0, 0, 0, 0, 0, -10, -10, 0, 0, 0,
         // State 21
-        0, -22, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+        0, -23, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
         // State 22
-        0, -21, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+        0, -22, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
         // State 23
-        -14, 0, 0, 0, 0, 0, 0, 0, 0, 0, -14, -14, -15, 0,
+        0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
         // State 24
-        0, 0, 0, 0, 0, 0, 0, 0, 0, 0, -4, 0, 0, 0,
+        -15, 0, 0, 0, 0, 0, 0, 0, 0, 0, -15, -15, 0, -16, 0,
         // State 25
-        0, 0, 0, 0, 0, 0, 0, 0, 0, 0, -6, 4, 0, 0,
+        0, 0, 0, 0, 0, 0, 0, 0, 0, 0, -5, 0, 0, 0, 0,
         // State 26
-        -14, 0, 0, 0, 0, 0, 0, 0, 0, 0, -14, -14, 0, 0,
+        0, 0, 0, 0, 0, 0, 0, 0, 0, 0, -7, 4, 0, 0, 0,
         // State 27
-        -19, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+        -15, 0, 0, 0, 0, 0, 0, 0, 0, 0, -15, -15, 0, 0, 0,
         // State 28
-        0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 8, 0,
+        -20, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
         // State 29
-        -17, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+        0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 8, 0,
         // State 30
-        0, 0, 0, 0, 0, 0, 0, 0, 0, 0, -7, 0, 0, 0,
+        -18, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
         // State 31
-        -18, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+        0, 0, 0, 0, 0, 0, 0, 0, 0, 0, -8, 0, 0, 0, 0,
         // State 32
-        -16, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+        -19, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
         // State 33
-        3, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+        -17, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
         // State 34
-        6, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+        3, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
         // State 35
-        -20, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+        6, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+        // State 36
+        -21, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
     ];
     fn __action(state: i8, integer: usize) -> i8 {
-        __ACTION[(state as usize) * 14 + integer]
+        __ACTION[(state as usize) * 15 + integer]
     }
     const __EOF_ACTION: &[i8] = &[
         // State 0
@@ -128,13 +130,13 @@ mod __parse__AllDiceRollsExpr {
         // State 7
         0,
         // State 8
-        -23,
+        -24,
         // State 9
         -1,
         // State 10
-        -5,
-        // State 11
         -6,
+        // State 11
+        -7,
         // State 12
         0,
         // State 13
@@ -142,76 +144,78 @@ mod __parse__AllDiceRollsExpr {
         // State 14
         0,
         // State 15
-        -12,
-        // State 16
-        -11,
-        // State 17
-        -8,
-        // State 18
         -13,
-        // State 19
-        -10,
-        // State 20
+        // State 16
+        -12,
+        // State 17
         -9,
+        // State 18
+        -14,
+        // State 19
+        -11,
+        // State 20
+        -10,
         // State 21
         0,
         // State 22
         0,
         // State 23
-        -14,
-        // State 24
         -4,
+        // State 24
+        -15,
         // State 25
-        -6,
+        -5,
         // State 26
-        -14,
-        // State 27
-        -19,
-        // State 28
-        0,
-        // State 29
-        -17,
-        // State 30
         -7,
-        // State 31
-        -18,
-        // State 32
-        -16,
-        // State 33
-        0,
-        // State 34
-        -2,
-        // State 35
+        // State 27
+        -15,
+        // State 28
         -20,
+        // State 29
+        0,
+        // State 30
+        -18,
+        // State 31
+        -8,
+        // State 32
+        -19,
+        // State 33
+        -17,
+        // State 34
+        0,
+        // State 35
+        -2,
+        // State 36
+        -21,
     ];
     fn __goto(state: i8, nt: usize) -> i8 {
         match nt {
             0 => 8,
             1 => 9,
             2 => match state {
-                1 => 24,
+                1 => 25,
                 _ => 10,
             },
             3 => match state {
                 0 => 11,
-                1 => 25,
-                3 => 30,
-                4 => 31,
-                6 => 33,
-                7 => 35,
-                _ => 27,
+                1 => 26,
+                3 => 31,
+                4 => 32,
+                6 => 34,
+                7 => 36,
+                _ => 28,
             },
             4 => match state {
-                2 | 5 => 28,
+                2 | 5 => 29,
                 _ => 12,
             },
             5 => match state {
-                6 => 34,
+                6 => 35,
                 _ => 13,
             },
             6 => match state {
-                5 => 32,
-                _ => 29,
+                5 => 33,
+                _ => 30,
             },
             7 => 14,
             _ => 0,
@@ -230,6 +234,7 @@ mod __parse__AllDiceRollsExpr {
         r###""one-chance""###,
         r###""or""###,
         r###""to""###,
+        r###""waiting""###,
         r###""x""###,
         r###"r#"[0-9]+"#"###,
     ];
@@ -300,7 +305,7 @@ mod __parse__AllDiceRollsExpr {
 
         #[inline]
         fn error_action(&self, state: i8) -> i8 {
-            __action(state, 14 - 1)
+            __action(state, 15 - 1)
         }
 
         #[inline]
@@ -380,7 +385,8 @@ mod __parse__AllDiceRollsExpr {
             Token(11, _) if true => Some(10),
             Token(12, _) if true => Some(11),
             Token(13, _) if true => Some(12),
-            Token(0, _) if true => Some(13),
+            Token(14, _) if true => Some(13),
+            Token(0, _) if true => Some(14),
             _ => None,
         }
     }
@@ -393,8 +399,8 @@ mod __parse__AllDiceRollsExpr {
     ) -> __Symbol<'input>
     {
         match __token_index {
-            0 | 1 | 2 | 3 | 4 | 5 | 6 | 7 | 8 | 9 | 10 | 11 | 12 | 13 => match __token {
-                Token(1, __tok0) | Token(2, __tok0) | Token(3, __tok0) | Token(4, __tok0) | Token(5, __tok0) | Token(6, __tok0) | Token(7, __tok0) | Token(8, __tok0) | Token(9, __tok0) | Token(10, __tok0) | Token(11, __tok0) | Token(12, __tok0) | Token(13, __tok0) | Token(0, __tok0) if true => __Symbol::Variant0(__tok0),
+            0 | 1 | 2 | 3 | 4 | 5 | 6 | 7 | 8 | 9 | 10 | 11 | 12 | 13 | 14 => match __token {
+                Token(1, __tok0) | Token(2, __tok0) | Token(3, __tok0) | Token(4, __tok0) | Token(5, __tok0) | Token(6, __tok0) | Token(7, __tok0) | Token(8, __tok0) | Token(9, __tok0) | Token(10, __tok0) | Token(11, __tok0) | Token(12, __tok0) | Token(13, __tok0) | Token(14, __tok0) | Token(0, __tok0) if true => __Symbol::Variant0(__tok0),
                 _ => unreachable!(),
             },
             _ => unreachable!(),
@@ -428,32 +434,32 @@ mod __parse__AllDiceRollsExpr {
             }
             3 => {
                 __state_machine::SimulatedReduce::Reduce {
-                    states_to_pop: 3,
-                    nonterminal_produced: 1,
+                    states_to_pop: 1,
+                    nonterminal_produced: 0,
                 }
             }
             4 => {
                 __state_machine::SimulatedReduce::Reduce {
-                    states_to_pop: 1,
+                    states_to_pop: 3,
                     nonterminal_produced: 1,
                 }
             }
             5 => {
                 __state_machine::SimulatedReduce::Reduce {
                     states_to_pop: 1,
-                    nonterminal_produced: 2,
+                    nonterminal_produced: 1,
                 }
             }
             6 => {
                 __state_machine::SimulatedReduce::Reduce {
-                    states_to_pop: 3,
+                    states_to_pop: 1,
                     nonterminal_produced: 2,
                 }
             }
             7 => {
                 __state_machine::SimulatedReduce::Reduce {
-                    states_to_pop: 1,
-                    nonterminal_produced: 3,
+                    states_to_pop: 3,
+                    nonterminal_produced: 2,
                 }
             }
             8 => {
@@ -495,13 +501,13 @@ mod __parse__AllDiceRollsExpr {
             14 => {
                 __state_machine::SimulatedReduce::Reduce {
                     states_to_pop: 1,
-                    nonterminal_produced: 4,
+                    nonterminal_produced: 3,
                 }
             }
             15 => {
                 __state_machine::SimulatedReduce::Reduce {
-                    states_to_pop: 3,
-                    nonterminal_produced: 5,
+                    states_to_pop: 1,
+                    nonterminal_produced: 4,
                 }
             }
             16 => {
@@ -518,20 +524,20 @@ mod __parse__AllDiceRollsExpr {
             }
             18 => {
                 __state_machine::SimulatedReduce::Reduce {
-                    states_to_pop: 1,
-                    nonterminal_produced: 6,
+                    states_to_pop: 3,
+                    nonterminal_produced: 5,
                 }
             }
             19 => {
                 __state_machine::SimulatedReduce::Reduce {
-                    states_to_pop: 3,
+                    states_to_pop: 1,
                     nonterminal_produced: 6,
                 }
             }
             20 => {
                 __state_machine::SimulatedReduce::Reduce {
-                    states_to_pop: 1,
-                    nonterminal_produced: 7,
+                    states_to_pop: 3,
+                    nonterminal_produced: 6,
                 }
             }
             21 => {
@@ -540,32 +546,38 @@ mod __parse__AllDiceRollsExpr {
                     nonterminal_produced: 7,
                 }
             }
-            22 => __state_machine::SimulatedReduce::Accept,
-            23 => {
+            22 => {
+                __state_machine::SimulatedReduce::Reduce {
+                    states_to_pop: 1,
+                    nonterminal_produced: 7,
+                }
+            }
+            23 => __state_machine::SimulatedReduce::Accept,
+            24 => {
                 __state_machine::SimulatedReduce::Reduce {
                     states_to_pop: 1,
                     nonterminal_produced: 9,
                 }
             }
-            24 => {
+            25 => {
                 __state_machine::SimulatedReduce::Reduce {
                     states_to_pop: 1,
                     nonterminal_produced: 10,
                 }
             }
-            25 => {
+            26 => {
                 __state_machine::SimulatedReduce::Reduce {
                     states_to_pop: 1,
                     nonterminal_produced: 11,
                 }
             }
-            26 => {
+            27 => {
                 __state_machine::SimulatedReduce::Reduce {
                     states_to_pop: 1,
                     nonterminal_produced: 12,
                 }
             }
-            27 => {
+            28 => {
                 __state_machine::SimulatedReduce::Reduce {
                     states_to_pop: 1,
                     nonterminal_produced: 13,
@@ -718,15 +730,15 @@ mod __parse__AllDiceRollsExpr {
                 __reduce21(input, __lookahead_start, __symbols, core::marker::PhantomData::<(&())>)
             }
             22 => {
+                __reduce22(input, __lookahead_start, __symbols, core::marker::PhantomData::<(&())>)
+            }
+            23 => {
                 // __AllDiceRollsExpr = AllDiceRollsExpr => ActionFn(0);
                 let __sym0 = __pop_Variant1(__symbols);
                 let __start = __sym0.0;
                 let __end = __sym0.2;
                 let __nt = super::__action0::<>(input, __sym0);
                 return Some(Ok(__nt));
-            }
-            23 => {
-                __reduce23(input, __lookahead_start, __symbols, core::marker::PhantomData::<(&())>)
             }
             24 => {
                 __reduce24(input, __lookahead_start, __symbols, core::marker::PhantomData::<(&())>)
@@ -739,6 +751,9 @@ mod __parse__AllDiceRollsExpr {
             }
             27 => {
                 __reduce27(input, __lookahead_start, __symbols, core::marker::PhantomData::<(&())>)
+            }
+            28 => {
+                __reduce28(input, __lookahead_start, __symbols, core::marker::PhantomData::<(&())>)
             }
             _ => panic!("invalid action code {}", __action)
         };
@@ -893,16 +908,13 @@ mod __parse__AllDiceRollsExpr {
         _: core::marker::PhantomData<(&'input ())>,
     ) -> (usize, usize)
     {
-        // DiceRollExpr = DiceRollExpr, "or", Factor => ActionFn(9);
-        assert!(__symbols.len() >= 3);
-        let __sym2 = __pop_Variant2(__symbols);
-        let __sym1 = __pop_Variant0(__symbols);
-        let __sym0 = __pop_Variant2(__symbols);
+        // AllDiceRollsExpr = "waiting" => ActionFn(9);
+        let __sym0 = __pop_Variant0(__symbols);
         let __start = __sym0.0;
-        let __end = __sym2.2;
-        let __nt = super::__action9::<>(input, __sym0, __sym1, __sym2);
-        __symbols.push((__start, __Symbol::Variant2(__nt), __end));
-        (3, 1)
+        let __end = __sym0.2;
+        let __nt = super::__action9::<>(input, __sym0);
+        __symbols.push((__start, __Symbol::Variant1(__nt), __end));
+        (1, 0)
     }
     pub(crate) fn __reduce4<
         'input,
@@ -913,13 +925,16 @@ mod __parse__AllDiceRollsExpr {
         _: core::marker::PhantomData<(&'input ())>,
     ) -> (usize, usize)
     {
-        // DiceRollExpr = Factor => ActionFn(10);
+        // DiceRollExpr = DiceRollExpr, "or", Factor => ActionFn(10);
+        assert!(__symbols.len() >= 3);
+        let __sym2 = __pop_Variant2(__symbols);
+        let __sym1 = __pop_Variant0(__symbols);
         let __sym0 = __pop_Variant2(__symbols);
         let __start = __sym0.0;
-        let __end = __sym0.2;
-        let __nt = super::__action10::<>(input, __sym0);
+        let __end = __sym2.2;
+        let __nt = super::__action10::<>(input, __sym0, __sym1, __sym2);
         __symbols.push((__start, __Symbol::Variant2(__nt), __end));
-        (1, 1)
+        (3, 1)
     }
     pub(crate) fn __reduce5<
         'input,
@@ -930,13 +945,13 @@ mod __parse__AllDiceRollsExpr {
         _: core::marker::PhantomData<(&'input ())>,
     ) -> (usize, usize)
     {
-        // Factor = Num => ActionFn(11);
-        let __sym0 = __pop_Variant3(__symbols);
+        // DiceRollExpr = Factor => ActionFn(11);
+        let __sym0 = __pop_Variant2(__symbols);
         let __start = __sym0.0;
         let __end = __sym0.2;
         let __nt = super::__action11::<>(input, __sym0);
         __symbols.push((__start, __Symbol::Variant2(__nt), __end));
-        (1, 2)
+        (1, 1)
     }
     pub(crate) fn __reduce6<
         'input,
@@ -947,16 +962,13 @@ mod __parse__AllDiceRollsExpr {
         _: core::marker::PhantomData<(&'input ())>,
     ) -> (usize, usize)
     {
-        // Factor = Num, "to", Num => ActionFn(12);
-        assert!(__symbols.len() >= 3);
-        let __sym2 = __pop_Variant3(__symbols);
-        let __sym1 = __pop_Variant0(__symbols);
+        // Factor = Num => ActionFn(12);
         let __sym0 = __pop_Variant3(__symbols);
         let __start = __sym0.0;
-        let __end = __sym2.2;
-        let __nt = super::__action12::<>(input, __sym0, __sym1, __sym2);
+        let __end = __sym0.2;
+        let __nt = super::__action12::<>(input, __sym0);
         __symbols.push((__start, __Symbol::Variant2(__nt), __end));
-        (3, 2)
+        (1, 2)
     }
     pub(crate) fn __reduce7<
         'input,
@@ -967,13 +979,16 @@ mod __parse__AllDiceRollsExpr {
         _: core::marker::PhantomData<(&'input ())>,
     ) -> (usize, usize)
     {
-        // Num = "One" => ActionFn(18);
-        let __sym0 = __pop_Variant0(__symbols);
+        // Factor = Num, "to", Num => ActionFn(13);
+        assert!(__symbols.len() >= 3);
+        let __sym2 = __pop_Variant3(__symbols);
+        let __sym1 = __pop_Variant0(__symbols);
+        let __sym0 = __pop_Variant3(__symbols);
         let __start = __sym0.0;
-        let __end = __sym0.2;
-        let __nt = super::__action18::<>(input, __sym0);
-        __symbols.push((__start, __Symbol::Variant3(__nt), __end));
-        (1, 3)
+        let __end = __sym2.2;
+        let __nt = super::__action13::<>(input, __sym0, __sym1, __sym2);
+        __symbols.push((__start, __Symbol::Variant2(__nt), __end));
+        (3, 2)
     }
     pub(crate) fn __reduce8<
         'input,
@@ -984,7 +999,7 @@ mod __parse__AllDiceRollsExpr {
         _: core::marker::PhantomData<(&'input ())>,
     ) -> (usize, usize)
     {
-        // Num = "Two" => ActionFn(19);
+        // Num = "One" => ActionFn(19);
         let __sym0 = __pop_Variant0(__symbols);
         let __start = __sym0.0;
         let __end = __sym0.2;
@@ -1001,7 +1016,7 @@ mod __parse__AllDiceRollsExpr {
         _: core::marker::PhantomData<(&'input ())>,
     ) -> (usize, usize)
     {
-        // Num = "Three" => ActionFn(20);
+        // Num = "Two" => ActionFn(20);
         let __sym0 = __pop_Variant0(__symbols);
         let __start = __sym0.0;
         let __end = __sym0.2;
@@ -1018,7 +1033,7 @@ mod __parse__AllDiceRollsExpr {
         _: core::marker::PhantomData<(&'input ())>,
     ) -> (usize, usize)
     {
-        // Num = "Four" => ActionFn(21);
+        // Num = "Three" => ActionFn(21);
         let __sym0 = __pop_Variant0(__symbols);
         let __start = __sym0.0;
         let __end = __sym0.2;
@@ -1035,7 +1050,7 @@ mod __parse__AllDiceRollsExpr {
         _: core::marker::PhantomData<(&'input ())>,
     ) -> (usize, usize)
     {
-        // Num = "Five" => ActionFn(22);
+        // Num = "Four" => ActionFn(22);
         let __sym0 = __pop_Variant0(__symbols);
         let __start = __sym0.0;
         let __end = __sym0.2;
@@ -1052,7 +1067,7 @@ mod __parse__AllDiceRollsExpr {
         _: core::marker::PhantomData<(&'input ())>,
     ) -> (usize, usize)
     {
-        // Num = "Six" => ActionFn(23);
+        // Num = "Five" => ActionFn(23);
         let __sym0 = __pop_Variant0(__symbols);
         let __start = __sym0.0;
         let __end = __sym0.2;
@@ -1069,7 +1084,7 @@ mod __parse__AllDiceRollsExpr {
         _: core::marker::PhantomData<(&'input ())>,
     ) -> (usize, usize)
     {
-        // Num = r#"[0-9]+"# => ActionFn(24);
+        // Num = "Six" => ActionFn(24);
         let __sym0 = __pop_Variant0(__symbols);
         let __start = __sym0.0;
         let __end = __sym0.2;
@@ -1086,13 +1101,13 @@ mod __parse__AllDiceRollsExpr {
         _: core::marker::PhantomData<(&'input ())>,
     ) -> (usize, usize)
     {
-        // Quantity = r#"[0-9]+"# => ActionFn(25);
+        // Num = r#"[0-9]+"# => ActionFn(25);
         let __sym0 = __pop_Variant0(__symbols);
         let __start = __sym0.0;
         let __end = __sym0.2;
         let __nt = super::__action25::<>(input, __sym0);
-        __symbols.push((__start, __Symbol::Variant4(__nt), __end));
-        (1, 4)
+        __symbols.push((__start, __Symbol::Variant3(__nt), __end));
+        (1, 3)
     }
     pub(crate) fn __reduce15<
         'input,
@@ -1103,16 +1118,13 @@ mod __parse__AllDiceRollsExpr {
         _: core::marker::PhantomData<(&'input ())>,
     ) -> (usize, usize)
     {
-        // SuccessiveDiceRollExpr = SuccessiveDiceRollExpr, "+", SuccessiveFactor => ActionFn(13);
-        assert!(__symbols.len() >= 3);
-        let __sym2 = __pop_Variant5(__symbols);
-        let __sym1 = __pop_Variant0(__symbols);
-        let __sym0 = __pop_Variant5(__symbols);
+        // Quantity = r#"[0-9]+"# => ActionFn(26);
+        let __sym0 = __pop_Variant0(__symbols);
         let __start = __sym0.0;
-        let __end = __sym2.2;
-        let __nt = super::__action13::<>(input, __sym0, __sym1, __sym2);
-        __symbols.push((__start, __Symbol::Variant5(__nt), __end));
-        (3, 5)
+        let __end = __sym0.2;
+        let __nt = super::__action26::<>(input, __sym0);
+        __symbols.push((__start, __Symbol::Variant4(__nt), __end));
+        (1, 4)
     }
     pub(crate) fn __reduce16<
         'input,
@@ -1123,11 +1135,11 @@ mod __parse__AllDiceRollsExpr {
         _: core::marker::PhantomData<(&'input ())>,
     ) -> (usize, usize)
     {
-        // SuccessiveDiceRollExpr = Num, "+", SuccessiveFactor => ActionFn(14);
+        // SuccessiveDiceRollExpr = SuccessiveDiceRollExpr, "+", SuccessiveFactor => ActionFn(14);
         assert!(__symbols.len() >= 3);
         let __sym2 = __pop_Variant5(__symbols);
         let __sym1 = __pop_Variant0(__symbols);
-        let __sym0 = __pop_Variant3(__symbols);
+        let __sym0 = __pop_Variant5(__symbols);
         let __start = __sym0.0;
         let __end = __sym2.2;
         let __nt = super::__action14::<>(input, __sym0, __sym1, __sym2);
@@ -1143,11 +1155,11 @@ mod __parse__AllDiceRollsExpr {
         _: core::marker::PhantomData<(&'input ())>,
     ) -> (usize, usize)
     {
-        // SuccessiveDiceRollExpr = Quantity, "x", Num => ActionFn(15);
+        // SuccessiveDiceRollExpr = Num, "+", SuccessiveFactor => ActionFn(15);
         assert!(__symbols.len() >= 3);
-        let __sym2 = __pop_Variant3(__symbols);
+        let __sym2 = __pop_Variant5(__symbols);
         let __sym1 = __pop_Variant0(__symbols);
-        let __sym0 = __pop_Variant4(__symbols);
+        let __sym0 = __pop_Variant3(__symbols);
         let __start = __sym0.0;
         let __end = __sym2.2;
         let __nt = super::__action15::<>(input, __sym0, __sym1, __sym2);
@@ -1163,13 +1175,16 @@ mod __parse__AllDiceRollsExpr {
         _: core::marker::PhantomData<(&'input ())>,
     ) -> (usize, usize)
     {
-        // SuccessiveFactor = Num => ActionFn(16);
-        let __sym0 = __pop_Variant3(__symbols);
+        // SuccessiveDiceRollExpr = Quantity, "x", Num => ActionFn(16);
+        assert!(__symbols.len() >= 3);
+        let __sym2 = __pop_Variant3(__symbols);
+        let __sym1 = __pop_Variant0(__symbols);
+        let __sym0 = __pop_Variant4(__symbols);
         let __start = __sym0.0;
-        let __end = __sym0.2;
-        let __nt = super::__action16::<>(input, __sym0);
+        let __end = __sym2.2;
+        let __nt = super::__action16::<>(input, __sym0, __sym1, __sym2);
         __symbols.push((__start, __Symbol::Variant5(__nt), __end));
-        (1, 6)
+        (3, 5)
     }
     pub(crate) fn __reduce19<
         'input,
@@ -1180,16 +1195,13 @@ mod __parse__AllDiceRollsExpr {
         _: core::marker::PhantomData<(&'input ())>,
     ) -> (usize, usize)
     {
-        // SuccessiveFactor = Quantity, "x", Num => ActionFn(17);
-        assert!(__symbols.len() >= 3);
-        let __sym2 = __pop_Variant3(__symbols);
-        let __sym1 = __pop_Variant0(__symbols);
-        let __sym0 = __pop_Variant4(__symbols);
+        // SuccessiveFactor = Num => ActionFn(17);
+        let __sym0 = __pop_Variant3(__symbols);
         let __start = __sym0.0;
-        let __end = __sym2.2;
-        let __nt = super::__action17::<>(input, __sym0, __sym1, __sym2);
+        let __end = __sym0.2;
+        let __nt = super::__action17::<>(input, __sym0);
         __symbols.push((__start, __Symbol::Variant5(__nt), __end));
-        (3, 6)
+        (1, 6)
     }
     pub(crate) fn __reduce20<
         'input,
@@ -1200,13 +1212,16 @@ mod __parse__AllDiceRollsExpr {
         _: core::marker::PhantomData<(&'input ())>,
     ) -> (usize, usize)
     {
-        // SuccessiveRollsOptions = "one-chance" => ActionFn(26);
-        let __sym0 = __pop_Variant0(__symbols);
+        // SuccessiveFactor = Quantity, "x", Num => ActionFn(18);
+        assert!(__symbols.len() >= 3);
+        let __sym2 = __pop_Variant3(__symbols);
+        let __sym1 = __pop_Variant0(__symbols);
+        let __sym0 = __pop_Variant4(__symbols);
         let __start = __sym0.0;
-        let __end = __sym0.2;
-        let __nt = super::__action26::<>(input, __sym0);
-        __symbols.push((__start, __Symbol::Variant6(__nt), __end));
-        (1, 7)
+        let __end = __sym2.2;
+        let __nt = super::__action18::<>(input, __sym0, __sym1, __sym2);
+        __symbols.push((__start, __Symbol::Variant5(__nt), __end));
+        (3, 6)
     }
     pub(crate) fn __reduce21<
         'input,
@@ -1217,7 +1232,7 @@ mod __parse__AllDiceRollsExpr {
         _: core::marker::PhantomData<(&'input ())>,
     ) -> (usize, usize)
     {
-        // SuccessiveRollsOptions = "accum" => ActionFn(27);
+        // SuccessiveRollsOptions = "one-chance" => ActionFn(27);
         let __sym0 = __pop_Variant0(__symbols);
         let __start = __sym0.0;
         let __end = __sym0.2;
@@ -1225,7 +1240,24 @@ mod __parse__AllDiceRollsExpr {
         __symbols.push((__start, __Symbol::Variant6(__nt), __end));
         (1, 7)
     }
-    pub(crate) fn __reduce23<
+    pub(crate) fn __reduce22<
+        'input,
+    >(
+        input: &'input str,
+        __lookahead_start: Option<&usize>,
+        __symbols: &mut alloc::vec::Vec<(usize,__Symbol<'input>,usize)>,
+        _: core::marker::PhantomData<(&'input ())>,
+    ) -> (usize, usize)
+    {
+        // SuccessiveRollsOptions = "accum" => ActionFn(28);
+        let __sym0 = __pop_Variant0(__symbols);
+        let __start = __sym0.0;
+        let __end = __sym0.2;
+        let __nt = super::__action28::<>(input, __sym0);
+        __symbols.push((__start, __Symbol::Variant6(__nt), __end));
+        (1, 7)
+    }
+    pub(crate) fn __reduce24<
         'input,
     >(
         input: &'input str,
@@ -1242,7 +1274,7 @@ mod __parse__AllDiceRollsExpr {
         __symbols.push((__start, __Symbol::Variant2(__nt), __end));
         (1, 9)
     }
-    pub(crate) fn __reduce24<
+    pub(crate) fn __reduce25<
         'input,
     >(
         input: &'input str,
@@ -1259,7 +1291,7 @@ mod __parse__AllDiceRollsExpr {
         __symbols.push((__start, __Symbol::Variant3(__nt), __end));
         (1, 10)
     }
-    pub(crate) fn __reduce25<
+    pub(crate) fn __reduce26<
         'input,
     >(
         input: &'input str,
@@ -1276,7 +1308,7 @@ mod __parse__AllDiceRollsExpr {
         __symbols.push((__start, __Symbol::Variant4(__nt), __end));
         (1, 11)
     }
-    pub(crate) fn __reduce26<
+    pub(crate) fn __reduce27<
         'input,
     >(
         input: &'input str,
@@ -1293,7 +1325,7 @@ mod __parse__AllDiceRollsExpr {
         __symbols.push((__start, __Symbol::Variant5(__nt), __end));
         (1, 12)
     }
-    pub(crate) fn __reduce27<
+    pub(crate) fn __reduce28<
         'input,
     >(
         input: &'input str,
@@ -1339,38 +1371,38 @@ mod __parse__DiceRollExpr {
     }
     const __ACTION: &[i8] = &[
         // State 0
-        0, 0, 7, 8, 9, 10, 11, 12, 0, 0, 0, 0, 0, 13,
+        0, 0, 7, 8, 9, 10, 11, 12, 0, 0, 0, 0, 0, 0, 13,
         // State 1
-        0, 0, 7, 8, 9, 10, 11, 12, 0, 0, 0, 0, 0, 13,
+        0, 0, 7, 8, 9, 10, 11, 12, 0, 0, 0, 0, 0, 0, 13,
         // State 2
-        0, 0, 7, 8, 9, 10, 11, 12, 0, 0, 0, 0, 0, 13,
+        0, 0, 7, 8, 9, 10, 11, 12, 0, 0, 0, 0, 0, 0, 13,
         // State 3
-        0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 2, 0, 0, 0,
+        0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 2, 0, 0, 0, 0,
         // State 4
-        0, 0, 0, 0, 0, 0, 0, 0, 0, 0, -5, 0, 0, 0,
+        0, 0, 0, 0, 0, 0, 0, 0, 0, 0, -6, 0, 0, 0, 0,
         // State 5
-        0, 0, 0, 0, 0, 0, 0, 0, 0, 0, -6, 3, 0, 0,
+        0, 0, 0, 0, 0, 0, 0, 0, 0, 0, -7, 3, 0, 0, 0,
         // State 6
-        0, 0, 0, 0, 0, 0, 0, 0, 0, 0, -12, -12, 0, 0,
+        0, 0, 0, 0, 0, 0, 0, 0, 0, 0, -13, -13, 0, 0, 0,
         // State 7
-        0, 0, 0, 0, 0, 0, 0, 0, 0, 0, -11, -11, 0, 0,
+        0, 0, 0, 0, 0, 0, 0, 0, 0, 0, -12, -12, 0, 0, 0,
         // State 8
-        0, 0, 0, 0, 0, 0, 0, 0, 0, 0, -8, -8, 0, 0,
+        0, 0, 0, 0, 0, 0, 0, 0, 0, 0, -9, -9, 0, 0, 0,
         // State 9
-        0, 0, 0, 0, 0, 0, 0, 0, 0, 0, -13, -13, 0, 0,
+        0, 0, 0, 0, 0, 0, 0, 0, 0, 0, -14, -14, 0, 0, 0,
         // State 10
-        0, 0, 0, 0, 0, 0, 0, 0, 0, 0, -10, -10, 0, 0,
+        0, 0, 0, 0, 0, 0, 0, 0, 0, 0, -11, -11, 0, 0, 0,
         // State 11
-        0, 0, 0, 0, 0, 0, 0, 0, 0, 0, -9, -9, 0, 0,
+        0, 0, 0, 0, 0, 0, 0, 0, 0, 0, -10, -10, 0, 0, 0,
         // State 12
-        0, 0, 0, 0, 0, 0, 0, 0, 0, 0, -14, -14, 0, 0,
+        0, 0, 0, 0, 0, 0, 0, 0, 0, 0, -15, -15, 0, 0, 0,
         // State 13
-        0, 0, 0, 0, 0, 0, 0, 0, 0, 0, -4, 0, 0, 0,
+        0, 0, 0, 0, 0, 0, 0, 0, 0, 0, -5, 0, 0, 0, 0,
         // State 14
-        0, 0, 0, 0, 0, 0, 0, 0, 0, 0, -7, 0, 0, 0,
+        0, 0, 0, 0, 0, 0, 0, 0, 0, 0, -8, 0, 0, 0, 0,
     ];
     fn __action(state: i8, integer: usize) -> i8 {
-        __ACTION[(state as usize) * 14 + integer]
+        __ACTION[(state as usize) * 15 + integer]
     }
     const __EOF_ACTION: &[i8] = &[
         // State 0
@@ -1380,29 +1412,29 @@ mod __parse__DiceRollExpr {
         // State 2
         0,
         // State 3
-        -24,
+        -25,
         // State 4
-        -5,
-        // State 5
         -6,
-        // State 6
-        -12,
-        // State 7
-        -11,
-        // State 8
-        -8,
-        // State 9
-        -13,
-        // State 10
-        -10,
-        // State 11
-        -9,
-        // State 12
-        -14,
-        // State 13
-        -4,
-        // State 14
+        // State 5
         -7,
+        // State 6
+        -13,
+        // State 7
+        -12,
+        // State 8
+        -9,
+        // State 9
+        -14,
+        // State 10
+        -11,
+        // State 11
+        -10,
+        // State 12
+        -15,
+        // State 13
+        -5,
+        // State 14
+        -8,
     ];
     fn __goto(state: i8, nt: usize) -> i8 {
         match nt {
@@ -1431,6 +1463,7 @@ mod __parse__DiceRollExpr {
         r###""one-chance""###,
         r###""or""###,
         r###""to""###,
+        r###""waiting""###,
         r###""x""###,
         r###"r#"[0-9]+"#"###,
     ];
@@ -1501,7 +1534,7 @@ mod __parse__DiceRollExpr {
 
         #[inline]
         fn error_action(&self, state: i8) -> i8 {
-            __action(state, 14 - 1)
+            __action(state, 15 - 1)
         }
 
         #[inline]
@@ -1581,7 +1614,8 @@ mod __parse__DiceRollExpr {
             Token(11, _) if true => Some(10),
             Token(12, _) if true => Some(11),
             Token(13, _) if true => Some(12),
-            Token(0, _) if true => Some(13),
+            Token(14, _) if true => Some(13),
+            Token(0, _) if true => Some(14),
             _ => None,
         }
     }
@@ -1594,8 +1628,8 @@ mod __parse__DiceRollExpr {
     ) -> __Symbol<'input>
     {
         match __token_index {
-            0 | 1 | 2 | 3 | 4 | 5 | 6 | 7 | 8 | 9 | 10 | 11 | 12 | 13 => match __token {
-                Token(1, __tok0) | Token(2, __tok0) | Token(3, __tok0) | Token(4, __tok0) | Token(5, __tok0) | Token(6, __tok0) | Token(7, __tok0) | Token(8, __tok0) | Token(9, __tok0) | Token(10, __tok0) | Token(11, __tok0) | Token(12, __tok0) | Token(13, __tok0) | Token(0, __tok0) if true => __Symbol::Variant0(__tok0),
+            0 | 1 | 2 | 3 | 4 | 5 | 6 | 7 | 8 | 9 | 10 | 11 | 12 | 13 | 14 => match __token {
+                Token(1, __tok0) | Token(2, __tok0) | Token(3, __tok0) | Token(4, __tok0) | Token(5, __tok0) | Token(6, __tok0) | Token(7, __tok0) | Token(8, __tok0) | Token(9, __tok0) | Token(10, __tok0) | Token(11, __tok0) | Token(12, __tok0) | Token(13, __tok0) | Token(14, __tok0) | Token(0, __tok0) if true => __Symbol::Variant0(__tok0),
                 _ => unreachable!(),
             },
             _ => unreachable!(),
@@ -1629,32 +1663,32 @@ mod __parse__DiceRollExpr {
             }
             3 => {
                 __state_machine::SimulatedReduce::Reduce {
-                    states_to_pop: 3,
-                    nonterminal_produced: 1,
+                    states_to_pop: 1,
+                    nonterminal_produced: 0,
                 }
             }
             4 => {
                 __state_machine::SimulatedReduce::Reduce {
-                    states_to_pop: 1,
+                    states_to_pop: 3,
                     nonterminal_produced: 1,
                 }
             }
             5 => {
                 __state_machine::SimulatedReduce::Reduce {
                     states_to_pop: 1,
-                    nonterminal_produced: 2,
+                    nonterminal_produced: 1,
                 }
             }
             6 => {
                 __state_machine::SimulatedReduce::Reduce {
-                    states_to_pop: 3,
+                    states_to_pop: 1,
                     nonterminal_produced: 2,
                 }
             }
             7 => {
                 __state_machine::SimulatedReduce::Reduce {
-                    states_to_pop: 1,
-                    nonterminal_produced: 3,
+                    states_to_pop: 3,
+                    nonterminal_produced: 2,
                 }
             }
             8 => {
@@ -1696,13 +1730,13 @@ mod __parse__DiceRollExpr {
             14 => {
                 __state_machine::SimulatedReduce::Reduce {
                     states_to_pop: 1,
-                    nonterminal_produced: 4,
+                    nonterminal_produced: 3,
                 }
             }
             15 => {
                 __state_machine::SimulatedReduce::Reduce {
-                    states_to_pop: 3,
-                    nonterminal_produced: 5,
+                    states_to_pop: 1,
+                    nonterminal_produced: 4,
                 }
             }
             16 => {
@@ -1719,20 +1753,20 @@ mod __parse__DiceRollExpr {
             }
             18 => {
                 __state_machine::SimulatedReduce::Reduce {
-                    states_to_pop: 1,
-                    nonterminal_produced: 6,
+                    states_to_pop: 3,
+                    nonterminal_produced: 5,
                 }
             }
             19 => {
                 __state_machine::SimulatedReduce::Reduce {
-                    states_to_pop: 3,
+                    states_to_pop: 1,
                     nonterminal_produced: 6,
                 }
             }
             20 => {
                 __state_machine::SimulatedReduce::Reduce {
-                    states_to_pop: 1,
-                    nonterminal_produced: 7,
+                    states_to_pop: 3,
+                    nonterminal_produced: 6,
                 }
             }
             21 => {
@@ -1744,29 +1778,35 @@ mod __parse__DiceRollExpr {
             22 => {
                 __state_machine::SimulatedReduce::Reduce {
                     states_to_pop: 1,
+                    nonterminal_produced: 7,
+                }
+            }
+            23 => {
+                __state_machine::SimulatedReduce::Reduce {
+                    states_to_pop: 1,
                     nonterminal_produced: 8,
                 }
             }
-            23 => __state_machine::SimulatedReduce::Accept,
-            24 => {
+            24 => __state_machine::SimulatedReduce::Accept,
+            25 => {
                 __state_machine::SimulatedReduce::Reduce {
                     states_to_pop: 1,
                     nonterminal_produced: 10,
                 }
             }
-            25 => {
+            26 => {
                 __state_machine::SimulatedReduce::Reduce {
                     states_to_pop: 1,
                     nonterminal_produced: 11,
                 }
             }
-            26 => {
+            27 => {
                 __state_machine::SimulatedReduce::Reduce {
                     states_to_pop: 1,
                     nonterminal_produced: 12,
                 }
             }
-            27 => {
+            28 => {
                 __state_machine::SimulatedReduce::Reduce {
                     states_to_pop: 1,
                     nonterminal_produced: 13,
@@ -1922,15 +1962,15 @@ mod __parse__DiceRollExpr {
                 __reduce22(input, __lookahead_start, __symbols, core::marker::PhantomData::<(&())>)
             }
             23 => {
+                __reduce23(input, __lookahead_start, __symbols, core::marker::PhantomData::<(&())>)
+            }
+            24 => {
                 // __DiceRollExpr = DiceRollExpr => ActionFn(1);
                 let __sym0 = __pop_Variant2(__symbols);
                 let __start = __sym0.0;
                 let __end = __sym0.2;
                 let __nt = super::__action1::<>(input, __sym0);
                 return Some(Ok(__nt));
-            }
-            24 => {
-                __reduce24(input, __lookahead_start, __symbols, core::marker::PhantomData::<(&())>)
             }
             25 => {
                 __reduce25(input, __lookahead_start, __symbols, core::marker::PhantomData::<(&())>)
@@ -1940,6 +1980,9 @@ mod __parse__DiceRollExpr {
             }
             27 => {
                 __reduce27(input, __lookahead_start, __symbols, core::marker::PhantomData::<(&())>)
+            }
+            28 => {
+                __reduce28(input, __lookahead_start, __symbols, core::marker::PhantomData::<(&())>)
             }
             _ => panic!("invalid action code {}", __action)
         };
@@ -2094,16 +2137,13 @@ mod __parse__DiceRollExpr {
         _: core::marker::PhantomData<(&'input ())>,
     ) -> (usize, usize)
     {
-        // DiceRollExpr = DiceRollExpr, "or", Factor => ActionFn(9);
-        assert!(__symbols.len() >= 3);
-        let __sym2 = __pop_Variant2(__symbols);
-        let __sym1 = __pop_Variant0(__symbols);
-        let __sym0 = __pop_Variant2(__symbols);
+        // AllDiceRollsExpr = "waiting" => ActionFn(9);
+        let __sym0 = __pop_Variant0(__symbols);
         let __start = __sym0.0;
-        let __end = __sym2.2;
-        let __nt = super::__action9::<>(input, __sym0, __sym1, __sym2);
-        __symbols.push((__start, __Symbol::Variant2(__nt), __end));
-        (3, 1)
+        let __end = __sym0.2;
+        let __nt = super::__action9::<>(input, __sym0);
+        __symbols.push((__start, __Symbol::Variant1(__nt), __end));
+        (1, 0)
     }
     pub(crate) fn __reduce4<
         'input,
@@ -2114,13 +2154,16 @@ mod __parse__DiceRollExpr {
         _: core::marker::PhantomData<(&'input ())>,
     ) -> (usize, usize)
     {
-        // DiceRollExpr = Factor => ActionFn(10);
+        // DiceRollExpr = DiceRollExpr, "or", Factor => ActionFn(10);
+        assert!(__symbols.len() >= 3);
+        let __sym2 = __pop_Variant2(__symbols);
+        let __sym1 = __pop_Variant0(__symbols);
         let __sym0 = __pop_Variant2(__symbols);
         let __start = __sym0.0;
-        let __end = __sym0.2;
-        let __nt = super::__action10::<>(input, __sym0);
+        let __end = __sym2.2;
+        let __nt = super::__action10::<>(input, __sym0, __sym1, __sym2);
         __symbols.push((__start, __Symbol::Variant2(__nt), __end));
-        (1, 1)
+        (3, 1)
     }
     pub(crate) fn __reduce5<
         'input,
@@ -2131,13 +2174,13 @@ mod __parse__DiceRollExpr {
         _: core::marker::PhantomData<(&'input ())>,
     ) -> (usize, usize)
     {
-        // Factor = Num => ActionFn(11);
-        let __sym0 = __pop_Variant3(__symbols);
+        // DiceRollExpr = Factor => ActionFn(11);
+        let __sym0 = __pop_Variant2(__symbols);
         let __start = __sym0.0;
         let __end = __sym0.2;
         let __nt = super::__action11::<>(input, __sym0);
         __symbols.push((__start, __Symbol::Variant2(__nt), __end));
-        (1, 2)
+        (1, 1)
     }
     pub(crate) fn __reduce6<
         'input,
@@ -2148,16 +2191,13 @@ mod __parse__DiceRollExpr {
         _: core::marker::PhantomData<(&'input ())>,
     ) -> (usize, usize)
     {
-        // Factor = Num, "to", Num => ActionFn(12);
-        assert!(__symbols.len() >= 3);
-        let __sym2 = __pop_Variant3(__symbols);
-        let __sym1 = __pop_Variant0(__symbols);
+        // Factor = Num => ActionFn(12);
         let __sym0 = __pop_Variant3(__symbols);
         let __start = __sym0.0;
-        let __end = __sym2.2;
-        let __nt = super::__action12::<>(input, __sym0, __sym1, __sym2);
+        let __end = __sym0.2;
+        let __nt = super::__action12::<>(input, __sym0);
         __symbols.push((__start, __Symbol::Variant2(__nt), __end));
-        (3, 2)
+        (1, 2)
     }
     pub(crate) fn __reduce7<
         'input,
@@ -2168,13 +2208,16 @@ mod __parse__DiceRollExpr {
         _: core::marker::PhantomData<(&'input ())>,
     ) -> (usize, usize)
     {
-        // Num = "One" => ActionFn(18);
-        let __sym0 = __pop_Variant0(__symbols);
+        // Factor = Num, "to", Num => ActionFn(13);
+        assert!(__symbols.len() >= 3);
+        let __sym2 = __pop_Variant3(__symbols);
+        let __sym1 = __pop_Variant0(__symbols);
+        let __sym0 = __pop_Variant3(__symbols);
         let __start = __sym0.0;
-        let __end = __sym0.2;
-        let __nt = super::__action18::<>(input, __sym0);
-        __symbols.push((__start, __Symbol::Variant3(__nt), __end));
-        (1, 3)
+        let __end = __sym2.2;
+        let __nt = super::__action13::<>(input, __sym0, __sym1, __sym2);
+        __symbols.push((__start, __Symbol::Variant2(__nt), __end));
+        (3, 2)
     }
     pub(crate) fn __reduce8<
         'input,
@@ -2185,7 +2228,7 @@ mod __parse__DiceRollExpr {
         _: core::marker::PhantomData<(&'input ())>,
     ) -> (usize, usize)
     {
-        // Num = "Two" => ActionFn(19);
+        // Num = "One" => ActionFn(19);
         let __sym0 = __pop_Variant0(__symbols);
         let __start = __sym0.0;
         let __end = __sym0.2;
@@ -2202,7 +2245,7 @@ mod __parse__DiceRollExpr {
         _: core::marker::PhantomData<(&'input ())>,
     ) -> (usize, usize)
     {
-        // Num = "Three" => ActionFn(20);
+        // Num = "Two" => ActionFn(20);
         let __sym0 = __pop_Variant0(__symbols);
         let __start = __sym0.0;
         let __end = __sym0.2;
@@ -2219,7 +2262,7 @@ mod __parse__DiceRollExpr {
         _: core::marker::PhantomData<(&'input ())>,
     ) -> (usize, usize)
     {
-        // Num = "Four" => ActionFn(21);
+        // Num = "Three" => ActionFn(21);
         let __sym0 = __pop_Variant0(__symbols);
         let __start = __sym0.0;
         let __end = __sym0.2;
@@ -2236,7 +2279,7 @@ mod __parse__DiceRollExpr {
         _: core::marker::PhantomData<(&'input ())>,
     ) -> (usize, usize)
     {
-        // Num = "Five" => ActionFn(22);
+        // Num = "Four" => ActionFn(22);
         let __sym0 = __pop_Variant0(__symbols);
         let __start = __sym0.0;
         let __end = __sym0.2;
@@ -2253,7 +2296,7 @@ mod __parse__DiceRollExpr {
         _: core::marker::PhantomData<(&'input ())>,
     ) -> (usize, usize)
     {
-        // Num = "Six" => ActionFn(23);
+        // Num = "Five" => ActionFn(23);
         let __sym0 = __pop_Variant0(__symbols);
         let __start = __sym0.0;
         let __end = __sym0.2;
@@ -2270,7 +2313,7 @@ mod __parse__DiceRollExpr {
         _: core::marker::PhantomData<(&'input ())>,
     ) -> (usize, usize)
     {
-        // Num = r#"[0-9]+"# => ActionFn(24);
+        // Num = "Six" => ActionFn(24);
         let __sym0 = __pop_Variant0(__symbols);
         let __start = __sym0.0;
         let __end = __sym0.2;
@@ -2287,13 +2330,13 @@ mod __parse__DiceRollExpr {
         _: core::marker::PhantomData<(&'input ())>,
     ) -> (usize, usize)
     {
-        // Quantity = r#"[0-9]+"# => ActionFn(25);
+        // Num = r#"[0-9]+"# => ActionFn(25);
         let __sym0 = __pop_Variant0(__symbols);
         let __start = __sym0.0;
         let __end = __sym0.2;
         let __nt = super::__action25::<>(input, __sym0);
-        __symbols.push((__start, __Symbol::Variant4(__nt), __end));
-        (1, 4)
+        __symbols.push((__start, __Symbol::Variant3(__nt), __end));
+        (1, 3)
     }
     pub(crate) fn __reduce15<
         'input,
@@ -2304,16 +2347,13 @@ mod __parse__DiceRollExpr {
         _: core::marker::PhantomData<(&'input ())>,
     ) -> (usize, usize)
     {
-        // SuccessiveDiceRollExpr = SuccessiveDiceRollExpr, "+", SuccessiveFactor => ActionFn(13);
-        assert!(__symbols.len() >= 3);
-        let __sym2 = __pop_Variant5(__symbols);
-        let __sym1 = __pop_Variant0(__symbols);
-        let __sym0 = __pop_Variant5(__symbols);
+        // Quantity = r#"[0-9]+"# => ActionFn(26);
+        let __sym0 = __pop_Variant0(__symbols);
         let __start = __sym0.0;
-        let __end = __sym2.2;
-        let __nt = super::__action13::<>(input, __sym0, __sym1, __sym2);
-        __symbols.push((__start, __Symbol::Variant5(__nt), __end));
-        (3, 5)
+        let __end = __sym0.2;
+        let __nt = super::__action26::<>(input, __sym0);
+        __symbols.push((__start, __Symbol::Variant4(__nt), __end));
+        (1, 4)
     }
     pub(crate) fn __reduce16<
         'input,
@@ -2324,11 +2364,11 @@ mod __parse__DiceRollExpr {
         _: core::marker::PhantomData<(&'input ())>,
     ) -> (usize, usize)
     {
-        // SuccessiveDiceRollExpr = Num, "+", SuccessiveFactor => ActionFn(14);
+        // SuccessiveDiceRollExpr = SuccessiveDiceRollExpr, "+", SuccessiveFactor => ActionFn(14);
         assert!(__symbols.len() >= 3);
         let __sym2 = __pop_Variant5(__symbols);
         let __sym1 = __pop_Variant0(__symbols);
-        let __sym0 = __pop_Variant3(__symbols);
+        let __sym0 = __pop_Variant5(__symbols);
         let __start = __sym0.0;
         let __end = __sym2.2;
         let __nt = super::__action14::<>(input, __sym0, __sym1, __sym2);
@@ -2344,11 +2384,11 @@ mod __parse__DiceRollExpr {
         _: core::marker::PhantomData<(&'input ())>,
     ) -> (usize, usize)
     {
-        // SuccessiveDiceRollExpr = Quantity, "x", Num => ActionFn(15);
+        // SuccessiveDiceRollExpr = Num, "+", SuccessiveFactor => ActionFn(15);
         assert!(__symbols.len() >= 3);
-        let __sym2 = __pop_Variant3(__symbols);
+        let __sym2 = __pop_Variant5(__symbols);
         let __sym1 = __pop_Variant0(__symbols);
-        let __sym0 = __pop_Variant4(__symbols);
+        let __sym0 = __pop_Variant3(__symbols);
         let __start = __sym0.0;
         let __end = __sym2.2;
         let __nt = super::__action15::<>(input, __sym0, __sym1, __sym2);
@@ -2364,13 +2404,16 @@ mod __parse__DiceRollExpr {
         _: core::marker::PhantomData<(&'input ())>,
     ) -> (usize, usize)
     {
-        // SuccessiveFactor = Num => ActionFn(16);
-        let __sym0 = __pop_Variant3(__symbols);
+        // SuccessiveDiceRollExpr = Quantity, "x", Num => ActionFn(16);
+        assert!(__symbols.len() >= 3);
+        let __sym2 = __pop_Variant3(__symbols);
+        let __sym1 = __pop_Variant0(__symbols);
+        let __sym0 = __pop_Variant4(__symbols);
         let __start = __sym0.0;
-        let __end = __sym0.2;
-        let __nt = super::__action16::<>(input, __sym0);
+        let __end = __sym2.2;
+        let __nt = super::__action16::<>(input, __sym0, __sym1, __sym2);
         __symbols.push((__start, __Symbol::Variant5(__nt), __end));
-        (1, 6)
+        (3, 5)
     }
     pub(crate) fn __reduce19<
         'input,
@@ -2381,16 +2424,13 @@ mod __parse__DiceRollExpr {
         _: core::marker::PhantomData<(&'input ())>,
     ) -> (usize, usize)
     {
-        // SuccessiveFactor = Quantity, "x", Num => ActionFn(17);
-        assert!(__symbols.len() >= 3);
-        let __sym2 = __pop_Variant3(__symbols);
-        let __sym1 = __pop_Variant0(__symbols);
-        let __sym0 = __pop_Variant4(__symbols);
+        // SuccessiveFactor = Num => ActionFn(17);
+        let __sym0 = __pop_Variant3(__symbols);
         let __start = __sym0.0;
-        let __end = __sym2.2;
-        let __nt = super::__action17::<>(input, __sym0, __sym1, __sym2);
+        let __end = __sym0.2;
+        let __nt = super::__action17::<>(input, __sym0);
         __symbols.push((__start, __Symbol::Variant5(__nt), __end));
-        (3, 6)
+        (1, 6)
     }
     pub(crate) fn __reduce20<
         'input,
@@ -2401,13 +2441,16 @@ mod __parse__DiceRollExpr {
         _: core::marker::PhantomData<(&'input ())>,
     ) -> (usize, usize)
     {
-        // SuccessiveRollsOptions = "one-chance" => ActionFn(26);
-        let __sym0 = __pop_Variant0(__symbols);
+        // SuccessiveFactor = Quantity, "x", Num => ActionFn(18);
+        assert!(__symbols.len() >= 3);
+        let __sym2 = __pop_Variant3(__symbols);
+        let __sym1 = __pop_Variant0(__symbols);
+        let __sym0 = __pop_Variant4(__symbols);
         let __start = __sym0.0;
-        let __end = __sym0.2;
-        let __nt = super::__action26::<>(input, __sym0);
-        __symbols.push((__start, __Symbol::Variant6(__nt), __end));
-        (1, 7)
+        let __end = __sym2.2;
+        let __nt = super::__action18::<>(input, __sym0, __sym1, __sym2);
+        __symbols.push((__start, __Symbol::Variant5(__nt), __end));
+        (3, 6)
     }
     pub(crate) fn __reduce21<
         'input,
@@ -2418,7 +2461,7 @@ mod __parse__DiceRollExpr {
         _: core::marker::PhantomData<(&'input ())>,
     ) -> (usize, usize)
     {
-        // SuccessiveRollsOptions = "accum" => ActionFn(27);
+        // SuccessiveRollsOptions = "one-chance" => ActionFn(27);
         let __sym0 = __pop_Variant0(__symbols);
         let __start = __sym0.0;
         let __end = __sym0.2;
@@ -2435,6 +2478,23 @@ mod __parse__DiceRollExpr {
         _: core::marker::PhantomData<(&'input ())>,
     ) -> (usize, usize)
     {
+        // SuccessiveRollsOptions = "accum" => ActionFn(28);
+        let __sym0 = __pop_Variant0(__symbols);
+        let __start = __sym0.0;
+        let __end = __sym0.2;
+        let __nt = super::__action28::<>(input, __sym0);
+        __symbols.push((__start, __Symbol::Variant6(__nt), __end));
+        (1, 7)
+    }
+    pub(crate) fn __reduce23<
+        'input,
+    >(
+        input: &'input str,
+        __lookahead_start: Option<&usize>,
+        __symbols: &mut alloc::vec::Vec<(usize,__Symbol<'input>,usize)>,
+        _: core::marker::PhantomData<(&'input ())>,
+    ) -> (usize, usize)
+    {
         // __AllDiceRollsExpr = AllDiceRollsExpr => ActionFn(0);
         let __sym0 = __pop_Variant1(__symbols);
         let __start = __sym0.0;
@@ -2443,7 +2503,7 @@ mod __parse__DiceRollExpr {
         __symbols.push((__start, __Symbol::Variant1(__nt), __end));
         (1, 8)
     }
-    pub(crate) fn __reduce24<
+    pub(crate) fn __reduce25<
         'input,
     >(
         input: &'input str,
@@ -2460,7 +2520,7 @@ mod __parse__DiceRollExpr {
         __symbols.push((__start, __Symbol::Variant3(__nt), __end));
         (1, 10)
     }
-    pub(crate) fn __reduce25<
+    pub(crate) fn __reduce26<
         'input,
     >(
         input: &'input str,
@@ -2477,7 +2537,7 @@ mod __parse__DiceRollExpr {
         __symbols.push((__start, __Symbol::Variant4(__nt), __end));
         (1, 11)
     }
-    pub(crate) fn __reduce26<
+    pub(crate) fn __reduce27<
         'input,
     >(
         input: &'input str,
@@ -2494,7 +2554,7 @@ mod __parse__DiceRollExpr {
         __symbols.push((__start, __Symbol::Variant5(__nt), __end));
         (1, 12)
     }
-    pub(crate) fn __reduce27<
+    pub(crate) fn __reduce28<
         'input,
     >(
         input: &'input str,
@@ -2540,46 +2600,46 @@ mod __parse__Num {
     }
     const __ACTION: &[i8] = &[
         // State 0
-        0, 0, 3, 4, 5, 6, 7, 8, 0, 0, 0, 0, 0, 9,
+        0, 0, 3, 4, 5, 6, 7, 8, 0, 0, 0, 0, 0, 0, 9,
         // State 1
-        0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+        0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
         // State 2
-        0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+        0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
         // State 3
-        0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+        0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
         // State 4
-        0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+        0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
         // State 5
-        0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+        0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
         // State 6
-        0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+        0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
         // State 7
-        0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+        0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
         // State 8
-        0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+        0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
     ];
     fn __action(state: i8, integer: usize) -> i8 {
-        __ACTION[(state as usize) * 14 + integer]
+        __ACTION[(state as usize) * 15 + integer]
     }
     const __EOF_ACTION: &[i8] = &[
         // State 0
         0,
         // State 1
-        -25,
+        -26,
         // State 2
-        -12,
-        // State 3
-        -11,
-        // State 4
-        -8,
-        // State 5
         -13,
-        // State 6
-        -10,
-        // State 7
+        // State 3
+        -12,
+        // State 4
         -9,
-        // State 8
+        // State 5
         -14,
+        // State 6
+        -11,
+        // State 7
+        -10,
+        // State 8
+        -15,
     ];
     fn __goto(state: i8, nt: usize) -> i8 {
         match nt {
@@ -2600,6 +2660,7 @@ mod __parse__Num {
         r###""one-chance""###,
         r###""or""###,
         r###""to""###,
+        r###""waiting""###,
         r###""x""###,
         r###"r#"[0-9]+"#"###,
     ];
@@ -2670,7 +2731,7 @@ mod __parse__Num {
 
         #[inline]
         fn error_action(&self, state: i8) -> i8 {
-            __action(state, 14 - 1)
+            __action(state, 15 - 1)
         }
 
         #[inline]
@@ -2750,7 +2811,8 @@ mod __parse__Num {
             Token(11, _) if true => Some(10),
             Token(12, _) if true => Some(11),
             Token(13, _) if true => Some(12),
-            Token(0, _) if true => Some(13),
+            Token(14, _) if true => Some(13),
+            Token(0, _) if true => Some(14),
             _ => None,
         }
     }
@@ -2763,8 +2825,8 @@ mod __parse__Num {
     ) -> __Symbol<'input>
     {
         match __token_index {
-            0 | 1 | 2 | 3 | 4 | 5 | 6 | 7 | 8 | 9 | 10 | 11 | 12 | 13 => match __token {
-                Token(1, __tok0) | Token(2, __tok0) | Token(3, __tok0) | Token(4, __tok0) | Token(5, __tok0) | Token(6, __tok0) | Token(7, __tok0) | Token(8, __tok0) | Token(9, __tok0) | Token(10, __tok0) | Token(11, __tok0) | Token(12, __tok0) | Token(13, __tok0) | Token(0, __tok0) if true => __Symbol::Variant0(__tok0),
+            0 | 1 | 2 | 3 | 4 | 5 | 6 | 7 | 8 | 9 | 10 | 11 | 12 | 13 | 14 => match __token {
+                Token(1, __tok0) | Token(2, __tok0) | Token(3, __tok0) | Token(4, __tok0) | Token(5, __tok0) | Token(6, __tok0) | Token(7, __tok0) | Token(8, __tok0) | Token(9, __tok0) | Token(10, __tok0) | Token(11, __tok0) | Token(12, __tok0) | Token(13, __tok0) | Token(14, __tok0) | Token(0, __tok0) if true => __Symbol::Variant0(__tok0),
                 _ => unreachable!(),
             },
             _ => unreachable!(),
@@ -2798,32 +2860,32 @@ mod __parse__Num {
             }
             3 => {
                 __state_machine::SimulatedReduce::Reduce {
-                    states_to_pop: 3,
-                    nonterminal_produced: 1,
+                    states_to_pop: 1,
+                    nonterminal_produced: 0,
                 }
             }
             4 => {
                 __state_machine::SimulatedReduce::Reduce {
-                    states_to_pop: 1,
+                    states_to_pop: 3,
                     nonterminal_produced: 1,
                 }
             }
             5 => {
                 __state_machine::SimulatedReduce::Reduce {
                     states_to_pop: 1,
-                    nonterminal_produced: 2,
+                    nonterminal_produced: 1,
                 }
             }
             6 => {
                 __state_machine::SimulatedReduce::Reduce {
-                    states_to_pop: 3,
+                    states_to_pop: 1,
                     nonterminal_produced: 2,
                 }
             }
             7 => {
                 __state_machine::SimulatedReduce::Reduce {
-                    states_to_pop: 1,
-                    nonterminal_produced: 3,
+                    states_to_pop: 3,
+                    nonterminal_produced: 2,
                 }
             }
             8 => {
@@ -2865,13 +2927,13 @@ mod __parse__Num {
             14 => {
                 __state_machine::SimulatedReduce::Reduce {
                     states_to_pop: 1,
-                    nonterminal_produced: 4,
+                    nonterminal_produced: 3,
                 }
             }
             15 => {
                 __state_machine::SimulatedReduce::Reduce {
-                    states_to_pop: 3,
-                    nonterminal_produced: 5,
+                    states_to_pop: 1,
+                    nonterminal_produced: 4,
                 }
             }
             16 => {
@@ -2888,20 +2950,20 @@ mod __parse__Num {
             }
             18 => {
                 __state_machine::SimulatedReduce::Reduce {
-                    states_to_pop: 1,
-                    nonterminal_produced: 6,
+                    states_to_pop: 3,
+                    nonterminal_produced: 5,
                 }
             }
             19 => {
                 __state_machine::SimulatedReduce::Reduce {
-                    states_to_pop: 3,
+                    states_to_pop: 1,
                     nonterminal_produced: 6,
                 }
             }
             20 => {
                 __state_machine::SimulatedReduce::Reduce {
-                    states_to_pop: 1,
-                    nonterminal_produced: 7,
+                    states_to_pop: 3,
+                    nonterminal_produced: 6,
                 }
             }
             21 => {
@@ -2913,29 +2975,35 @@ mod __parse__Num {
             22 => {
                 __state_machine::SimulatedReduce::Reduce {
                     states_to_pop: 1,
-                    nonterminal_produced: 8,
+                    nonterminal_produced: 7,
                 }
             }
             23 => {
                 __state_machine::SimulatedReduce::Reduce {
                     states_to_pop: 1,
+                    nonterminal_produced: 8,
+                }
+            }
+            24 => {
+                __state_machine::SimulatedReduce::Reduce {
+                    states_to_pop: 1,
                     nonterminal_produced: 9,
                 }
             }
-            24 => __state_machine::SimulatedReduce::Accept,
-            25 => {
+            25 => __state_machine::SimulatedReduce::Accept,
+            26 => {
                 __state_machine::SimulatedReduce::Reduce {
                     states_to_pop: 1,
                     nonterminal_produced: 11,
                 }
             }
-            26 => {
+            27 => {
                 __state_machine::SimulatedReduce::Reduce {
                     states_to_pop: 1,
                     nonterminal_produced: 12,
                 }
             }
-            27 => {
+            28 => {
                 __state_machine::SimulatedReduce::Reduce {
                     states_to_pop: 1,
                     nonterminal_produced: 13,
@@ -3094,6 +3162,9 @@ mod __parse__Num {
                 __reduce23(input, __lookahead_start, __symbols, core::marker::PhantomData::<(&())>)
             }
             24 => {
+                __reduce24(input, __lookahead_start, __symbols, core::marker::PhantomData::<(&())>)
+            }
+            25 => {
                 // __Num = Num => ActionFn(3);
                 let __sym0 = __pop_Variant3(__symbols);
                 let __start = __sym0.0;
@@ -3101,14 +3172,14 @@ mod __parse__Num {
                 let __nt = super::__action3::<>(input, __sym0);
                 return Some(Ok(__nt));
             }
-            25 => {
-                __reduce25(input, __lookahead_start, __symbols, core::marker::PhantomData::<(&())>)
-            }
             26 => {
                 __reduce26(input, __lookahead_start, __symbols, core::marker::PhantomData::<(&())>)
             }
             27 => {
                 __reduce27(input, __lookahead_start, __symbols, core::marker::PhantomData::<(&())>)
+            }
+            28 => {
+                __reduce28(input, __lookahead_start, __symbols, core::marker::PhantomData::<(&())>)
             }
             _ => panic!("invalid action code {}", __action)
         };
@@ -3263,16 +3334,13 @@ mod __parse__Num {
         _: core::marker::PhantomData<(&'input ())>,
     ) -> (usize, usize)
     {
-        // DiceRollExpr = DiceRollExpr, "or", Factor => ActionFn(9);
-        assert!(__symbols.len() >= 3);
-        let __sym2 = __pop_Variant2(__symbols);
-        let __sym1 = __pop_Variant0(__symbols);
-        let __sym0 = __pop_Variant2(__symbols);
+        // AllDiceRollsExpr = "waiting" => ActionFn(9);
+        let __sym0 = __pop_Variant0(__symbols);
         let __start = __sym0.0;
-        let __end = __sym2.2;
-        let __nt = super::__action9::<>(input, __sym0, __sym1, __sym2);
-        __symbols.push((__start, __Symbol::Variant2(__nt), __end));
-        (3, 1)
+        let __end = __sym0.2;
+        let __nt = super::__action9::<>(input, __sym0);
+        __symbols.push((__start, __Symbol::Variant1(__nt), __end));
+        (1, 0)
     }
     pub(crate) fn __reduce4<
         'input,
@@ -3283,13 +3351,16 @@ mod __parse__Num {
         _: core::marker::PhantomData<(&'input ())>,
     ) -> (usize, usize)
     {
-        // DiceRollExpr = Factor => ActionFn(10);
+        // DiceRollExpr = DiceRollExpr, "or", Factor => ActionFn(10);
+        assert!(__symbols.len() >= 3);
+        let __sym2 = __pop_Variant2(__symbols);
+        let __sym1 = __pop_Variant0(__symbols);
         let __sym0 = __pop_Variant2(__symbols);
         let __start = __sym0.0;
-        let __end = __sym0.2;
-        let __nt = super::__action10::<>(input, __sym0);
+        let __end = __sym2.2;
+        let __nt = super::__action10::<>(input, __sym0, __sym1, __sym2);
         __symbols.push((__start, __Symbol::Variant2(__nt), __end));
-        (1, 1)
+        (3, 1)
     }
     pub(crate) fn __reduce5<
         'input,
@@ -3300,13 +3371,13 @@ mod __parse__Num {
         _: core::marker::PhantomData<(&'input ())>,
     ) -> (usize, usize)
     {
-        // Factor = Num => ActionFn(11);
-        let __sym0 = __pop_Variant3(__symbols);
+        // DiceRollExpr = Factor => ActionFn(11);
+        let __sym0 = __pop_Variant2(__symbols);
         let __start = __sym0.0;
         let __end = __sym0.2;
         let __nt = super::__action11::<>(input, __sym0);
         __symbols.push((__start, __Symbol::Variant2(__nt), __end));
-        (1, 2)
+        (1, 1)
     }
     pub(crate) fn __reduce6<
         'input,
@@ -3317,16 +3388,13 @@ mod __parse__Num {
         _: core::marker::PhantomData<(&'input ())>,
     ) -> (usize, usize)
     {
-        // Factor = Num, "to", Num => ActionFn(12);
-        assert!(__symbols.len() >= 3);
-        let __sym2 = __pop_Variant3(__symbols);
-        let __sym1 = __pop_Variant0(__symbols);
+        // Factor = Num => ActionFn(12);
         let __sym0 = __pop_Variant3(__symbols);
         let __start = __sym0.0;
-        let __end = __sym2.2;
-        let __nt = super::__action12::<>(input, __sym0, __sym1, __sym2);
+        let __end = __sym0.2;
+        let __nt = super::__action12::<>(input, __sym0);
         __symbols.push((__start, __Symbol::Variant2(__nt), __end));
-        (3, 2)
+        (1, 2)
     }
     pub(crate) fn __reduce7<
         'input,
@@ -3337,13 +3405,16 @@ mod __parse__Num {
         _: core::marker::PhantomData<(&'input ())>,
     ) -> (usize, usize)
     {
-        // Num = "One" => ActionFn(18);
-        let __sym0 = __pop_Variant0(__symbols);
+        // Factor = Num, "to", Num => ActionFn(13);
+        assert!(__symbols.len() >= 3);
+        let __sym2 = __pop_Variant3(__symbols);
+        let __sym1 = __pop_Variant0(__symbols);
+        let __sym0 = __pop_Variant3(__symbols);
         let __start = __sym0.0;
-        let __end = __sym0.2;
-        let __nt = super::__action18::<>(input, __sym0);
-        __symbols.push((__start, __Symbol::Variant3(__nt), __end));
-        (1, 3)
+        let __end = __sym2.2;
+        let __nt = super::__action13::<>(input, __sym0, __sym1, __sym2);
+        __symbols.push((__start, __Symbol::Variant2(__nt), __end));
+        (3, 2)
     }
     pub(crate) fn __reduce8<
         'input,
@@ -3354,7 +3425,7 @@ mod __parse__Num {
         _: core::marker::PhantomData<(&'input ())>,
     ) -> (usize, usize)
     {
-        // Num = "Two" => ActionFn(19);
+        // Num = "One" => ActionFn(19);
         let __sym0 = __pop_Variant0(__symbols);
         let __start = __sym0.0;
         let __end = __sym0.2;
@@ -3371,7 +3442,7 @@ mod __parse__Num {
         _: core::marker::PhantomData<(&'input ())>,
     ) -> (usize, usize)
     {
-        // Num = "Three" => ActionFn(20);
+        // Num = "Two" => ActionFn(20);
         let __sym0 = __pop_Variant0(__symbols);
         let __start = __sym0.0;
         let __end = __sym0.2;
@@ -3388,7 +3459,7 @@ mod __parse__Num {
         _: core::marker::PhantomData<(&'input ())>,
     ) -> (usize, usize)
     {
-        // Num = "Four" => ActionFn(21);
+        // Num = "Three" => ActionFn(21);
         let __sym0 = __pop_Variant0(__symbols);
         let __start = __sym0.0;
         let __end = __sym0.2;
@@ -3405,7 +3476,7 @@ mod __parse__Num {
         _: core::marker::PhantomData<(&'input ())>,
     ) -> (usize, usize)
     {
-        // Num = "Five" => ActionFn(22);
+        // Num = "Four" => ActionFn(22);
         let __sym0 = __pop_Variant0(__symbols);
         let __start = __sym0.0;
         let __end = __sym0.2;
@@ -3422,7 +3493,7 @@ mod __parse__Num {
         _: core::marker::PhantomData<(&'input ())>,
     ) -> (usize, usize)
     {
-        // Num = "Six" => ActionFn(23);
+        // Num = "Five" => ActionFn(23);
         let __sym0 = __pop_Variant0(__symbols);
         let __start = __sym0.0;
         let __end = __sym0.2;
@@ -3439,7 +3510,7 @@ mod __parse__Num {
         _: core::marker::PhantomData<(&'input ())>,
     ) -> (usize, usize)
     {
-        // Num = r#"[0-9]+"# => ActionFn(24);
+        // Num = "Six" => ActionFn(24);
         let __sym0 = __pop_Variant0(__symbols);
         let __start = __sym0.0;
         let __end = __sym0.2;
@@ -3456,13 +3527,13 @@ mod __parse__Num {
         _: core::marker::PhantomData<(&'input ())>,
     ) -> (usize, usize)
     {
-        // Quantity = r#"[0-9]+"# => ActionFn(25);
+        // Num = r#"[0-9]+"# => ActionFn(25);
         let __sym0 = __pop_Variant0(__symbols);
         let __start = __sym0.0;
         let __end = __sym0.2;
         let __nt = super::__action25::<>(input, __sym0);
-        __symbols.push((__start, __Symbol::Variant4(__nt), __end));
-        (1, 4)
+        __symbols.push((__start, __Symbol::Variant3(__nt), __end));
+        (1, 3)
     }
     pub(crate) fn __reduce15<
         'input,
@@ -3473,16 +3544,13 @@ mod __parse__Num {
         _: core::marker::PhantomData<(&'input ())>,
     ) -> (usize, usize)
     {
-        // SuccessiveDiceRollExpr = SuccessiveDiceRollExpr, "+", SuccessiveFactor => ActionFn(13);
-        assert!(__symbols.len() >= 3);
-        let __sym2 = __pop_Variant5(__symbols);
-        let __sym1 = __pop_Variant0(__symbols);
-        let __sym0 = __pop_Variant5(__symbols);
+        // Quantity = r#"[0-9]+"# => ActionFn(26);
+        let __sym0 = __pop_Variant0(__symbols);
         let __start = __sym0.0;
-        let __end = __sym2.2;
-        let __nt = super::__action13::<>(input, __sym0, __sym1, __sym2);
-        __symbols.push((__start, __Symbol::Variant5(__nt), __end));
-        (3, 5)
+        let __end = __sym0.2;
+        let __nt = super::__action26::<>(input, __sym0);
+        __symbols.push((__start, __Symbol::Variant4(__nt), __end));
+        (1, 4)
     }
     pub(crate) fn __reduce16<
         'input,
@@ -3493,11 +3561,11 @@ mod __parse__Num {
         _: core::marker::PhantomData<(&'input ())>,
     ) -> (usize, usize)
     {
-        // SuccessiveDiceRollExpr = Num, "+", SuccessiveFactor => ActionFn(14);
+        // SuccessiveDiceRollExpr = SuccessiveDiceRollExpr, "+", SuccessiveFactor => ActionFn(14);
         assert!(__symbols.len() >= 3);
         let __sym2 = __pop_Variant5(__symbols);
         let __sym1 = __pop_Variant0(__symbols);
-        let __sym0 = __pop_Variant3(__symbols);
+        let __sym0 = __pop_Variant5(__symbols);
         let __start = __sym0.0;
         let __end = __sym2.2;
         let __nt = super::__action14::<>(input, __sym0, __sym1, __sym2);
@@ -3513,11 +3581,11 @@ mod __parse__Num {
         _: core::marker::PhantomData<(&'input ())>,
     ) -> (usize, usize)
     {
-        // SuccessiveDiceRollExpr = Quantity, "x", Num => ActionFn(15);
+        // SuccessiveDiceRollExpr = Num, "+", SuccessiveFactor => ActionFn(15);
         assert!(__symbols.len() >= 3);
-        let __sym2 = __pop_Variant3(__symbols);
+        let __sym2 = __pop_Variant5(__symbols);
         let __sym1 = __pop_Variant0(__symbols);
-        let __sym0 = __pop_Variant4(__symbols);
+        let __sym0 = __pop_Variant3(__symbols);
         let __start = __sym0.0;
         let __end = __sym2.2;
         let __nt = super::__action15::<>(input, __sym0, __sym1, __sym2);
@@ -3533,13 +3601,16 @@ mod __parse__Num {
         _: core::marker::PhantomData<(&'input ())>,
     ) -> (usize, usize)
     {
-        // SuccessiveFactor = Num => ActionFn(16);
-        let __sym0 = __pop_Variant3(__symbols);
+        // SuccessiveDiceRollExpr = Quantity, "x", Num => ActionFn(16);
+        assert!(__symbols.len() >= 3);
+        let __sym2 = __pop_Variant3(__symbols);
+        let __sym1 = __pop_Variant0(__symbols);
+        let __sym0 = __pop_Variant4(__symbols);
         let __start = __sym0.0;
-        let __end = __sym0.2;
-        let __nt = super::__action16::<>(input, __sym0);
+        let __end = __sym2.2;
+        let __nt = super::__action16::<>(input, __sym0, __sym1, __sym2);
         __symbols.push((__start, __Symbol::Variant5(__nt), __end));
-        (1, 6)
+        (3, 5)
     }
     pub(crate) fn __reduce19<
         'input,
@@ -3550,16 +3621,13 @@ mod __parse__Num {
         _: core::marker::PhantomData<(&'input ())>,
     ) -> (usize, usize)
     {
-        // SuccessiveFactor = Quantity, "x", Num => ActionFn(17);
-        assert!(__symbols.len() >= 3);
-        let __sym2 = __pop_Variant3(__symbols);
-        let __sym1 = __pop_Variant0(__symbols);
-        let __sym0 = __pop_Variant4(__symbols);
+        // SuccessiveFactor = Num => ActionFn(17);
+        let __sym0 = __pop_Variant3(__symbols);
         let __start = __sym0.0;
-        let __end = __sym2.2;
-        let __nt = super::__action17::<>(input, __sym0, __sym1, __sym2);
+        let __end = __sym0.2;
+        let __nt = super::__action17::<>(input, __sym0);
         __symbols.push((__start, __Symbol::Variant5(__nt), __end));
-        (3, 6)
+        (1, 6)
     }
     pub(crate) fn __reduce20<
         'input,
@@ -3570,13 +3638,16 @@ mod __parse__Num {
         _: core::marker::PhantomData<(&'input ())>,
     ) -> (usize, usize)
     {
-        // SuccessiveRollsOptions = "one-chance" => ActionFn(26);
-        let __sym0 = __pop_Variant0(__symbols);
+        // SuccessiveFactor = Quantity, "x", Num => ActionFn(18);
+        assert!(__symbols.len() >= 3);
+        let __sym2 = __pop_Variant3(__symbols);
+        let __sym1 = __pop_Variant0(__symbols);
+        let __sym0 = __pop_Variant4(__symbols);
         let __start = __sym0.0;
-        let __end = __sym0.2;
-        let __nt = super::__action26::<>(input, __sym0);
-        __symbols.push((__start, __Symbol::Variant6(__nt), __end));
-        (1, 7)
+        let __end = __sym2.2;
+        let __nt = super::__action18::<>(input, __sym0, __sym1, __sym2);
+        __symbols.push((__start, __Symbol::Variant5(__nt), __end));
+        (3, 6)
     }
     pub(crate) fn __reduce21<
         'input,
@@ -3587,7 +3658,7 @@ mod __parse__Num {
         _: core::marker::PhantomData<(&'input ())>,
     ) -> (usize, usize)
     {
-        // SuccessiveRollsOptions = "accum" => ActionFn(27);
+        // SuccessiveRollsOptions = "one-chance" => ActionFn(27);
         let __sym0 = __pop_Variant0(__symbols);
         let __start = __sym0.0;
         let __end = __sym0.2;
@@ -3604,6 +3675,23 @@ mod __parse__Num {
         _: core::marker::PhantomData<(&'input ())>,
     ) -> (usize, usize)
     {
+        // SuccessiveRollsOptions = "accum" => ActionFn(28);
+        let __sym0 = __pop_Variant0(__symbols);
+        let __start = __sym0.0;
+        let __end = __sym0.2;
+        let __nt = super::__action28::<>(input, __sym0);
+        __symbols.push((__start, __Symbol::Variant6(__nt), __end));
+        (1, 7)
+    }
+    pub(crate) fn __reduce23<
+        'input,
+    >(
+        input: &'input str,
+        __lookahead_start: Option<&usize>,
+        __symbols: &mut alloc::vec::Vec<(usize,__Symbol<'input>,usize)>,
+        _: core::marker::PhantomData<(&'input ())>,
+    ) -> (usize, usize)
+    {
         // __AllDiceRollsExpr = AllDiceRollsExpr => ActionFn(0);
         let __sym0 = __pop_Variant1(__symbols);
         let __start = __sym0.0;
@@ -3612,7 +3700,7 @@ mod __parse__Num {
         __symbols.push((__start, __Symbol::Variant1(__nt), __end));
         (1, 8)
     }
-    pub(crate) fn __reduce23<
+    pub(crate) fn __reduce24<
         'input,
     >(
         input: &'input str,
@@ -3629,7 +3717,7 @@ mod __parse__Num {
         __symbols.push((__start, __Symbol::Variant2(__nt), __end));
         (1, 9)
     }
-    pub(crate) fn __reduce25<
+    pub(crate) fn __reduce26<
         'input,
     >(
         input: &'input str,
@@ -3646,7 +3734,7 @@ mod __parse__Num {
         __symbols.push((__start, __Symbol::Variant4(__nt), __end));
         (1, 11)
     }
-    pub(crate) fn __reduce26<
+    pub(crate) fn __reduce27<
         'input,
     >(
         input: &'input str,
@@ -3663,7 +3751,7 @@ mod __parse__Num {
         __symbols.push((__start, __Symbol::Variant5(__nt), __end));
         (1, 12)
     }
-    pub(crate) fn __reduce27<
+    pub(crate) fn __reduce28<
         'input,
     >(
         input: &'input str,
@@ -3709,22 +3797,22 @@ mod __parse__Quantity {
     }
     const __ACTION: &[i8] = &[
         // State 0
-        0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 3,
+        0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 3,
         // State 1
-        0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+        0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
         // State 2
-        0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+        0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
     ];
     fn __action(state: i8, integer: usize) -> i8 {
-        __ACTION[(state as usize) * 14 + integer]
+        __ACTION[(state as usize) * 15 + integer]
     }
     const __EOF_ACTION: &[i8] = &[
         // State 0
         0,
         // State 1
-        -26,
+        -27,
         // State 2
-        -15,
+        -16,
     ];
     fn __goto(state: i8, nt: usize) -> i8 {
         match nt {
@@ -3745,6 +3833,7 @@ mod __parse__Quantity {
         r###""one-chance""###,
         r###""or""###,
         r###""to""###,
+        r###""waiting""###,
         r###""x""###,
         r###"r#"[0-9]+"#"###,
     ];
@@ -3815,7 +3904,7 @@ mod __parse__Quantity {
 
         #[inline]
         fn error_action(&self, state: i8) -> i8 {
-            __action(state, 14 - 1)
+            __action(state, 15 - 1)
         }
 
         #[inline]
@@ -3895,7 +3984,8 @@ mod __parse__Quantity {
             Token(11, _) if true => Some(10),
             Token(12, _) if true => Some(11),
             Token(13, _) if true => Some(12),
-            Token(0, _) if true => Some(13),
+            Token(14, _) if true => Some(13),
+            Token(0, _) if true => Some(14),
             _ => None,
         }
     }
@@ -3908,8 +3998,8 @@ mod __parse__Quantity {
     ) -> __Symbol<'input>
     {
         match __token_index {
-            0 | 1 | 2 | 3 | 4 | 5 | 6 | 7 | 8 | 9 | 10 | 11 | 12 | 13 => match __token {
-                Token(1, __tok0) | Token(2, __tok0) | Token(3, __tok0) | Token(4, __tok0) | Token(5, __tok0) | Token(6, __tok0) | Token(7, __tok0) | Token(8, __tok0) | Token(9, __tok0) | Token(10, __tok0) | Token(11, __tok0) | Token(12, __tok0) | Token(13, __tok0) | Token(0, __tok0) if true => __Symbol::Variant0(__tok0),
+            0 | 1 | 2 | 3 | 4 | 5 | 6 | 7 | 8 | 9 | 10 | 11 | 12 | 13 | 14 => match __token {
+                Token(1, __tok0) | Token(2, __tok0) | Token(3, __tok0) | Token(4, __tok0) | Token(5, __tok0) | Token(6, __tok0) | Token(7, __tok0) | Token(8, __tok0) | Token(9, __tok0) | Token(10, __tok0) | Token(11, __tok0) | Token(12, __tok0) | Token(13, __tok0) | Token(14, __tok0) | Token(0, __tok0) if true => __Symbol::Variant0(__tok0),
                 _ => unreachable!(),
             },
             _ => unreachable!(),
@@ -3943,32 +4033,32 @@ mod __parse__Quantity {
             }
             3 => {
                 __state_machine::SimulatedReduce::Reduce {
-                    states_to_pop: 3,
-                    nonterminal_produced: 1,
+                    states_to_pop: 1,
+                    nonterminal_produced: 0,
                 }
             }
             4 => {
                 __state_machine::SimulatedReduce::Reduce {
-                    states_to_pop: 1,
+                    states_to_pop: 3,
                     nonterminal_produced: 1,
                 }
             }
             5 => {
                 __state_machine::SimulatedReduce::Reduce {
                     states_to_pop: 1,
-                    nonterminal_produced: 2,
+                    nonterminal_produced: 1,
                 }
             }
             6 => {
                 __state_machine::SimulatedReduce::Reduce {
-                    states_to_pop: 3,
+                    states_to_pop: 1,
                     nonterminal_produced: 2,
                 }
             }
             7 => {
                 __state_machine::SimulatedReduce::Reduce {
-                    states_to_pop: 1,
-                    nonterminal_produced: 3,
+                    states_to_pop: 3,
+                    nonterminal_produced: 2,
                 }
             }
             8 => {
@@ -4010,13 +4100,13 @@ mod __parse__Quantity {
             14 => {
                 __state_machine::SimulatedReduce::Reduce {
                     states_to_pop: 1,
-                    nonterminal_produced: 4,
+                    nonterminal_produced: 3,
                 }
             }
             15 => {
                 __state_machine::SimulatedReduce::Reduce {
-                    states_to_pop: 3,
-                    nonterminal_produced: 5,
+                    states_to_pop: 1,
+                    nonterminal_produced: 4,
                 }
             }
             16 => {
@@ -4033,20 +4123,20 @@ mod __parse__Quantity {
             }
             18 => {
                 __state_machine::SimulatedReduce::Reduce {
-                    states_to_pop: 1,
-                    nonterminal_produced: 6,
+                    states_to_pop: 3,
+                    nonterminal_produced: 5,
                 }
             }
             19 => {
                 __state_machine::SimulatedReduce::Reduce {
-                    states_to_pop: 3,
+                    states_to_pop: 1,
                     nonterminal_produced: 6,
                 }
             }
             20 => {
                 __state_machine::SimulatedReduce::Reduce {
-                    states_to_pop: 1,
-                    nonterminal_produced: 7,
+                    states_to_pop: 3,
+                    nonterminal_produced: 6,
                 }
             }
             21 => {
@@ -4058,29 +4148,35 @@ mod __parse__Quantity {
             22 => {
                 __state_machine::SimulatedReduce::Reduce {
                     states_to_pop: 1,
-                    nonterminal_produced: 8,
+                    nonterminal_produced: 7,
                 }
             }
             23 => {
                 __state_machine::SimulatedReduce::Reduce {
                     states_to_pop: 1,
-                    nonterminal_produced: 9,
+                    nonterminal_produced: 8,
                 }
             }
             24 => {
                 __state_machine::SimulatedReduce::Reduce {
                     states_to_pop: 1,
+                    nonterminal_produced: 9,
+                }
+            }
+            25 => {
+                __state_machine::SimulatedReduce::Reduce {
+                    states_to_pop: 1,
                     nonterminal_produced: 10,
                 }
             }
-            25 => __state_machine::SimulatedReduce::Accept,
-            26 => {
+            26 => __state_machine::SimulatedReduce::Accept,
+            27 => {
                 __state_machine::SimulatedReduce::Reduce {
                     states_to_pop: 1,
                     nonterminal_produced: 12,
                 }
             }
-            27 => {
+            28 => {
                 __state_machine::SimulatedReduce::Reduce {
                     states_to_pop: 1,
                     nonterminal_produced: 13,
@@ -4242,6 +4338,9 @@ mod __parse__Quantity {
                 __reduce24(input, __lookahead_start, __symbols, core::marker::PhantomData::<(&())>)
             }
             25 => {
+                __reduce25(input, __lookahead_start, __symbols, core::marker::PhantomData::<(&())>)
+            }
+            26 => {
                 // __Quantity = Quantity => ActionFn(4);
                 let __sym0 = __pop_Variant4(__symbols);
                 let __start = __sym0.0;
@@ -4249,11 +4348,11 @@ mod __parse__Quantity {
                 let __nt = super::__action4::<>(input, __sym0);
                 return Some(Ok(__nt));
             }
-            26 => {
-                __reduce26(input, __lookahead_start, __symbols, core::marker::PhantomData::<(&())>)
-            }
             27 => {
                 __reduce27(input, __lookahead_start, __symbols, core::marker::PhantomData::<(&())>)
+            }
+            28 => {
+                __reduce28(input, __lookahead_start, __symbols, core::marker::PhantomData::<(&())>)
             }
             _ => panic!("invalid action code {}", __action)
         };
@@ -4408,16 +4507,13 @@ mod __parse__Quantity {
         _: core::marker::PhantomData<(&'input ())>,
     ) -> (usize, usize)
     {
-        // DiceRollExpr = DiceRollExpr, "or", Factor => ActionFn(9);
-        assert!(__symbols.len() >= 3);
-        let __sym2 = __pop_Variant2(__symbols);
-        let __sym1 = __pop_Variant0(__symbols);
-        let __sym0 = __pop_Variant2(__symbols);
+        // AllDiceRollsExpr = "waiting" => ActionFn(9);
+        let __sym0 = __pop_Variant0(__symbols);
         let __start = __sym0.0;
-        let __end = __sym2.2;
-        let __nt = super::__action9::<>(input, __sym0, __sym1, __sym2);
-        __symbols.push((__start, __Symbol::Variant2(__nt), __end));
-        (3, 1)
+        let __end = __sym0.2;
+        let __nt = super::__action9::<>(input, __sym0);
+        __symbols.push((__start, __Symbol::Variant1(__nt), __end));
+        (1, 0)
     }
     pub(crate) fn __reduce4<
         'input,
@@ -4428,13 +4524,16 @@ mod __parse__Quantity {
         _: core::marker::PhantomData<(&'input ())>,
     ) -> (usize, usize)
     {
-        // DiceRollExpr = Factor => ActionFn(10);
+        // DiceRollExpr = DiceRollExpr, "or", Factor => ActionFn(10);
+        assert!(__symbols.len() >= 3);
+        let __sym2 = __pop_Variant2(__symbols);
+        let __sym1 = __pop_Variant0(__symbols);
         let __sym0 = __pop_Variant2(__symbols);
         let __start = __sym0.0;
-        let __end = __sym0.2;
-        let __nt = super::__action10::<>(input, __sym0);
+        let __end = __sym2.2;
+        let __nt = super::__action10::<>(input, __sym0, __sym1, __sym2);
         __symbols.push((__start, __Symbol::Variant2(__nt), __end));
-        (1, 1)
+        (3, 1)
     }
     pub(crate) fn __reduce5<
         'input,
@@ -4445,13 +4544,13 @@ mod __parse__Quantity {
         _: core::marker::PhantomData<(&'input ())>,
     ) -> (usize, usize)
     {
-        // Factor = Num => ActionFn(11);
-        let __sym0 = __pop_Variant3(__symbols);
+        // DiceRollExpr = Factor => ActionFn(11);
+        let __sym0 = __pop_Variant2(__symbols);
         let __start = __sym0.0;
         let __end = __sym0.2;
         let __nt = super::__action11::<>(input, __sym0);
         __symbols.push((__start, __Symbol::Variant2(__nt), __end));
-        (1, 2)
+        (1, 1)
     }
     pub(crate) fn __reduce6<
         'input,
@@ -4462,16 +4561,13 @@ mod __parse__Quantity {
         _: core::marker::PhantomData<(&'input ())>,
     ) -> (usize, usize)
     {
-        // Factor = Num, "to", Num => ActionFn(12);
-        assert!(__symbols.len() >= 3);
-        let __sym2 = __pop_Variant3(__symbols);
-        let __sym1 = __pop_Variant0(__symbols);
+        // Factor = Num => ActionFn(12);
         let __sym0 = __pop_Variant3(__symbols);
         let __start = __sym0.0;
-        let __end = __sym2.2;
-        let __nt = super::__action12::<>(input, __sym0, __sym1, __sym2);
+        let __end = __sym0.2;
+        let __nt = super::__action12::<>(input, __sym0);
         __symbols.push((__start, __Symbol::Variant2(__nt), __end));
-        (3, 2)
+        (1, 2)
     }
     pub(crate) fn __reduce7<
         'input,
@@ -4482,13 +4578,16 @@ mod __parse__Quantity {
         _: core::marker::PhantomData<(&'input ())>,
     ) -> (usize, usize)
     {
-        // Num = "One" => ActionFn(18);
-        let __sym0 = __pop_Variant0(__symbols);
+        // Factor = Num, "to", Num => ActionFn(13);
+        assert!(__symbols.len() >= 3);
+        let __sym2 = __pop_Variant3(__symbols);
+        let __sym1 = __pop_Variant0(__symbols);
+        let __sym0 = __pop_Variant3(__symbols);
         let __start = __sym0.0;
-        let __end = __sym0.2;
-        let __nt = super::__action18::<>(input, __sym0);
-        __symbols.push((__start, __Symbol::Variant3(__nt), __end));
-        (1, 3)
+        let __end = __sym2.2;
+        let __nt = super::__action13::<>(input, __sym0, __sym1, __sym2);
+        __symbols.push((__start, __Symbol::Variant2(__nt), __end));
+        (3, 2)
     }
     pub(crate) fn __reduce8<
         'input,
@@ -4499,7 +4598,7 @@ mod __parse__Quantity {
         _: core::marker::PhantomData<(&'input ())>,
     ) -> (usize, usize)
     {
-        // Num = "Two" => ActionFn(19);
+        // Num = "One" => ActionFn(19);
         let __sym0 = __pop_Variant0(__symbols);
         let __start = __sym0.0;
         let __end = __sym0.2;
@@ -4516,7 +4615,7 @@ mod __parse__Quantity {
         _: core::marker::PhantomData<(&'input ())>,
     ) -> (usize, usize)
     {
-        // Num = "Three" => ActionFn(20);
+        // Num = "Two" => ActionFn(20);
         let __sym0 = __pop_Variant0(__symbols);
         let __start = __sym0.0;
         let __end = __sym0.2;
@@ -4533,7 +4632,7 @@ mod __parse__Quantity {
         _: core::marker::PhantomData<(&'input ())>,
     ) -> (usize, usize)
     {
-        // Num = "Four" => ActionFn(21);
+        // Num = "Three" => ActionFn(21);
         let __sym0 = __pop_Variant0(__symbols);
         let __start = __sym0.0;
         let __end = __sym0.2;
@@ -4550,7 +4649,7 @@ mod __parse__Quantity {
         _: core::marker::PhantomData<(&'input ())>,
     ) -> (usize, usize)
     {
-        // Num = "Five" => ActionFn(22);
+        // Num = "Four" => ActionFn(22);
         let __sym0 = __pop_Variant0(__symbols);
         let __start = __sym0.0;
         let __end = __sym0.2;
@@ -4567,7 +4666,7 @@ mod __parse__Quantity {
         _: core::marker::PhantomData<(&'input ())>,
     ) -> (usize, usize)
     {
-        // Num = "Six" => ActionFn(23);
+        // Num = "Five" => ActionFn(23);
         let __sym0 = __pop_Variant0(__symbols);
         let __start = __sym0.0;
         let __end = __sym0.2;
@@ -4584,7 +4683,7 @@ mod __parse__Quantity {
         _: core::marker::PhantomData<(&'input ())>,
     ) -> (usize, usize)
     {
-        // Num = r#"[0-9]+"# => ActionFn(24);
+        // Num = "Six" => ActionFn(24);
         let __sym0 = __pop_Variant0(__symbols);
         let __start = __sym0.0;
         let __end = __sym0.2;
@@ -4601,13 +4700,13 @@ mod __parse__Quantity {
         _: core::marker::PhantomData<(&'input ())>,
     ) -> (usize, usize)
     {
-        // Quantity = r#"[0-9]+"# => ActionFn(25);
+        // Num = r#"[0-9]+"# => ActionFn(25);
         let __sym0 = __pop_Variant0(__symbols);
         let __start = __sym0.0;
         let __end = __sym0.2;
         let __nt = super::__action25::<>(input, __sym0);
-        __symbols.push((__start, __Symbol::Variant4(__nt), __end));
-        (1, 4)
+        __symbols.push((__start, __Symbol::Variant3(__nt), __end));
+        (1, 3)
     }
     pub(crate) fn __reduce15<
         'input,
@@ -4618,16 +4717,13 @@ mod __parse__Quantity {
         _: core::marker::PhantomData<(&'input ())>,
     ) -> (usize, usize)
     {
-        // SuccessiveDiceRollExpr = SuccessiveDiceRollExpr, "+", SuccessiveFactor => ActionFn(13);
-        assert!(__symbols.len() >= 3);
-        let __sym2 = __pop_Variant5(__symbols);
-        let __sym1 = __pop_Variant0(__symbols);
-        let __sym0 = __pop_Variant5(__symbols);
+        // Quantity = r#"[0-9]+"# => ActionFn(26);
+        let __sym0 = __pop_Variant0(__symbols);
         let __start = __sym0.0;
-        let __end = __sym2.2;
-        let __nt = super::__action13::<>(input, __sym0, __sym1, __sym2);
-        __symbols.push((__start, __Symbol::Variant5(__nt), __end));
-        (3, 5)
+        let __end = __sym0.2;
+        let __nt = super::__action26::<>(input, __sym0);
+        __symbols.push((__start, __Symbol::Variant4(__nt), __end));
+        (1, 4)
     }
     pub(crate) fn __reduce16<
         'input,
@@ -4638,11 +4734,11 @@ mod __parse__Quantity {
         _: core::marker::PhantomData<(&'input ())>,
     ) -> (usize, usize)
     {
-        // SuccessiveDiceRollExpr = Num, "+", SuccessiveFactor => ActionFn(14);
+        // SuccessiveDiceRollExpr = SuccessiveDiceRollExpr, "+", SuccessiveFactor => ActionFn(14);
         assert!(__symbols.len() >= 3);
         let __sym2 = __pop_Variant5(__symbols);
         let __sym1 = __pop_Variant0(__symbols);
-        let __sym0 = __pop_Variant3(__symbols);
+        let __sym0 = __pop_Variant5(__symbols);
         let __start = __sym0.0;
         let __end = __sym2.2;
         let __nt = super::__action14::<>(input, __sym0, __sym1, __sym2);
@@ -4658,11 +4754,11 @@ mod __parse__Quantity {
         _: core::marker::PhantomData<(&'input ())>,
     ) -> (usize, usize)
     {
-        // SuccessiveDiceRollExpr = Quantity, "x", Num => ActionFn(15);
+        // SuccessiveDiceRollExpr = Num, "+", SuccessiveFactor => ActionFn(15);
         assert!(__symbols.len() >= 3);
-        let __sym2 = __pop_Variant3(__symbols);
+        let __sym2 = __pop_Variant5(__symbols);
         let __sym1 = __pop_Variant0(__symbols);
-        let __sym0 = __pop_Variant4(__symbols);
+        let __sym0 = __pop_Variant3(__symbols);
         let __start = __sym0.0;
         let __end = __sym2.2;
         let __nt = super::__action15::<>(input, __sym0, __sym1, __sym2);
@@ -4678,13 +4774,16 @@ mod __parse__Quantity {
         _: core::marker::PhantomData<(&'input ())>,
     ) -> (usize, usize)
     {
-        // SuccessiveFactor = Num => ActionFn(16);
-        let __sym0 = __pop_Variant3(__symbols);
+        // SuccessiveDiceRollExpr = Quantity, "x", Num => ActionFn(16);
+        assert!(__symbols.len() >= 3);
+        let __sym2 = __pop_Variant3(__symbols);
+        let __sym1 = __pop_Variant0(__symbols);
+        let __sym0 = __pop_Variant4(__symbols);
         let __start = __sym0.0;
-        let __end = __sym0.2;
-        let __nt = super::__action16::<>(input, __sym0);
+        let __end = __sym2.2;
+        let __nt = super::__action16::<>(input, __sym0, __sym1, __sym2);
         __symbols.push((__start, __Symbol::Variant5(__nt), __end));
-        (1, 6)
+        (3, 5)
     }
     pub(crate) fn __reduce19<
         'input,
@@ -4695,16 +4794,13 @@ mod __parse__Quantity {
         _: core::marker::PhantomData<(&'input ())>,
     ) -> (usize, usize)
     {
-        // SuccessiveFactor = Quantity, "x", Num => ActionFn(17);
-        assert!(__symbols.len() >= 3);
-        let __sym2 = __pop_Variant3(__symbols);
-        let __sym1 = __pop_Variant0(__symbols);
-        let __sym0 = __pop_Variant4(__symbols);
+        // SuccessiveFactor = Num => ActionFn(17);
+        let __sym0 = __pop_Variant3(__symbols);
         let __start = __sym0.0;
-        let __end = __sym2.2;
-        let __nt = super::__action17::<>(input, __sym0, __sym1, __sym2);
+        let __end = __sym0.2;
+        let __nt = super::__action17::<>(input, __sym0);
         __symbols.push((__start, __Symbol::Variant5(__nt), __end));
-        (3, 6)
+        (1, 6)
     }
     pub(crate) fn __reduce20<
         'input,
@@ -4715,13 +4811,16 @@ mod __parse__Quantity {
         _: core::marker::PhantomData<(&'input ())>,
     ) -> (usize, usize)
     {
-        // SuccessiveRollsOptions = "one-chance" => ActionFn(26);
-        let __sym0 = __pop_Variant0(__symbols);
+        // SuccessiveFactor = Quantity, "x", Num => ActionFn(18);
+        assert!(__symbols.len() >= 3);
+        let __sym2 = __pop_Variant3(__symbols);
+        let __sym1 = __pop_Variant0(__symbols);
+        let __sym0 = __pop_Variant4(__symbols);
         let __start = __sym0.0;
-        let __end = __sym0.2;
-        let __nt = super::__action26::<>(input, __sym0);
-        __symbols.push((__start, __Symbol::Variant6(__nt), __end));
-        (1, 7)
+        let __end = __sym2.2;
+        let __nt = super::__action18::<>(input, __sym0, __sym1, __sym2);
+        __symbols.push((__start, __Symbol::Variant5(__nt), __end));
+        (3, 6)
     }
     pub(crate) fn __reduce21<
         'input,
@@ -4732,7 +4831,7 @@ mod __parse__Quantity {
         _: core::marker::PhantomData<(&'input ())>,
     ) -> (usize, usize)
     {
-        // SuccessiveRollsOptions = "accum" => ActionFn(27);
+        // SuccessiveRollsOptions = "one-chance" => ActionFn(27);
         let __sym0 = __pop_Variant0(__symbols);
         let __start = __sym0.0;
         let __end = __sym0.2;
@@ -4749,6 +4848,23 @@ mod __parse__Quantity {
         _: core::marker::PhantomData<(&'input ())>,
     ) -> (usize, usize)
     {
+        // SuccessiveRollsOptions = "accum" => ActionFn(28);
+        let __sym0 = __pop_Variant0(__symbols);
+        let __start = __sym0.0;
+        let __end = __sym0.2;
+        let __nt = super::__action28::<>(input, __sym0);
+        __symbols.push((__start, __Symbol::Variant6(__nt), __end));
+        (1, 7)
+    }
+    pub(crate) fn __reduce23<
+        'input,
+    >(
+        input: &'input str,
+        __lookahead_start: Option<&usize>,
+        __symbols: &mut alloc::vec::Vec<(usize,__Symbol<'input>,usize)>,
+        _: core::marker::PhantomData<(&'input ())>,
+    ) -> (usize, usize)
+    {
         // __AllDiceRollsExpr = AllDiceRollsExpr => ActionFn(0);
         let __sym0 = __pop_Variant1(__symbols);
         let __start = __sym0.0;
@@ -4757,7 +4873,7 @@ mod __parse__Quantity {
         __symbols.push((__start, __Symbol::Variant1(__nt), __end));
         (1, 8)
     }
-    pub(crate) fn __reduce23<
+    pub(crate) fn __reduce24<
         'input,
     >(
         input: &'input str,
@@ -4774,7 +4890,7 @@ mod __parse__Quantity {
         __symbols.push((__start, __Symbol::Variant2(__nt), __end));
         (1, 9)
     }
-    pub(crate) fn __reduce24<
+    pub(crate) fn __reduce25<
         'input,
     >(
         input: &'input str,
@@ -4791,7 +4907,7 @@ mod __parse__Quantity {
         __symbols.push((__start, __Symbol::Variant3(__nt), __end));
         (1, 10)
     }
-    pub(crate) fn __reduce26<
+    pub(crate) fn __reduce27<
         'input,
     >(
         input: &'input str,
@@ -4808,7 +4924,7 @@ mod __parse__Quantity {
         __symbols.push((__start, __Symbol::Variant5(__nt), __end));
         (1, 12)
     }
-    pub(crate) fn __reduce27<
+    pub(crate) fn __reduce28<
         'input,
     >(
         input: &'input str,
@@ -4854,52 +4970,52 @@ mod __parse__SuccessiveDiceRollExpr {
     }
     const __ACTION: &[i8] = &[
         // State 0
-        0, 0, 9, 10, 11, 12, 13, 14, 0, 0, 0, 0, 0, 15,
+        0, 0, 9, 10, 11, 12, 13, 14, 0, 0, 0, 0, 0, 0, 15,
         // State 1
-        0, 0, 9, 10, 11, 12, 13, 14, 0, 0, 0, 0, 0, 15,
+        0, 0, 9, 10, 11, 12, 13, 14, 0, 0, 0, 0, 0, 0, 15,
         // State 2
-        0, 0, 9, 10, 11, 12, 13, 14, 0, 0, 0, 0, 0, 20,
+        0, 0, 9, 10, 11, 12, 13, 14, 0, 0, 0, 0, 0, 0, 20,
         // State 3
-        0, 0, 9, 10, 11, 12, 13, 14, 0, 0, 0, 0, 0, 15,
+        0, 0, 9, 10, 11, 12, 13, 14, 0, 0, 0, 0, 0, 0, 15,
         // State 4
-        0, 0, 9, 10, 11, 12, 13, 14, 0, 0, 0, 0, 0, 20,
+        0, 0, 9, 10, 11, 12, 13, 14, 0, 0, 0, 0, 0, 0, 20,
         // State 5
-        2, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+        2, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
         // State 6
-        0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 3, 0,
+        0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 3, 0,
         // State 7
-        4, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+        4, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
         // State 8
-        -12, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+        -13, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
         // State 9
-        -11, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+        -12, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
         // State 10
-        -8, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+        -9, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
         // State 11
-        -13, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+        -14, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
         // State 12
-        -10, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+        -11, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
         // State 13
-        -9, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+        -10, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
         // State 14
-        -14, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, -15, 0,
+        -15, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, -16, 0,
         // State 15
-        -19, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+        -20, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
         // State 16
-        0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 5, 0,
+        0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 5, 0,
         // State 17
-        -17, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+        -18, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
         // State 18
-        -18, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+        -19, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
         // State 19
-        -14, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+        -15, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
         // State 20
-        -16, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+        -17, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
         // State 21
-        -20, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+        -21, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
     ];
     fn __action(state: i8, integer: usize) -> i8 {
-        __ACTION[(state as usize) * 14 + integer]
+        __ACTION[(state as usize) * 15 + integer]
     }
     const __EOF_ACTION: &[i8] = &[
         // State 0
@@ -4917,35 +5033,35 @@ mod __parse__SuccessiveDiceRollExpr {
         // State 6
         0,
         // State 7
-        -27,
+        -28,
         // State 8
-        -12,
-        // State 9
-        -11,
-        // State 10
-        -8,
-        // State 11
         -13,
-        // State 12
-        -10,
-        // State 13
+        // State 9
+        -12,
+        // State 10
         -9,
-        // State 14
+        // State 11
         -14,
+        // State 12
+        -11,
+        // State 13
+        -10,
+        // State 14
+        -15,
         // State 15
-        -19,
+        -20,
         // State 16
         0,
         // State 17
-        -17,
-        // State 18
         -18,
+        // State 18
+        -19,
         // State 19
-        -14,
+        -15,
         // State 20
-        -16,
+        -17,
         // State 21
-        -20,
+        -21,
     ];
     fn __goto(state: i8, nt: usize) -> i8 {
         match nt {
@@ -4980,6 +5096,7 @@ mod __parse__SuccessiveDiceRollExpr {
         r###""one-chance""###,
         r###""or""###,
         r###""to""###,
+        r###""waiting""###,
         r###""x""###,
         r###"r#"[0-9]+"#"###,
     ];
@@ -5050,7 +5167,7 @@ mod __parse__SuccessiveDiceRollExpr {
 
         #[inline]
         fn error_action(&self, state: i8) -> i8 {
-            __action(state, 14 - 1)
+            __action(state, 15 - 1)
         }
 
         #[inline]
@@ -5130,7 +5247,8 @@ mod __parse__SuccessiveDiceRollExpr {
             Token(11, _) if true => Some(10),
             Token(12, _) if true => Some(11),
             Token(13, _) if true => Some(12),
-            Token(0, _) if true => Some(13),
+            Token(14, _) if true => Some(13),
+            Token(0, _) if true => Some(14),
             _ => None,
         }
     }
@@ -5143,8 +5261,8 @@ mod __parse__SuccessiveDiceRollExpr {
     ) -> __Symbol<'input>
     {
         match __token_index {
-            0 | 1 | 2 | 3 | 4 | 5 | 6 | 7 | 8 | 9 | 10 | 11 | 12 | 13 => match __token {
-                Token(1, __tok0) | Token(2, __tok0) | Token(3, __tok0) | Token(4, __tok0) | Token(5, __tok0) | Token(6, __tok0) | Token(7, __tok0) | Token(8, __tok0) | Token(9, __tok0) | Token(10, __tok0) | Token(11, __tok0) | Token(12, __tok0) | Token(13, __tok0) | Token(0, __tok0) if true => __Symbol::Variant0(__tok0),
+            0 | 1 | 2 | 3 | 4 | 5 | 6 | 7 | 8 | 9 | 10 | 11 | 12 | 13 | 14 => match __token {
+                Token(1, __tok0) | Token(2, __tok0) | Token(3, __tok0) | Token(4, __tok0) | Token(5, __tok0) | Token(6, __tok0) | Token(7, __tok0) | Token(8, __tok0) | Token(9, __tok0) | Token(10, __tok0) | Token(11, __tok0) | Token(12, __tok0) | Token(13, __tok0) | Token(14, __tok0) | Token(0, __tok0) if true => __Symbol::Variant0(__tok0),
                 _ => unreachable!(),
             },
             _ => unreachable!(),
@@ -5178,32 +5296,32 @@ mod __parse__SuccessiveDiceRollExpr {
             }
             3 => {
                 __state_machine::SimulatedReduce::Reduce {
-                    states_to_pop: 3,
-                    nonterminal_produced: 1,
+                    states_to_pop: 1,
+                    nonterminal_produced: 0,
                 }
             }
             4 => {
                 __state_machine::SimulatedReduce::Reduce {
-                    states_to_pop: 1,
+                    states_to_pop: 3,
                     nonterminal_produced: 1,
                 }
             }
             5 => {
                 __state_machine::SimulatedReduce::Reduce {
                     states_to_pop: 1,
-                    nonterminal_produced: 2,
+                    nonterminal_produced: 1,
                 }
             }
             6 => {
                 __state_machine::SimulatedReduce::Reduce {
-                    states_to_pop: 3,
+                    states_to_pop: 1,
                     nonterminal_produced: 2,
                 }
             }
             7 => {
                 __state_machine::SimulatedReduce::Reduce {
-                    states_to_pop: 1,
-                    nonterminal_produced: 3,
+                    states_to_pop: 3,
+                    nonterminal_produced: 2,
                 }
             }
             8 => {
@@ -5245,13 +5363,13 @@ mod __parse__SuccessiveDiceRollExpr {
             14 => {
                 __state_machine::SimulatedReduce::Reduce {
                     states_to_pop: 1,
-                    nonterminal_produced: 4,
+                    nonterminal_produced: 3,
                 }
             }
             15 => {
                 __state_machine::SimulatedReduce::Reduce {
-                    states_to_pop: 3,
-                    nonterminal_produced: 5,
+                    states_to_pop: 1,
+                    nonterminal_produced: 4,
                 }
             }
             16 => {
@@ -5268,20 +5386,20 @@ mod __parse__SuccessiveDiceRollExpr {
             }
             18 => {
                 __state_machine::SimulatedReduce::Reduce {
-                    states_to_pop: 1,
-                    nonterminal_produced: 6,
+                    states_to_pop: 3,
+                    nonterminal_produced: 5,
                 }
             }
             19 => {
                 __state_machine::SimulatedReduce::Reduce {
-                    states_to_pop: 3,
+                    states_to_pop: 1,
                     nonterminal_produced: 6,
                 }
             }
             20 => {
                 __state_machine::SimulatedReduce::Reduce {
-                    states_to_pop: 1,
-                    nonterminal_produced: 7,
+                    states_to_pop: 3,
+                    nonterminal_produced: 6,
                 }
             }
             21 => {
@@ -5293,29 +5411,35 @@ mod __parse__SuccessiveDiceRollExpr {
             22 => {
                 __state_machine::SimulatedReduce::Reduce {
                     states_to_pop: 1,
-                    nonterminal_produced: 8,
+                    nonterminal_produced: 7,
                 }
             }
             23 => {
                 __state_machine::SimulatedReduce::Reduce {
                     states_to_pop: 1,
-                    nonterminal_produced: 9,
+                    nonterminal_produced: 8,
                 }
             }
             24 => {
                 __state_machine::SimulatedReduce::Reduce {
                     states_to_pop: 1,
-                    nonterminal_produced: 10,
+                    nonterminal_produced: 9,
                 }
             }
             25 => {
                 __state_machine::SimulatedReduce::Reduce {
                     states_to_pop: 1,
+                    nonterminal_produced: 10,
+                }
+            }
+            26 => {
+                __state_machine::SimulatedReduce::Reduce {
+                    states_to_pop: 1,
                     nonterminal_produced: 11,
                 }
             }
-            26 => __state_machine::SimulatedReduce::Accept,
-            27 => {
+            27 => __state_machine::SimulatedReduce::Accept,
+            28 => {
                 __state_machine::SimulatedReduce::Reduce {
                     states_to_pop: 1,
                     nonterminal_produced: 13,
@@ -5480,6 +5604,9 @@ mod __parse__SuccessiveDiceRollExpr {
                 __reduce25(input, __lookahead_start, __symbols, core::marker::PhantomData::<(&())>)
             }
             26 => {
+                __reduce26(input, __lookahead_start, __symbols, core::marker::PhantomData::<(&())>)
+            }
+            27 => {
                 // __SuccessiveDiceRollExpr = SuccessiveDiceRollExpr => ActionFn(2);
                 let __sym0 = __pop_Variant5(__symbols);
                 let __start = __sym0.0;
@@ -5487,8 +5614,8 @@ mod __parse__SuccessiveDiceRollExpr {
                 let __nt = super::__action2::<>(input, __sym0);
                 return Some(Ok(__nt));
             }
-            27 => {
-                __reduce27(input, __lookahead_start, __symbols, core::marker::PhantomData::<(&())>)
+            28 => {
+                __reduce28(input, __lookahead_start, __symbols, core::marker::PhantomData::<(&())>)
             }
             _ => panic!("invalid action code {}", __action)
         };
@@ -5643,16 +5770,13 @@ mod __parse__SuccessiveDiceRollExpr {
         _: core::marker::PhantomData<(&'input ())>,
     ) -> (usize, usize)
     {
-        // DiceRollExpr = DiceRollExpr, "or", Factor => ActionFn(9);
-        assert!(__symbols.len() >= 3);
-        let __sym2 = __pop_Variant2(__symbols);
-        let __sym1 = __pop_Variant0(__symbols);
-        let __sym0 = __pop_Variant2(__symbols);
+        // AllDiceRollsExpr = "waiting" => ActionFn(9);
+        let __sym0 = __pop_Variant0(__symbols);
         let __start = __sym0.0;
-        let __end = __sym2.2;
-        let __nt = super::__action9::<>(input, __sym0, __sym1, __sym2);
-        __symbols.push((__start, __Symbol::Variant2(__nt), __end));
-        (3, 1)
+        let __end = __sym0.2;
+        let __nt = super::__action9::<>(input, __sym0);
+        __symbols.push((__start, __Symbol::Variant1(__nt), __end));
+        (1, 0)
     }
     pub(crate) fn __reduce4<
         'input,
@@ -5663,13 +5787,16 @@ mod __parse__SuccessiveDiceRollExpr {
         _: core::marker::PhantomData<(&'input ())>,
     ) -> (usize, usize)
     {
-        // DiceRollExpr = Factor => ActionFn(10);
+        // DiceRollExpr = DiceRollExpr, "or", Factor => ActionFn(10);
+        assert!(__symbols.len() >= 3);
+        let __sym2 = __pop_Variant2(__symbols);
+        let __sym1 = __pop_Variant0(__symbols);
         let __sym0 = __pop_Variant2(__symbols);
         let __start = __sym0.0;
-        let __end = __sym0.2;
-        let __nt = super::__action10::<>(input, __sym0);
+        let __end = __sym2.2;
+        let __nt = super::__action10::<>(input, __sym0, __sym1, __sym2);
         __symbols.push((__start, __Symbol::Variant2(__nt), __end));
-        (1, 1)
+        (3, 1)
     }
     pub(crate) fn __reduce5<
         'input,
@@ -5680,13 +5807,13 @@ mod __parse__SuccessiveDiceRollExpr {
         _: core::marker::PhantomData<(&'input ())>,
     ) -> (usize, usize)
     {
-        // Factor = Num => ActionFn(11);
-        let __sym0 = __pop_Variant3(__symbols);
+        // DiceRollExpr = Factor => ActionFn(11);
+        let __sym0 = __pop_Variant2(__symbols);
         let __start = __sym0.0;
         let __end = __sym0.2;
         let __nt = super::__action11::<>(input, __sym0);
         __symbols.push((__start, __Symbol::Variant2(__nt), __end));
-        (1, 2)
+        (1, 1)
     }
     pub(crate) fn __reduce6<
         'input,
@@ -5697,16 +5824,13 @@ mod __parse__SuccessiveDiceRollExpr {
         _: core::marker::PhantomData<(&'input ())>,
     ) -> (usize, usize)
     {
-        // Factor = Num, "to", Num => ActionFn(12);
-        assert!(__symbols.len() >= 3);
-        let __sym2 = __pop_Variant3(__symbols);
-        let __sym1 = __pop_Variant0(__symbols);
+        // Factor = Num => ActionFn(12);
         let __sym0 = __pop_Variant3(__symbols);
         let __start = __sym0.0;
-        let __end = __sym2.2;
-        let __nt = super::__action12::<>(input, __sym0, __sym1, __sym2);
+        let __end = __sym0.2;
+        let __nt = super::__action12::<>(input, __sym0);
         __symbols.push((__start, __Symbol::Variant2(__nt), __end));
-        (3, 2)
+        (1, 2)
     }
     pub(crate) fn __reduce7<
         'input,
@@ -5717,13 +5841,16 @@ mod __parse__SuccessiveDiceRollExpr {
         _: core::marker::PhantomData<(&'input ())>,
     ) -> (usize, usize)
     {
-        // Num = "One" => ActionFn(18);
-        let __sym0 = __pop_Variant0(__symbols);
+        // Factor = Num, "to", Num => ActionFn(13);
+        assert!(__symbols.len() >= 3);
+        let __sym2 = __pop_Variant3(__symbols);
+        let __sym1 = __pop_Variant0(__symbols);
+        let __sym0 = __pop_Variant3(__symbols);
         let __start = __sym0.0;
-        let __end = __sym0.2;
-        let __nt = super::__action18::<>(input, __sym0);
-        __symbols.push((__start, __Symbol::Variant3(__nt), __end));
-        (1, 3)
+        let __end = __sym2.2;
+        let __nt = super::__action13::<>(input, __sym0, __sym1, __sym2);
+        __symbols.push((__start, __Symbol::Variant2(__nt), __end));
+        (3, 2)
     }
     pub(crate) fn __reduce8<
         'input,
@@ -5734,7 +5861,7 @@ mod __parse__SuccessiveDiceRollExpr {
         _: core::marker::PhantomData<(&'input ())>,
     ) -> (usize, usize)
     {
-        // Num = "Two" => ActionFn(19);
+        // Num = "One" => ActionFn(19);
         let __sym0 = __pop_Variant0(__symbols);
         let __start = __sym0.0;
         let __end = __sym0.2;
@@ -5751,7 +5878,7 @@ mod __parse__SuccessiveDiceRollExpr {
         _: core::marker::PhantomData<(&'input ())>,
     ) -> (usize, usize)
     {
-        // Num = "Three" => ActionFn(20);
+        // Num = "Two" => ActionFn(20);
         let __sym0 = __pop_Variant0(__symbols);
         let __start = __sym0.0;
         let __end = __sym0.2;
@@ -5768,7 +5895,7 @@ mod __parse__SuccessiveDiceRollExpr {
         _: core::marker::PhantomData<(&'input ())>,
     ) -> (usize, usize)
     {
-        // Num = "Four" => ActionFn(21);
+        // Num = "Three" => ActionFn(21);
         let __sym0 = __pop_Variant0(__symbols);
         let __start = __sym0.0;
         let __end = __sym0.2;
@@ -5785,7 +5912,7 @@ mod __parse__SuccessiveDiceRollExpr {
         _: core::marker::PhantomData<(&'input ())>,
     ) -> (usize, usize)
     {
-        // Num = "Five" => ActionFn(22);
+        // Num = "Four" => ActionFn(22);
         let __sym0 = __pop_Variant0(__symbols);
         let __start = __sym0.0;
         let __end = __sym0.2;
@@ -5802,7 +5929,7 @@ mod __parse__SuccessiveDiceRollExpr {
         _: core::marker::PhantomData<(&'input ())>,
     ) -> (usize, usize)
     {
-        // Num = "Six" => ActionFn(23);
+        // Num = "Five" => ActionFn(23);
         let __sym0 = __pop_Variant0(__symbols);
         let __start = __sym0.0;
         let __end = __sym0.2;
@@ -5819,7 +5946,7 @@ mod __parse__SuccessiveDiceRollExpr {
         _: core::marker::PhantomData<(&'input ())>,
     ) -> (usize, usize)
     {
-        // Num = r#"[0-9]+"# => ActionFn(24);
+        // Num = "Six" => ActionFn(24);
         let __sym0 = __pop_Variant0(__symbols);
         let __start = __sym0.0;
         let __end = __sym0.2;
@@ -5836,13 +5963,13 @@ mod __parse__SuccessiveDiceRollExpr {
         _: core::marker::PhantomData<(&'input ())>,
     ) -> (usize, usize)
     {
-        // Quantity = r#"[0-9]+"# => ActionFn(25);
+        // Num = r#"[0-9]+"# => ActionFn(25);
         let __sym0 = __pop_Variant0(__symbols);
         let __start = __sym0.0;
         let __end = __sym0.2;
         let __nt = super::__action25::<>(input, __sym0);
-        __symbols.push((__start, __Symbol::Variant4(__nt), __end));
-        (1, 4)
+        __symbols.push((__start, __Symbol::Variant3(__nt), __end));
+        (1, 3)
     }
     pub(crate) fn __reduce15<
         'input,
@@ -5853,16 +5980,13 @@ mod __parse__SuccessiveDiceRollExpr {
         _: core::marker::PhantomData<(&'input ())>,
     ) -> (usize, usize)
     {
-        // SuccessiveDiceRollExpr = SuccessiveDiceRollExpr, "+", SuccessiveFactor => ActionFn(13);
-        assert!(__symbols.len() >= 3);
-        let __sym2 = __pop_Variant5(__symbols);
-        let __sym1 = __pop_Variant0(__symbols);
-        let __sym0 = __pop_Variant5(__symbols);
+        // Quantity = r#"[0-9]+"# => ActionFn(26);
+        let __sym0 = __pop_Variant0(__symbols);
         let __start = __sym0.0;
-        let __end = __sym2.2;
-        let __nt = super::__action13::<>(input, __sym0, __sym1, __sym2);
-        __symbols.push((__start, __Symbol::Variant5(__nt), __end));
-        (3, 5)
+        let __end = __sym0.2;
+        let __nt = super::__action26::<>(input, __sym0);
+        __symbols.push((__start, __Symbol::Variant4(__nt), __end));
+        (1, 4)
     }
     pub(crate) fn __reduce16<
         'input,
@@ -5873,11 +5997,11 @@ mod __parse__SuccessiveDiceRollExpr {
         _: core::marker::PhantomData<(&'input ())>,
     ) -> (usize, usize)
     {
-        // SuccessiveDiceRollExpr = Num, "+", SuccessiveFactor => ActionFn(14);
+        // SuccessiveDiceRollExpr = SuccessiveDiceRollExpr, "+", SuccessiveFactor => ActionFn(14);
         assert!(__symbols.len() >= 3);
         let __sym2 = __pop_Variant5(__symbols);
         let __sym1 = __pop_Variant0(__symbols);
-        let __sym0 = __pop_Variant3(__symbols);
+        let __sym0 = __pop_Variant5(__symbols);
         let __start = __sym0.0;
         let __end = __sym2.2;
         let __nt = super::__action14::<>(input, __sym0, __sym1, __sym2);
@@ -5893,11 +6017,11 @@ mod __parse__SuccessiveDiceRollExpr {
         _: core::marker::PhantomData<(&'input ())>,
     ) -> (usize, usize)
     {
-        // SuccessiveDiceRollExpr = Quantity, "x", Num => ActionFn(15);
+        // SuccessiveDiceRollExpr = Num, "+", SuccessiveFactor => ActionFn(15);
         assert!(__symbols.len() >= 3);
-        let __sym2 = __pop_Variant3(__symbols);
+        let __sym2 = __pop_Variant5(__symbols);
         let __sym1 = __pop_Variant0(__symbols);
-        let __sym0 = __pop_Variant4(__symbols);
+        let __sym0 = __pop_Variant3(__symbols);
         let __start = __sym0.0;
         let __end = __sym2.2;
         let __nt = super::__action15::<>(input, __sym0, __sym1, __sym2);
@@ -5913,13 +6037,16 @@ mod __parse__SuccessiveDiceRollExpr {
         _: core::marker::PhantomData<(&'input ())>,
     ) -> (usize, usize)
     {
-        // SuccessiveFactor = Num => ActionFn(16);
-        let __sym0 = __pop_Variant3(__symbols);
+        // SuccessiveDiceRollExpr = Quantity, "x", Num => ActionFn(16);
+        assert!(__symbols.len() >= 3);
+        let __sym2 = __pop_Variant3(__symbols);
+        let __sym1 = __pop_Variant0(__symbols);
+        let __sym0 = __pop_Variant4(__symbols);
         let __start = __sym0.0;
-        let __end = __sym0.2;
-        let __nt = super::__action16::<>(input, __sym0);
+        let __end = __sym2.2;
+        let __nt = super::__action16::<>(input, __sym0, __sym1, __sym2);
         __symbols.push((__start, __Symbol::Variant5(__nt), __end));
-        (1, 6)
+        (3, 5)
     }
     pub(crate) fn __reduce19<
         'input,
@@ -5930,16 +6057,13 @@ mod __parse__SuccessiveDiceRollExpr {
         _: core::marker::PhantomData<(&'input ())>,
     ) -> (usize, usize)
     {
-        // SuccessiveFactor = Quantity, "x", Num => ActionFn(17);
-        assert!(__symbols.len() >= 3);
-        let __sym2 = __pop_Variant3(__symbols);
-        let __sym1 = __pop_Variant0(__symbols);
-        let __sym0 = __pop_Variant4(__symbols);
+        // SuccessiveFactor = Num => ActionFn(17);
+        let __sym0 = __pop_Variant3(__symbols);
         let __start = __sym0.0;
-        let __end = __sym2.2;
-        let __nt = super::__action17::<>(input, __sym0, __sym1, __sym2);
+        let __end = __sym0.2;
+        let __nt = super::__action17::<>(input, __sym0);
         __symbols.push((__start, __Symbol::Variant5(__nt), __end));
-        (3, 6)
+        (1, 6)
     }
     pub(crate) fn __reduce20<
         'input,
@@ -5950,13 +6074,16 @@ mod __parse__SuccessiveDiceRollExpr {
         _: core::marker::PhantomData<(&'input ())>,
     ) -> (usize, usize)
     {
-        // SuccessiveRollsOptions = "one-chance" => ActionFn(26);
-        let __sym0 = __pop_Variant0(__symbols);
+        // SuccessiveFactor = Quantity, "x", Num => ActionFn(18);
+        assert!(__symbols.len() >= 3);
+        let __sym2 = __pop_Variant3(__symbols);
+        let __sym1 = __pop_Variant0(__symbols);
+        let __sym0 = __pop_Variant4(__symbols);
         let __start = __sym0.0;
-        let __end = __sym0.2;
-        let __nt = super::__action26::<>(input, __sym0);
-        __symbols.push((__start, __Symbol::Variant6(__nt), __end));
-        (1, 7)
+        let __end = __sym2.2;
+        let __nt = super::__action18::<>(input, __sym0, __sym1, __sym2);
+        __symbols.push((__start, __Symbol::Variant5(__nt), __end));
+        (3, 6)
     }
     pub(crate) fn __reduce21<
         'input,
@@ -5967,7 +6094,7 @@ mod __parse__SuccessiveDiceRollExpr {
         _: core::marker::PhantomData<(&'input ())>,
     ) -> (usize, usize)
     {
-        // SuccessiveRollsOptions = "accum" => ActionFn(27);
+        // SuccessiveRollsOptions = "one-chance" => ActionFn(27);
         let __sym0 = __pop_Variant0(__symbols);
         let __start = __sym0.0;
         let __end = __sym0.2;
@@ -5984,6 +6111,23 @@ mod __parse__SuccessiveDiceRollExpr {
         _: core::marker::PhantomData<(&'input ())>,
     ) -> (usize, usize)
     {
+        // SuccessiveRollsOptions = "accum" => ActionFn(28);
+        let __sym0 = __pop_Variant0(__symbols);
+        let __start = __sym0.0;
+        let __end = __sym0.2;
+        let __nt = super::__action28::<>(input, __sym0);
+        __symbols.push((__start, __Symbol::Variant6(__nt), __end));
+        (1, 7)
+    }
+    pub(crate) fn __reduce23<
+        'input,
+    >(
+        input: &'input str,
+        __lookahead_start: Option<&usize>,
+        __symbols: &mut alloc::vec::Vec<(usize,__Symbol<'input>,usize)>,
+        _: core::marker::PhantomData<(&'input ())>,
+    ) -> (usize, usize)
+    {
         // __AllDiceRollsExpr = AllDiceRollsExpr => ActionFn(0);
         let __sym0 = __pop_Variant1(__symbols);
         let __start = __sym0.0;
@@ -5992,7 +6136,7 @@ mod __parse__SuccessiveDiceRollExpr {
         __symbols.push((__start, __Symbol::Variant1(__nt), __end));
         (1, 8)
     }
-    pub(crate) fn __reduce23<
+    pub(crate) fn __reduce24<
         'input,
     >(
         input: &'input str,
@@ -6009,7 +6153,7 @@ mod __parse__SuccessiveDiceRollExpr {
         __symbols.push((__start, __Symbol::Variant2(__nt), __end));
         (1, 9)
     }
-    pub(crate) fn __reduce24<
+    pub(crate) fn __reduce25<
         'input,
     >(
         input: &'input str,
@@ -6026,7 +6170,7 @@ mod __parse__SuccessiveDiceRollExpr {
         __symbols.push((__start, __Symbol::Variant3(__nt), __end));
         (1, 10)
     }
-    pub(crate) fn __reduce25<
+    pub(crate) fn __reduce26<
         'input,
     >(
         input: &'input str,
@@ -6043,7 +6187,7 @@ mod __parse__SuccessiveDiceRollExpr {
         __symbols.push((__start, __Symbol::Variant4(__nt), __end));
         (1, 11)
     }
-    pub(crate) fn __reduce27<
+    pub(crate) fn __reduce28<
         'input,
     >(
         input: &'input str,
@@ -6089,26 +6233,26 @@ mod __parse__SuccessiveRollsOptions {
     }
     const __ACTION: &[i8] = &[
         // State 0
-        0, 0, 0, 0, 0, 0, 0, 0, 3, 4, 0, 0, 0, 0,
+        0, 0, 0, 0, 0, 0, 0, 0, 3, 4, 0, 0, 0, 0, 0,
         // State 1
-        0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+        0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
         // State 2
-        0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+        0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
         // State 3
-        0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+        0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
     ];
     fn __action(state: i8, integer: usize) -> i8 {
-        __ACTION[(state as usize) * 14 + integer]
+        __ACTION[(state as usize) * 15 + integer]
     }
     const __EOF_ACTION: &[i8] = &[
         // State 0
         0,
         // State 1
-        -28,
+        -29,
         // State 2
-        -22,
+        -23,
         // State 3
-        -21,
+        -22,
     ];
     fn __goto(state: i8, nt: usize) -> i8 {
         match nt {
@@ -6129,6 +6273,7 @@ mod __parse__SuccessiveRollsOptions {
         r###""one-chance""###,
         r###""or""###,
         r###""to""###,
+        r###""waiting""###,
         r###""x""###,
         r###"r#"[0-9]+"#"###,
     ];
@@ -6199,7 +6344,7 @@ mod __parse__SuccessiveRollsOptions {
 
         #[inline]
         fn error_action(&self, state: i8) -> i8 {
-            __action(state, 14 - 1)
+            __action(state, 15 - 1)
         }
 
         #[inline]
@@ -6279,7 +6424,8 @@ mod __parse__SuccessiveRollsOptions {
             Token(11, _) if true => Some(10),
             Token(12, _) if true => Some(11),
             Token(13, _) if true => Some(12),
-            Token(0, _) if true => Some(13),
+            Token(14, _) if true => Some(13),
+            Token(0, _) if true => Some(14),
             _ => None,
         }
     }
@@ -6292,8 +6438,8 @@ mod __parse__SuccessiveRollsOptions {
     ) -> __Symbol<'input>
     {
         match __token_index {
-            0 | 1 | 2 | 3 | 4 | 5 | 6 | 7 | 8 | 9 | 10 | 11 | 12 | 13 => match __token {
-                Token(1, __tok0) | Token(2, __tok0) | Token(3, __tok0) | Token(4, __tok0) | Token(5, __tok0) | Token(6, __tok0) | Token(7, __tok0) | Token(8, __tok0) | Token(9, __tok0) | Token(10, __tok0) | Token(11, __tok0) | Token(12, __tok0) | Token(13, __tok0) | Token(0, __tok0) if true => __Symbol::Variant0(__tok0),
+            0 | 1 | 2 | 3 | 4 | 5 | 6 | 7 | 8 | 9 | 10 | 11 | 12 | 13 | 14 => match __token {
+                Token(1, __tok0) | Token(2, __tok0) | Token(3, __tok0) | Token(4, __tok0) | Token(5, __tok0) | Token(6, __tok0) | Token(7, __tok0) | Token(8, __tok0) | Token(9, __tok0) | Token(10, __tok0) | Token(11, __tok0) | Token(12, __tok0) | Token(13, __tok0) | Token(14, __tok0) | Token(0, __tok0) if true => __Symbol::Variant0(__tok0),
                 _ => unreachable!(),
             },
             _ => unreachable!(),
@@ -6327,32 +6473,32 @@ mod __parse__SuccessiveRollsOptions {
             }
             3 => {
                 __state_machine::SimulatedReduce::Reduce {
-                    states_to_pop: 3,
-                    nonterminal_produced: 1,
+                    states_to_pop: 1,
+                    nonterminal_produced: 0,
                 }
             }
             4 => {
                 __state_machine::SimulatedReduce::Reduce {
-                    states_to_pop: 1,
+                    states_to_pop: 3,
                     nonterminal_produced: 1,
                 }
             }
             5 => {
                 __state_machine::SimulatedReduce::Reduce {
                     states_to_pop: 1,
-                    nonterminal_produced: 2,
+                    nonterminal_produced: 1,
                 }
             }
             6 => {
                 __state_machine::SimulatedReduce::Reduce {
-                    states_to_pop: 3,
+                    states_to_pop: 1,
                     nonterminal_produced: 2,
                 }
             }
             7 => {
                 __state_machine::SimulatedReduce::Reduce {
-                    states_to_pop: 1,
-                    nonterminal_produced: 3,
+                    states_to_pop: 3,
+                    nonterminal_produced: 2,
                 }
             }
             8 => {
@@ -6394,13 +6540,13 @@ mod __parse__SuccessiveRollsOptions {
             14 => {
                 __state_machine::SimulatedReduce::Reduce {
                     states_to_pop: 1,
-                    nonterminal_produced: 4,
+                    nonterminal_produced: 3,
                 }
             }
             15 => {
                 __state_machine::SimulatedReduce::Reduce {
-                    states_to_pop: 3,
-                    nonterminal_produced: 5,
+                    states_to_pop: 1,
+                    nonterminal_produced: 4,
                 }
             }
             16 => {
@@ -6417,20 +6563,20 @@ mod __parse__SuccessiveRollsOptions {
             }
             18 => {
                 __state_machine::SimulatedReduce::Reduce {
-                    states_to_pop: 1,
-                    nonterminal_produced: 6,
+                    states_to_pop: 3,
+                    nonterminal_produced: 5,
                 }
             }
             19 => {
                 __state_machine::SimulatedReduce::Reduce {
-                    states_to_pop: 3,
+                    states_to_pop: 1,
                     nonterminal_produced: 6,
                 }
             }
             20 => {
                 __state_machine::SimulatedReduce::Reduce {
-                    states_to_pop: 1,
-                    nonterminal_produced: 7,
+                    states_to_pop: 3,
+                    nonterminal_produced: 6,
                 }
             }
             21 => {
@@ -6442,34 +6588,40 @@ mod __parse__SuccessiveRollsOptions {
             22 => {
                 __state_machine::SimulatedReduce::Reduce {
                     states_to_pop: 1,
-                    nonterminal_produced: 8,
+                    nonterminal_produced: 7,
                 }
             }
             23 => {
                 __state_machine::SimulatedReduce::Reduce {
                     states_to_pop: 1,
-                    nonterminal_produced: 9,
+                    nonterminal_produced: 8,
                 }
             }
             24 => {
                 __state_machine::SimulatedReduce::Reduce {
                     states_to_pop: 1,
-                    nonterminal_produced: 10,
+                    nonterminal_produced: 9,
                 }
             }
             25 => {
                 __state_machine::SimulatedReduce::Reduce {
                     states_to_pop: 1,
-                    nonterminal_produced: 11,
+                    nonterminal_produced: 10,
                 }
             }
             26 => {
                 __state_machine::SimulatedReduce::Reduce {
                     states_to_pop: 1,
+                    nonterminal_produced: 11,
+                }
+            }
+            27 => {
+                __state_machine::SimulatedReduce::Reduce {
+                    states_to_pop: 1,
                     nonterminal_produced: 12,
                 }
             }
-            27 => __state_machine::SimulatedReduce::Accept,
+            28 => __state_machine::SimulatedReduce::Accept,
             _ => panic!("invalid reduction index {}", __reduce_index)
         }
     }
@@ -6632,6 +6784,9 @@ mod __parse__SuccessiveRollsOptions {
                 __reduce26(input, __lookahead_start, __symbols, core::marker::PhantomData::<(&())>)
             }
             27 => {
+                __reduce27(input, __lookahead_start, __symbols, core::marker::PhantomData::<(&())>)
+            }
+            28 => {
                 // __SuccessiveRollsOptions = SuccessiveRollsOptions => ActionFn(5);
                 let __sym0 = __pop_Variant6(__symbols);
                 let __start = __sym0.0;
@@ -6792,16 +6947,13 @@ mod __parse__SuccessiveRollsOptions {
         _: core::marker::PhantomData<(&'input ())>,
     ) -> (usize, usize)
     {
-        // DiceRollExpr = DiceRollExpr, "or", Factor => ActionFn(9);
-        assert!(__symbols.len() >= 3);
-        let __sym2 = __pop_Variant2(__symbols);
-        let __sym1 = __pop_Variant0(__symbols);
-        let __sym0 = __pop_Variant2(__symbols);
+        // AllDiceRollsExpr = "waiting" => ActionFn(9);
+        let __sym0 = __pop_Variant0(__symbols);
         let __start = __sym0.0;
-        let __end = __sym2.2;
-        let __nt = super::__action9::<>(input, __sym0, __sym1, __sym2);
-        __symbols.push((__start, __Symbol::Variant2(__nt), __end));
-        (3, 1)
+        let __end = __sym0.2;
+        let __nt = super::__action9::<>(input, __sym0);
+        __symbols.push((__start, __Symbol::Variant1(__nt), __end));
+        (1, 0)
     }
     pub(crate) fn __reduce4<
         'input,
@@ -6812,13 +6964,16 @@ mod __parse__SuccessiveRollsOptions {
         _: core::marker::PhantomData<(&'input ())>,
     ) -> (usize, usize)
     {
-        // DiceRollExpr = Factor => ActionFn(10);
+        // DiceRollExpr = DiceRollExpr, "or", Factor => ActionFn(10);
+        assert!(__symbols.len() >= 3);
+        let __sym2 = __pop_Variant2(__symbols);
+        let __sym1 = __pop_Variant0(__symbols);
         let __sym0 = __pop_Variant2(__symbols);
         let __start = __sym0.0;
-        let __end = __sym0.2;
-        let __nt = super::__action10::<>(input, __sym0);
+        let __end = __sym2.2;
+        let __nt = super::__action10::<>(input, __sym0, __sym1, __sym2);
         __symbols.push((__start, __Symbol::Variant2(__nt), __end));
-        (1, 1)
+        (3, 1)
     }
     pub(crate) fn __reduce5<
         'input,
@@ -6829,13 +6984,13 @@ mod __parse__SuccessiveRollsOptions {
         _: core::marker::PhantomData<(&'input ())>,
     ) -> (usize, usize)
     {
-        // Factor = Num => ActionFn(11);
-        let __sym0 = __pop_Variant3(__symbols);
+        // DiceRollExpr = Factor => ActionFn(11);
+        let __sym0 = __pop_Variant2(__symbols);
         let __start = __sym0.0;
         let __end = __sym0.2;
         let __nt = super::__action11::<>(input, __sym0);
         __symbols.push((__start, __Symbol::Variant2(__nt), __end));
-        (1, 2)
+        (1, 1)
     }
     pub(crate) fn __reduce6<
         'input,
@@ -6846,16 +7001,13 @@ mod __parse__SuccessiveRollsOptions {
         _: core::marker::PhantomData<(&'input ())>,
     ) -> (usize, usize)
     {
-        // Factor = Num, "to", Num => ActionFn(12);
-        assert!(__symbols.len() >= 3);
-        let __sym2 = __pop_Variant3(__symbols);
-        let __sym1 = __pop_Variant0(__symbols);
+        // Factor = Num => ActionFn(12);
         let __sym0 = __pop_Variant3(__symbols);
         let __start = __sym0.0;
-        let __end = __sym2.2;
-        let __nt = super::__action12::<>(input, __sym0, __sym1, __sym2);
+        let __end = __sym0.2;
+        let __nt = super::__action12::<>(input, __sym0);
         __symbols.push((__start, __Symbol::Variant2(__nt), __end));
-        (3, 2)
+        (1, 2)
     }
     pub(crate) fn __reduce7<
         'input,
@@ -6866,13 +7018,16 @@ mod __parse__SuccessiveRollsOptions {
         _: core::marker::PhantomData<(&'input ())>,
     ) -> (usize, usize)
     {
-        // Num = "One" => ActionFn(18);
-        let __sym0 = __pop_Variant0(__symbols);
+        // Factor = Num, "to", Num => ActionFn(13);
+        assert!(__symbols.len() >= 3);
+        let __sym2 = __pop_Variant3(__symbols);
+        let __sym1 = __pop_Variant0(__symbols);
+        let __sym0 = __pop_Variant3(__symbols);
         let __start = __sym0.0;
-        let __end = __sym0.2;
-        let __nt = super::__action18::<>(input, __sym0);
-        __symbols.push((__start, __Symbol::Variant3(__nt), __end));
-        (1, 3)
+        let __end = __sym2.2;
+        let __nt = super::__action13::<>(input, __sym0, __sym1, __sym2);
+        __symbols.push((__start, __Symbol::Variant2(__nt), __end));
+        (3, 2)
     }
     pub(crate) fn __reduce8<
         'input,
@@ -6883,7 +7038,7 @@ mod __parse__SuccessiveRollsOptions {
         _: core::marker::PhantomData<(&'input ())>,
     ) -> (usize, usize)
     {
-        // Num = "Two" => ActionFn(19);
+        // Num = "One" => ActionFn(19);
         let __sym0 = __pop_Variant0(__symbols);
         let __start = __sym0.0;
         let __end = __sym0.2;
@@ -6900,7 +7055,7 @@ mod __parse__SuccessiveRollsOptions {
         _: core::marker::PhantomData<(&'input ())>,
     ) -> (usize, usize)
     {
-        // Num = "Three" => ActionFn(20);
+        // Num = "Two" => ActionFn(20);
         let __sym0 = __pop_Variant0(__symbols);
         let __start = __sym0.0;
         let __end = __sym0.2;
@@ -6917,7 +7072,7 @@ mod __parse__SuccessiveRollsOptions {
         _: core::marker::PhantomData<(&'input ())>,
     ) -> (usize, usize)
     {
-        // Num = "Four" => ActionFn(21);
+        // Num = "Three" => ActionFn(21);
         let __sym0 = __pop_Variant0(__symbols);
         let __start = __sym0.0;
         let __end = __sym0.2;
@@ -6934,7 +7089,7 @@ mod __parse__SuccessiveRollsOptions {
         _: core::marker::PhantomData<(&'input ())>,
     ) -> (usize, usize)
     {
-        // Num = "Five" => ActionFn(22);
+        // Num = "Four" => ActionFn(22);
         let __sym0 = __pop_Variant0(__symbols);
         let __start = __sym0.0;
         let __end = __sym0.2;
@@ -6951,7 +7106,7 @@ mod __parse__SuccessiveRollsOptions {
         _: core::marker::PhantomData<(&'input ())>,
     ) -> (usize, usize)
     {
-        // Num = "Six" => ActionFn(23);
+        // Num = "Five" => ActionFn(23);
         let __sym0 = __pop_Variant0(__symbols);
         let __start = __sym0.0;
         let __end = __sym0.2;
@@ -6968,7 +7123,7 @@ mod __parse__SuccessiveRollsOptions {
         _: core::marker::PhantomData<(&'input ())>,
     ) -> (usize, usize)
     {
-        // Num = r#"[0-9]+"# => ActionFn(24);
+        // Num = "Six" => ActionFn(24);
         let __sym0 = __pop_Variant0(__symbols);
         let __start = __sym0.0;
         let __end = __sym0.2;
@@ -6985,13 +7140,13 @@ mod __parse__SuccessiveRollsOptions {
         _: core::marker::PhantomData<(&'input ())>,
     ) -> (usize, usize)
     {
-        // Quantity = r#"[0-9]+"# => ActionFn(25);
+        // Num = r#"[0-9]+"# => ActionFn(25);
         let __sym0 = __pop_Variant0(__symbols);
         let __start = __sym0.0;
         let __end = __sym0.2;
         let __nt = super::__action25::<>(input, __sym0);
-        __symbols.push((__start, __Symbol::Variant4(__nt), __end));
-        (1, 4)
+        __symbols.push((__start, __Symbol::Variant3(__nt), __end));
+        (1, 3)
     }
     pub(crate) fn __reduce15<
         'input,
@@ -7002,16 +7157,13 @@ mod __parse__SuccessiveRollsOptions {
         _: core::marker::PhantomData<(&'input ())>,
     ) -> (usize, usize)
     {
-        // SuccessiveDiceRollExpr = SuccessiveDiceRollExpr, "+", SuccessiveFactor => ActionFn(13);
-        assert!(__symbols.len() >= 3);
-        let __sym2 = __pop_Variant5(__symbols);
-        let __sym1 = __pop_Variant0(__symbols);
-        let __sym0 = __pop_Variant5(__symbols);
+        // Quantity = r#"[0-9]+"# => ActionFn(26);
+        let __sym0 = __pop_Variant0(__symbols);
         let __start = __sym0.0;
-        let __end = __sym2.2;
-        let __nt = super::__action13::<>(input, __sym0, __sym1, __sym2);
-        __symbols.push((__start, __Symbol::Variant5(__nt), __end));
-        (3, 5)
+        let __end = __sym0.2;
+        let __nt = super::__action26::<>(input, __sym0);
+        __symbols.push((__start, __Symbol::Variant4(__nt), __end));
+        (1, 4)
     }
     pub(crate) fn __reduce16<
         'input,
@@ -7022,11 +7174,11 @@ mod __parse__SuccessiveRollsOptions {
         _: core::marker::PhantomData<(&'input ())>,
     ) -> (usize, usize)
     {
-        // SuccessiveDiceRollExpr = Num, "+", SuccessiveFactor => ActionFn(14);
+        // SuccessiveDiceRollExpr = SuccessiveDiceRollExpr, "+", SuccessiveFactor => ActionFn(14);
         assert!(__symbols.len() >= 3);
         let __sym2 = __pop_Variant5(__symbols);
         let __sym1 = __pop_Variant0(__symbols);
-        let __sym0 = __pop_Variant3(__symbols);
+        let __sym0 = __pop_Variant5(__symbols);
         let __start = __sym0.0;
         let __end = __sym2.2;
         let __nt = super::__action14::<>(input, __sym0, __sym1, __sym2);
@@ -7042,11 +7194,11 @@ mod __parse__SuccessiveRollsOptions {
         _: core::marker::PhantomData<(&'input ())>,
     ) -> (usize, usize)
     {
-        // SuccessiveDiceRollExpr = Quantity, "x", Num => ActionFn(15);
+        // SuccessiveDiceRollExpr = Num, "+", SuccessiveFactor => ActionFn(15);
         assert!(__symbols.len() >= 3);
-        let __sym2 = __pop_Variant3(__symbols);
+        let __sym2 = __pop_Variant5(__symbols);
         let __sym1 = __pop_Variant0(__symbols);
-        let __sym0 = __pop_Variant4(__symbols);
+        let __sym0 = __pop_Variant3(__symbols);
         let __start = __sym0.0;
         let __end = __sym2.2;
         let __nt = super::__action15::<>(input, __sym0, __sym1, __sym2);
@@ -7062,13 +7214,16 @@ mod __parse__SuccessiveRollsOptions {
         _: core::marker::PhantomData<(&'input ())>,
     ) -> (usize, usize)
     {
-        // SuccessiveFactor = Num => ActionFn(16);
-        let __sym0 = __pop_Variant3(__symbols);
+        // SuccessiveDiceRollExpr = Quantity, "x", Num => ActionFn(16);
+        assert!(__symbols.len() >= 3);
+        let __sym2 = __pop_Variant3(__symbols);
+        let __sym1 = __pop_Variant0(__symbols);
+        let __sym0 = __pop_Variant4(__symbols);
         let __start = __sym0.0;
-        let __end = __sym0.2;
-        let __nt = super::__action16::<>(input, __sym0);
+        let __end = __sym2.2;
+        let __nt = super::__action16::<>(input, __sym0, __sym1, __sym2);
         __symbols.push((__start, __Symbol::Variant5(__nt), __end));
-        (1, 6)
+        (3, 5)
     }
     pub(crate) fn __reduce19<
         'input,
@@ -7079,16 +7234,13 @@ mod __parse__SuccessiveRollsOptions {
         _: core::marker::PhantomData<(&'input ())>,
     ) -> (usize, usize)
     {
-        // SuccessiveFactor = Quantity, "x", Num => ActionFn(17);
-        assert!(__symbols.len() >= 3);
-        let __sym2 = __pop_Variant3(__symbols);
-        let __sym1 = __pop_Variant0(__symbols);
-        let __sym0 = __pop_Variant4(__symbols);
+        // SuccessiveFactor = Num => ActionFn(17);
+        let __sym0 = __pop_Variant3(__symbols);
         let __start = __sym0.0;
-        let __end = __sym2.2;
-        let __nt = super::__action17::<>(input, __sym0, __sym1, __sym2);
+        let __end = __sym0.2;
+        let __nt = super::__action17::<>(input, __sym0);
         __symbols.push((__start, __Symbol::Variant5(__nt), __end));
-        (3, 6)
+        (1, 6)
     }
     pub(crate) fn __reduce20<
         'input,
@@ -7099,13 +7251,16 @@ mod __parse__SuccessiveRollsOptions {
         _: core::marker::PhantomData<(&'input ())>,
     ) -> (usize, usize)
     {
-        // SuccessiveRollsOptions = "one-chance" => ActionFn(26);
-        let __sym0 = __pop_Variant0(__symbols);
+        // SuccessiveFactor = Quantity, "x", Num => ActionFn(18);
+        assert!(__symbols.len() >= 3);
+        let __sym2 = __pop_Variant3(__symbols);
+        let __sym1 = __pop_Variant0(__symbols);
+        let __sym0 = __pop_Variant4(__symbols);
         let __start = __sym0.0;
-        let __end = __sym0.2;
-        let __nt = super::__action26::<>(input, __sym0);
-        __symbols.push((__start, __Symbol::Variant6(__nt), __end));
-        (1, 7)
+        let __end = __sym2.2;
+        let __nt = super::__action18::<>(input, __sym0, __sym1, __sym2);
+        __symbols.push((__start, __Symbol::Variant5(__nt), __end));
+        (3, 6)
     }
     pub(crate) fn __reduce21<
         'input,
@@ -7116,7 +7271,7 @@ mod __parse__SuccessiveRollsOptions {
         _: core::marker::PhantomData<(&'input ())>,
     ) -> (usize, usize)
     {
-        // SuccessiveRollsOptions = "accum" => ActionFn(27);
+        // SuccessiveRollsOptions = "one-chance" => ActionFn(27);
         let __sym0 = __pop_Variant0(__symbols);
         let __start = __sym0.0;
         let __end = __sym0.2;
@@ -7133,6 +7288,23 @@ mod __parse__SuccessiveRollsOptions {
         _: core::marker::PhantomData<(&'input ())>,
     ) -> (usize, usize)
     {
+        // SuccessiveRollsOptions = "accum" => ActionFn(28);
+        let __sym0 = __pop_Variant0(__symbols);
+        let __start = __sym0.0;
+        let __end = __sym0.2;
+        let __nt = super::__action28::<>(input, __sym0);
+        __symbols.push((__start, __Symbol::Variant6(__nt), __end));
+        (1, 7)
+    }
+    pub(crate) fn __reduce23<
+        'input,
+    >(
+        input: &'input str,
+        __lookahead_start: Option<&usize>,
+        __symbols: &mut alloc::vec::Vec<(usize,__Symbol<'input>,usize)>,
+        _: core::marker::PhantomData<(&'input ())>,
+    ) -> (usize, usize)
+    {
         // __AllDiceRollsExpr = AllDiceRollsExpr => ActionFn(0);
         let __sym0 = __pop_Variant1(__symbols);
         let __start = __sym0.0;
@@ -7141,7 +7313,7 @@ mod __parse__SuccessiveRollsOptions {
         __symbols.push((__start, __Symbol::Variant1(__nt), __end));
         (1, 8)
     }
-    pub(crate) fn __reduce23<
+    pub(crate) fn __reduce24<
         'input,
     >(
         input: &'input str,
@@ -7158,7 +7330,7 @@ mod __parse__SuccessiveRollsOptions {
         __symbols.push((__start, __Symbol::Variant2(__nt), __end));
         (1, 9)
     }
-    pub(crate) fn __reduce24<
+    pub(crate) fn __reduce25<
         'input,
     >(
         input: &'input str,
@@ -7175,7 +7347,7 @@ mod __parse__SuccessiveRollsOptions {
         __symbols.push((__start, __Symbol::Variant3(__nt), __end));
         (1, 10)
     }
-    pub(crate) fn __reduce25<
+    pub(crate) fn __reduce26<
         'input,
     >(
         input: &'input str,
@@ -7192,7 +7364,7 @@ mod __parse__SuccessiveRollsOptions {
         __symbols.push((__start, __Symbol::Variant4(__nt), __end));
         (1, 11)
     }
-    pub(crate) fn __reduce26<
+    pub(crate) fn __reduce27<
         'input,
     >(
         input: &'input str,
@@ -7237,6 +7409,7 @@ mod __intern_token {
             ("^((?:one\\-chance))", false),
             ("^((?:or))", false),
             ("^((?:to))", false),
+            ("^((?:waiting))", false),
             ("^(x)", false),
             (r"^(\s*)", true),
         ];
@@ -7361,6 +7534,18 @@ fn __action9<
     'input,
 >(
     input: &'input str,
+    (_, __0, _): (usize, &'input str, usize),
+) -> Box<AllDiceRollsExpr>
+{
+    Box::new(AllDiceRollsExpr::NoRoll(()))
+}
+
+#[allow(unused_variables)]
+#[allow(clippy::too_many_arguments)]
+fn __action10<
+    'input,
+>(
+    input: &'input str,
     (_, a, _): (usize, Box<DiceRollExpr>, usize),
     (_, _, _): (usize, &'input str, usize),
     (_, b, _): (usize, Box<DiceRollExpr>, usize),
@@ -7371,7 +7556,7 @@ fn __action9<
 
 #[allow(unused_variables)]
 #[allow(clippy::too_many_arguments)]
-fn __action10<
+fn __action11<
     'input,
 >(
     input: &'input str,
@@ -7383,7 +7568,7 @@ fn __action10<
 
 #[allow(unused_variables)]
 #[allow(clippy::too_many_arguments)]
-fn __action11<
+fn __action12<
     'input,
 >(
     input: &'input str,
@@ -7395,7 +7580,7 @@ fn __action11<
 
 #[allow(unused_variables)]
 #[allow(clippy::too_many_arguments)]
-fn __action12<
+fn __action13<
     'input,
 >(
     input: &'input str,
@@ -7409,7 +7594,7 @@ fn __action12<
 
 #[allow(unused_variables)]
 #[allow(clippy::too_many_arguments)]
-fn __action13<
+fn __action14<
     'input,
 >(
     input: &'input str,
@@ -7423,7 +7608,7 @@ fn __action13<
 
 #[allow(unused_variables)]
 #[allow(clippy::too_many_arguments)]
-fn __action14<
+fn __action15<
     'input,
 >(
     input: &'input str,
@@ -7437,7 +7622,7 @@ fn __action14<
 
 #[allow(unused_variables)]
 #[allow(clippy::too_many_arguments)]
-fn __action15<
+fn __action16<
     'input,
 >(
     input: &'input str,
@@ -7451,7 +7636,7 @@ fn __action15<
 
 #[allow(unused_variables)]
 #[allow(clippy::too_many_arguments)]
-fn __action16<
+fn __action17<
     'input,
 >(
     input: &'input str,
@@ -7463,7 +7648,7 @@ fn __action16<
 
 #[allow(unused_variables)]
 #[allow(clippy::too_many_arguments)]
-fn __action17<
+fn __action18<
     'input,
 >(
     input: &'input str,
@@ -7477,7 +7662,7 @@ fn __action17<
 
 #[allow(unused_variables)]
 #[allow(clippy::too_many_arguments)]
-fn __action18<
+fn __action19<
     'input,
 >(
     input: &'input str,
@@ -7489,7 +7674,7 @@ fn __action18<
 
 #[allow(unused_variables)]
 #[allow(clippy::too_many_arguments)]
-fn __action19<
+fn __action20<
     'input,
 >(
     input: &'input str,
@@ -7501,7 +7686,7 @@ fn __action19<
 
 #[allow(unused_variables)]
 #[allow(clippy::too_many_arguments)]
-fn __action20<
+fn __action21<
     'input,
 >(
     input: &'input str,
@@ -7513,7 +7698,7 @@ fn __action20<
 
 #[allow(unused_variables)]
 #[allow(clippy::too_many_arguments)]
-fn __action21<
+fn __action22<
     'input,
 >(
     input: &'input str,
@@ -7525,7 +7710,7 @@ fn __action21<
 
 #[allow(unused_variables)]
 #[allow(clippy::too_many_arguments)]
-fn __action22<
+fn __action23<
     'input,
 >(
     input: &'input str,
@@ -7537,7 +7722,7 @@ fn __action22<
 
 #[allow(unused_variables)]
 #[allow(clippy::too_many_arguments)]
-fn __action23<
+fn __action24<
     'input,
 >(
     input: &'input str,
@@ -7549,7 +7734,7 @@ fn __action23<
 
 #[allow(unused_variables)]
 #[allow(clippy::too_many_arguments)]
-fn __action24<
+fn __action25<
     'input,
 >(
     input: &'input str,
@@ -7561,7 +7746,7 @@ fn __action24<
 
 #[allow(unused_variables)]
 #[allow(clippy::too_many_arguments)]
-fn __action25<
+fn __action26<
     'input,
 >(
     input: &'input str,
@@ -7573,7 +7758,7 @@ fn __action25<
 
 #[allow(unused_variables)]
 #[allow(clippy::too_many_arguments)]
-fn __action26<
+fn __action27<
     'input,
 >(
     input: &'input str,
@@ -7585,7 +7770,7 @@ fn __action26<
 
 #[allow(unused_variables)]
 #[allow(clippy::too_many_arguments)]
-fn __action27<
+fn __action28<
     'input,
 >(
     input: &'input str,

@@ -18,6 +18,7 @@ pub enum SuccessiveDiceRollExpr {
 }
 
 pub enum AllDiceRollsExpr {
+    NoRoll(()),
     SingleRoll(Box<DiceRollExpr>),
     SuccessiveRolls(SuccessiveRollsOptions, Box<SuccessiveDiceRollExpr>),
 }

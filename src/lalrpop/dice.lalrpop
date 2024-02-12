@@ -7,6 +7,7 @@ pub AllDiceRollsExpr : Box<AllDiceRollsExpr> = {
     <a:DiceRollExpr> => Box::new(AllDiceRollsExpr::SingleRoll(a)),
     <opt:SuccessiveRollsOptions> ":" <b:SuccessiveDiceRollExpr> => Box::new(AllDiceRollsExpr::SuccessiveRolls(opt, b)),
     <b:SuccessiveDiceRollExpr> => Box::new(AllDiceRollsExpr::SuccessiveRolls(SuccessiveRollsOptions::Cumulative, b)),
+    "waiting" => Box::new(AllDiceRollsExpr::NoRoll(())),
 }
 
 

@@ -24,6 +24,7 @@ pub fn parse_dice_roll_expr_ast(code_str: &str, num_faces : &u8) -> Arc<dyn dice
     }
     
     match code.expect("SHOULD NOT HAPPEN").as_ref() {
+        AllDiceRollsExpr::NoRoll(()) => Arc::new(dice_event::InvalidRequirement{}),
         AllDiceRollsExpr::SingleRoll(expr) => 
             match expr.as_ref() {
                 DiceRollExpr::SingleValue(val) => Arc::new(dice_event::SingleValueRequirement{required_value: val.clone(), die_faces: num_faces.clone()}),
