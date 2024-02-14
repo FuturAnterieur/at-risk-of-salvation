@@ -104,6 +104,21 @@
             }
         },
         {
+            "number" : 21,
+            "name" : "Barbarism",
+            "description" : "One is born a human being, but in an uncivilized and materialistic society in which warfare is considered a legitimate mode of human interaction.",
+            "paths":
+            {       
+                    "One":15,
+                    "Two":62,
+                    "Three":13,
+                    "Four":11,
+                    "Five":10,
+                    "Six":2
+            }
+        },
+
+        {
             "number" : 24,
             "name" : "The Heavenly Highway",
             "description" : "The opportunity has arrived, so hard to obtain, \nFor accomplishing the welfare of living beings; \nIf I fail to take advantage of it, \nWhen will the chance come again?",
@@ -291,6 +306,18 @@
                 "Four":52,
                 "Five":11,
                 "Six":5
+            }
+        },
+        {
+            "number":39,
+            "name":"Disciples (Śrāvaka), Path of Application (Prayoga-Mārga)",
+            "description":"Having accumulated merit and equipped oneself with a degree of meditative ability, one plants wholesome roots conducive to penetration -- based on the \"calm\" of meditation, one begins to develop \"insight\" into the conditioned and impermanent nature of the self. If this path is well-accomplished, one rises to the world-transcending paths.",
+            "paths":{
+                "One or Four":52,
+                "Two":43,
+                "Three":40,
+                "Five":28,
+                "Six":19
             }
         },
 

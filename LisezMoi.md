@@ -20,6 +20,6 @@ Pour rendre cela plus intéressant, le programme est aussi configuré pour calcu
 
 ## Pour le futur
 
-Le projet n'est pas encore fini! Il reste à peaufiner le parsing de code de probabilité et le calcul de probabilité pour mieux gérer les deux cases piège du jeu. Ensuite, il faudra évidemment finir d'inclure toutes les 104 cases du jeu dans le fichier assets/game.json.
+Le projet n'est pas encore fini! Il reste quelques features optionnelles, comme l'amélioration des calculs de probabilité pour les cases piège du jeu. Ensuite, il faudra évidemment finir d'inclure toutes les 104 cases du jeu dans le fichier assets/game.json.
 
 Finalement, si quelqu'un me donne 1 million de dollars (ou à peu près), j'envisagerai d'implémenter du multiplayer online pour le jeu. Mais on verra bien.
