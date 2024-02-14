@@ -120,6 +120,12 @@ dependencies = [
 ]
 
 [[package]]
+name = "dyn-clone"
+version = "1.0.16"
+source = "registry+https://github.com/rust-lang/crates.io-index"
+checksum = "545b22097d44f8a9581187cdf93de7a71e4722bf51200cfaba810865b49a495d"
+
+[[package]]
 name = "either"
 version = "1.9.0"
 source = "registry+https://github.com/rust-lang/crates.io-index"
@@ -515,6 +521,7 @@ version = "0.1.0"
 dependencies = [
  "assert_float_eq",
  "conv",
+ "dyn-clone",
  "lalrpop",
  "lalrpop-util",
  "malachite",
