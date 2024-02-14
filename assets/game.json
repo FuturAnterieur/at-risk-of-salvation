@@ -254,7 +254,44 @@
                 "Five":17,
                 "Six":27
             }
-
+        },
+        {
+            "number":36,
+            "name":"The Formless Realm (Arūpa-Dhātu)",
+            "description" : "Passing beyond sense desires adn then beyond matter, one's mental horizons become so broadened as to encompass endless vistas of space, finally transcending consciousness itself. \"Transcending 'nothing-at-all', he attains the station of neither-ideas-nor-the-lack-of-ideas.\" This is called the Peak of Existence. After a period of time, however, past karma becomes operative and one is reborn in a lower destiny.",
+            "paths":{
+                "One":38,
+                "Two":17,
+                "Three":11,
+                "Four or Five":36,
+                "Six":4
+            }
+        },
+        {
+            "number":37,
+            "name":"Pure Abodes (Śuddhāvāsa)",
+            "description":"Here the heights of the Realm of Form are attained by means of the strongest and most concentrated practice of the fourth stage of trance. They are distinct from the other worlds of the rūpa-dhātu in that they only house Anāgāmins who are already on the path to Arhat-hood.",
+            "paths":{
+                "One":64,
+                "Two":54,
+                "Three":32,
+                "Four":52,
+                "Five":12,
+                "Six":37
+            }
+        },
+        {
+            "number":38,
+            "name":"Disciples (Śrāvaka), Path of Accumulation (Sambhāra-Mārga)",
+            "description":"Nurturing a disgust for the cycle of death and rebirth, on enters the Vehicle of Disciples, beginning to plant wholesome roots conducive to liberation. By meditation, one begins to attack the four perverted views that are deeply ingrained in all ordinary people.",
+            "paths":{
+                "One":37,
+                "Two":40,
+                "Three":39,
+                "Four":52,
+                "Five":11,
+                "Six":5
+            }
         },
 
         {

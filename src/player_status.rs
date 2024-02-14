@@ -1,8 +1,7 @@
 use crate::dice_event;
-use std::sync::Arc;
 
 pub struct RemainingRequirementsForEdge {
-    pub remaining : Arc<dyn dice_event::DiceRollRequirement>,
+    pub remaining : Box<dyn dice_event::FulfillableRequirement>,
 }
 
 pub struct PlayerStatus {

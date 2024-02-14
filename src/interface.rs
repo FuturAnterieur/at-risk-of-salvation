@@ -4,10 +4,12 @@ use std::fs;
 use std::io;
 use crate::game_loader;
 use crate::graph;
+use crate::player_status::RemainingRequirementsForEdge;
 use crate::shortest_path;
 use crate::player_status;
 use crate::dice_event_parser::int_to_digit_text;
 use crate::lalrpop::dice::NumParser;
+use dyn_clone::clone_box;
 
 pub struct KarmicCatastrophe
 {
@@ -53,16 +55,17 @@ impl CommandLineInterface {
         all_names.join(", ")
     }
 
-    fn determine_next_node(&self, edges : &Vec::<graph::Edge>, selected_option : &str) -> Option<u32> {
+    fn determine_next_node(&self, ps : &mut player_status::PlayerStatus, original_edges : &Vec::<graph::Edge>, selected_option : &str) -> Option<u32> {
         let selected_option_value = NumParser::new().parse(selected_option);
         match selected_option_value {
             Err(_why) => None,
             Ok(val) => {
-                let selected_edge_idx = edges.iter().map(|edge| edge.requirement.enumerate_roll_values()).position(|roll_values| roll_values.contains(&val));
-                match selected_edge_idx {
+                let maybe_idx = ps.remaining_reqs_for_each_edge.iter_mut().position(|reqs| reqs.remaining.fullfill_with(&val) );
+                match maybe_idx {
+                    Some(idx) => Some(original_edges[idx].destination.clone()),
                     None => None,
-                    Some(idx) => Some(edges[idx].destination.clone()),
                 }
+                
             }
         }
     }
@@ -76,7 +79,7 @@ impl Interface for CommandLineInterface {
 
         let g = graph::Graph::new(&sakya_pandita);
 
-        let _ps = player_status::PlayerStatus{name:"Neo".to_string(), 
+        let mut ps = player_status::PlayerStatus{name:"Neo".to_string(), 
         rolls_on_current_square : Vec::<i16>::new(),
         remaining_reqs_for_each_edge : Vec::<player_status::RemainingRequirementsForEdge>::new()};
         
@@ -109,15 +112,23 @@ impl Interface for CommandLineInterface {
             predecessors.push(sakya_pandita.winning_square);
             let chances_of_reaching_end = g.path_probability(&predecessors);
             println!("Your odds of following the shortest path to the end are {:.7}%.", chances_of_reaching_end*100_f64);
+            let original_edges = g.edges_for_node(&current_square.number);
 
-            println!("Your choices are :");
+            if original_edges.is_none() {
+                return Err(KarmicCatastrophe{message:"No edges found for node -- that's a programming error. Aborting.".to_string()});
+            }
+
+            ps.remaining_reqs_for_each_edge.clear();
+            for orig_edge in original_edges.unwrap_or(&Vec::<graph::Edge>::new()) {
+                ps.remaining_reqs_for_each_edge.push(RemainingRequirementsForEdge{remaining: clone_box(&*orig_edge.requirement)});
+            }
             
-            let edges = g.edges_for_node(&current_square.number);
             
-            println!("{}", self.show_edges_choices(edges.unwrap()));
             let mut choice = String::new();
-
             loop {
+                println!("Your choices are :");
+                println!("{}", self.show_edges_choices(original_edges.unwrap()));
+            
                 loop {
                     match io::stdin().read_line(&mut choice) {
                         Ok(_size) => break,
@@ -130,10 +141,10 @@ impl Interface for CommandLineInterface {
                     return Ok(());
                 }
 
-                let maybe_next_node = self.determine_next_node(edges.unwrap(), &true_choice);
+                let maybe_next_node = self.determine_next_node(&mut ps, original_edges.unwrap(), &true_choice);
                 match maybe_next_node {
                     Some(next_node) => {next_square_num = next_node.clone(); break;},
-                    None => {choice.clear(); println!("Your voice resounds loudly, but your desires are unclear. Please type something else.");}
+                    None => {choice.clear(); println!("Your voice resounds loudly, but your wishes sound in the void.");}
                 }
             }
         }

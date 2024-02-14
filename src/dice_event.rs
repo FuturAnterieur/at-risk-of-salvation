@@ -11,6 +11,7 @@ use malachite::num::arithmetic::traits::Pow;
 use malachite::rounding_modes::RoundingMode;
 use malachite::num::conversion::traits::RoundingFrom;
 //use malachite::Integer;
+use dyn_clone::DynClone;
 
 pub trait DiceRollRequirement {
     fn success_probability_for_one_turn(&self) -> f64;
@@ -18,11 +19,11 @@ pub trait DiceRollRequirement {
     fn enumerate_roll_values(&self) -> Vec<i16>;
 }
 
-pub trait FulfillableRequirement : DiceRollRequirement {
+pub trait FulfillableRequirement : DiceRollRequirement + DynClone{
     fn fullfill_with(&mut self, single_roll : &i16) -> bool;
 }
 
-
+#[derive(Clone)]
 pub struct InvalidRequirement {
 }
 
@@ -46,6 +47,7 @@ impl FulfillableRequirement for InvalidRequirement {
     }
 }
 
+#[derive(Clone)]
 pub struct SingleValueRequirement {
     pub required_value : i16,
     pub die_faces : u8,
@@ -77,6 +79,7 @@ impl FulfillableRequirement for SingleValueRequirement {
     }
 }
 
+#[derive(Clone)]
 pub struct SingleRollMultipleValueRequirement {
     pub possible_values : Vec<i16>,
     pub die_faces : u8,
@@ -100,6 +103,7 @@ impl FulfillableRequirement for SingleRollMultipleValueRequirement {
     }
 }
 
+#[derive(Clone)]
 pub struct SuccessiveRollsInMultipleTurnsRequirement {
     pub rolls : Vec<i16>,
     pub die_faces : u8,
@@ -149,7 +153,7 @@ impl FulfillableRequirement for SuccessiveRollsInMultipleTurnsRequirement {
          self.rolls.remove(idx.unwrap());
         }             
  
-        idx.is_some() 
+        self.rolls.is_empty()
      }
 }
 
