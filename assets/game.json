@@ -320,6 +320,56 @@
                 "Six":19
             }
         },
+        {
+            "number":40,
+            "name":"Disciples, Paths of Vision and Cultivation (Darśana-Mārga, Bhāvanā-Mārga)",
+            "description":"In the course of moral purification and mental concentration, the four noble truths as taught by the Buddha come into view into all their ramifications. The Path of Vision has destroyed the notion of a self; the path of Cultivation destroys the attachment to pleasurable sensations, which persists even after the self is gone.",
+            "paths":{
+                "One":30,
+                "Two":35,
+                "Three":28,
+                "Four":32,
+                "Five":31,
+                "Six":29
+            }
+        },
+        {
+            "number":41,
+            "name":"Tantra, Middle Path of Accumulation",
+            "description":"This second class of the tantras is known as the \"the practice of both\" (ubhaya-caryā-tantra), for it combines outer and inner yoga. The chief text of this class is the Mahā-vairocana, which is the basis of tantric practice in China and Japan.\nDon<t concentrate on yourself, restricting your breath.\nFie, yogin, don't squint at the end of your nose.\nO fool, hold fast to the Innate,\nAnd abandon the clinging bonds of existence.\nBring together in thought the restless waves of breath.\nThen know the rue nature of the Innate.\nAnd this becomes still of itself.",
+            "paths":{
+                "One":60,
+                "Two":42,
+                "Three":59,
+                "Four":41,
+                "Five":67,
+                "Six":33
+            }
+        },
+        {
+            "number":42,
+            "name":"Tantra, Greater Path of Accumulation",
+            "description":"The yoga tantra i =s wholly internalized practice. The yogi creates mandalas and complex visuzalizations involving the Buddhas of the five tantric families. During the meditation one's own being becomes identical with the deity, which has been sealed with five seals. So one is now without possibility of falling back into a lower path or unhappy destiny.",
+            "paths":{
+                "One":49,
+                "Two":50,
+                "Three to Five":42,
+                "Six":59
+            }
+        },
+        {
+            "number":43,
+            "name":"Independent Buddha (Pratyeka-Buddha), Path of Accumulation",
+            "description":"One enters the vehicle of the solitary Buddha. This being attains enlightenment at a time when no Buhha abides in the world to teach the Dharma. But steadfast in his revulsion from saṃsāra, and without hearing again the Dharma of the Buddhas, he continues accumulating merit by good conduct and solitary meditation, until at last the great Awakening is reached.",
+            "paths":{
+                "One":52,
+                "Two":44,
+                "Three":28,
+                "Four":38,
+                "Five":13,
+                "Six":6
+            }
+        },
 
         {
             "number":52,
