@@ -6,6 +6,8 @@ mod shortest_path;
 mod interface;
 mod dice_event;
 mod player_status;
+mod karmic_catastrophe;
+mod command_line_game_loop;
 mod tests;
 mod lalrpop;
 

@@ -6,6 +6,7 @@ pub struct RemainingRequirementsForEdge {
 
 pub struct PlayerStatus {
     pub name : String,
+    pub current_square : u32,
     pub rolls_on_current_square : Vec<i16>,
     pub remaining_reqs_for_each_edge : Vec<RemainingRequirementsForEdge>,
 }
