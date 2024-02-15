@@ -32,11 +32,7 @@ impl Interface for CommandLineInterface {
         loop {
             println!("Welcome to the main menu. Your choices are\nNew,\nLoad,\nQuit.");
 
-            let mut ps = player_status::PlayerStatus{name:"Neo".to_string(), current_square : sakya_pandita.starting_square,
-            rolls_on_current_square : Vec::<i16>::new(),
-            remaining_reqs_for_each_edge : Vec::<player_status::RemainingRequirementsForEdge>::new()};
-        
-
+            let mut ps = player_status::PlayerStatus::new("Neo", sakya_pandita.starting_square);
             let mut choice = String::new();
 
             loop {
@@ -51,7 +47,7 @@ impl Interface for CommandLineInterface {
                 let true_choice = choice.trim();
                 match true_choice {
                     "New" => {break;},
-                    "Load" => {ps.current_square = 9; break;},
+                    "Load" => {ps.data.current_square = 9; break;},
                     "Quit" => {return Ok(());},
                     _ => {continue;}
                 }

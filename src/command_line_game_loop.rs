@@ -21,6 +21,7 @@ fn determine_next_node(ps : &mut PlayerStatus, original_edges : &Vec::<graph::Ed
     match selected_option_value {
         Err(_why) => None,
         Ok(val) => {
+            ps.data.rolls_on_current_square.push(val);
             let maybe_idx = ps.remaining_reqs_for_each_edge.iter_mut().position(|reqs| reqs.remaining.fullfill_with(&val) );
             match maybe_idx {
                 Some(idx) => Some(original_edges[idx].destination.clone()),
@@ -34,18 +35,18 @@ fn determine_next_node(ps : &mut PlayerStatus, original_edges : &Vec::<graph::Ed
 
 pub fn game_loop(ps : &mut PlayerStatus, sakya_pandita : &game_loader::Game, g : &graph::Graph) -> Result<(), KarmicCatastrophe>{
     
-    let mut next_square_num = ps.current_square.clone();
+    let mut next_square_num = ps.data.current_square.clone();
 
     loop {
         let current_square_opt = sakya_pandita.squares.iter().find(|square| square.number == next_square_num);
         if current_square_opt.is_none() {
             println!("You landed on square {}, which does not exist, but may be there when I complete the JSON file.", next_square_num);
             println!("Going back to where we were...");
-            next_square_num = ps.current_square.clone();
+            next_square_num = ps.data.current_square.clone();
             continue;
         }
 
-        ps.current_square = next_square_num.clone();
+        ps.data.current_square = next_square_num.clone();
         let current_square = current_square_opt.unwrap();
         println!("-- {} -- {}", &current_square.number, &current_square.name);
         println!("{}", &current_square.description);
@@ -67,6 +68,7 @@ pub fn game_loop(ps : &mut PlayerStatus, sakya_pandita : &game_loader::Game, g :
         }
 
         ps.remaining_reqs_for_each_edge.clear();
+        ps.data.rolls_on_current_square.clear();
         for orig_edge in original_edges.unwrap_or(&Vec::<graph::Edge>::new()) {
             ps.remaining_reqs_for_each_edge.push(RemainingRequirementsForEdge{remaining: clone_box(&*orig_edge.requirement)});
         }
