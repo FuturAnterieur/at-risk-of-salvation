@@ -7,6 +7,8 @@ use crate::lalrpop::dice::NumParser;
 use crate::karmic_catastrophe::KarmicCatastrophe;
 use crate::player_status::{PlayerStatus, RemainingRequirementsForEdge};
 use dyn_clone::clone_box;
+use serde_json;
+use std::fs;
 
 fn show_edges_choices(edges : &Vec::<graph::Edge>) -> String {
     let mut all_distinct_digits : Vec<i16> = edges.iter().map(|edge| edge.requirement.enumerate_roll_values()).flatten().collect();
@@ -30,6 +32,41 @@ fn determine_next_node(ps : &mut PlayerStatus, original_edges : &Vec::<graph::Ed
             
         }
     }
+}
+
+pub fn save_player_status_menu(ps : &PlayerStatus) -> Result<(), KarmicCatastrophe>{
+    let mut choice = String::new();
+
+    let saved_games_folder = "./assets/saved_games";
+    let is_ok = fs::create_dir_all(saved_games_folder);
+    match is_ok {
+        Err(why) => return Err(KarmicCatastrophe{message: why.to_string()}),
+        Ok(()) => ()
+    }
+
+    let mut content : String = String::new();
+    let maybe_contents = serde_json::to_string_pretty(&ps.data);
+    match maybe_contents {
+        Err(why) => return Err(KarmicCatastrophe{message: why.to_string()}),
+        Ok(contents) => {content = contents;}
+    }
+
+    println!("Please type a name for the save game file :");
+    
+    loop {
+        match io::stdin().read_line(&mut choice) {
+            Ok(_size) => break,
+            Err(_why) => println!("An error impeded the transmission of thought. Please type something, as long as it is different.")
+        }
+    }
+
+    let full_path = format!("{}/{}.json", saved_games_folder, choice.trim());
+    
+    match fs::write(full_path, content) {
+        Err(why) => Err(KarmicCatastrophe{message : why.to_string()}),
+        Ok(()) => Ok(())
+    }
+    
 }
 
 

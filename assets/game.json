@@ -370,6 +370,19 @@
                 "Six":6
             }
         },
+        {
+            "number":44,
+            "name":"Independent Buddha, Path of Application",
+            "description":"For long ages one resides in the forest practicing meditation. One especially pursues the four applications of mindfulness : of the body, of feelings, of thoughts, and of dharma.\nLay down the rod for all beings,\ndo no harm to any of them,\nconsider their welfare with a friendly mind;\ncourse like the unicorn, alone.",
+            "paths":{
+                "One":30,
+                "Two":46,
+                "Three":45,
+                "Four":20,
+                "Five":39,
+                "Six":27
+            }
+        },
 
         {
             "number":52,

@@ -23,7 +23,7 @@ impl CommandLineInterface {
 }
 
 pub fn menu_for_load_game() -> Option<player_status::PlayerStatusPersistentData> {
-    let saved_games_folder = "./asssets/saved_games";
+    let saved_games_folder = "./assets/saved_games";
     let maybe_saved_games_files = std::fs::read_dir(saved_games_folder);
     match maybe_saved_games_files {
         Ok(saved_games_files) => {
@@ -76,7 +76,7 @@ pub fn menu_for_load_game() -> Option<player_status::PlayerStatusPersistentData>
                 }
             }
         },
-        Err(why) => None,
+        Err(_why) => None,
     }
 
 }
