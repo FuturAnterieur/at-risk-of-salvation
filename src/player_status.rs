@@ -1,9 +1,10 @@
 use crate::dice_event;
-
+use serde::{Deserialize, Serialize};
 pub struct RemainingRequirementsForEdge {
     pub remaining : Box<dyn dice_event::FulfillableRequirement>,
 }
 
+#[derive(Deserialize, Serialize)]
 pub struct PlayerStatusPersistentData {
     pub name : String,
     pub current_square : u32,
