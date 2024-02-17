@@ -1,7 +1,7 @@
 {
     "die_faces":6,
     "starting_square":24,
-    "winning_square":9,
+    "winning_square":34,
     "squares": [
         {
             "number": 1,

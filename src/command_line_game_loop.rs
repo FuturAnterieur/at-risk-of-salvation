@@ -18,13 +18,13 @@ fn show_edges_choices(edges : &Vec::<graph::Edge>) -> String {
     all_names.join(", ")
 }
 
-fn determine_next_node(ps : &mut PlayerStatus, original_edges : &Vec::<graph::Edge>, selected_option : &str) -> Option<u32> {
+fn determine_next_node(ps: &mut PlayerStatus, remaining_reqs_for_each_edge : &mut Vec::<RemainingRequirementsForEdge>, original_edges : &Vec::<graph::Edge>, selected_option : &str) -> Option<u32> {
     let selected_option_value = NumParser::new().parse(selected_option);
     match selected_option_value {
         Err(_why) => None,
         Ok(val) => {
             ps.data.rolls_on_current_square.push(val);
-            let maybe_idx = ps.remaining_reqs_for_each_edge.iter_mut().position(|reqs| reqs.remaining.fullfill_with(&val) );
+            let maybe_idx = remaining_reqs_for_each_edge.iter_mut().position(|reqs| reqs.remaining.fullfill_with(&val) );
             match maybe_idx {
                 Some(idx) => Some(original_edges[idx].destination.clone()),
                 None => None,
@@ -106,14 +106,14 @@ pub fn game_loop(ps : &mut PlayerStatus, sakya_pandita : &game_loader::Game, g :
             return Err(KarmicCatastrophe{message:"No edges found for node -- that's a programming error. Aborting.".to_string()});
         }
 
-        ps.remaining_reqs_for_each_edge.clear();
-        
+        let mut remaining_reqs_for_each_edge = Vec::<RemainingRequirementsForEdge>::new();
+
         for orig_edge in original_edges.unwrap_or(&Vec::<graph::Edge>::new()) {
-            ps.remaining_reqs_for_each_edge.push(RemainingRequirementsForEdge{remaining: clone_box(&*orig_edge.requirement)});
+            remaining_reqs_for_each_edge.push(RemainingRequirementsForEdge{remaining: clone_box(&*orig_edge.requirement)});
         }
         
         for val in &ps.data.rolls_on_current_square {
-            ps.remaining_reqs_for_each_edge.iter_mut().position(|reqs| reqs.remaining.fullfill_with(&val) );
+            remaining_reqs_for_each_edge.iter_mut().position(|reqs| reqs.remaining.fullfill_with(&val) );
         }
         
         let mut choice = String::new();
@@ -141,7 +141,7 @@ pub fn game_loop(ps : &mut PlayerStatus, sakya_pandita : &game_loader::Game, g :
                 }
             }
 
-            let maybe_next_node = determine_next_node(ps, original_edges.unwrap(), &true_choice);
+            let maybe_next_node = determine_next_node(ps, &mut remaining_reqs_for_each_edge, original_edges.unwrap(), &true_choice);
             match maybe_next_node {
                 Some(next_node) => {next_square_num = next_node.clone(); ps.data.rolls_on_current_square.clear(); break;},
                 None => {choice.clear(); println!("Your voice resounds loudly, but your wishes sound in the void.");}

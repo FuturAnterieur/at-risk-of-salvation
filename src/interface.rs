@@ -120,7 +120,7 @@ impl Interface for CommandLineInterface {
                     match maybe_psd {
                         None => continue,
                         Some(psd) => {
-                            let mut ps = player_status::PlayerStatus::from_persistent_data(psd, &g);
+                            let mut ps = player_status::PlayerStatus::from_persistent_data(psd);
                             let result = command_line_game_loop::game_loop(&mut ps, &sakya_pandita, &g);
                             match result {
                                 Ok(()) => {continue;},
