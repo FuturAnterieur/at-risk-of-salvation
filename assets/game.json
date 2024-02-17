@@ -383,6 +383,53 @@
                 "Six":27
             }
         },
+        {
+            "number":45,
+            "name":"Independent Buddha, Path of Vision",
+            "description":"Dwelling alone and far from the bustle of the world, the independent yogi turns hisconcentrated attention on the meaning of birht and death. He sees that sowing a thoughtm one reaps and action; sowing an action, one reaps a habit; sowing a habit, one reaps a destiny. With this purification of outlook he begins the practice of the noble eightfold path toward complete Awakening.",
+            "paths":{
+                "One":52,
+                "Two":47,
+                "Three":46,
+                "Four":40,
+                "Five":17,
+                "Six":28
+            }
+        },
+        {
+            "number":46,
+            "name":"Independent Buddha, Path of Cultivation",
+            "description":"By assiduous meditation on his vision of reality, the pratyeka-buddha destroys all attachment that can arise from grasping, rejecting, or bewildered relationship with the world. The Independent Buddha is able to perform miracles, to divide his body and appear double, or to transform it into any shape.",
+            "paths":{
+                "One":30,
+                "Two":47,
+                "Three":37,
+                "Four":35,
+                "Five":51,
+                "Six":29
+            }
+        },
+        {
+            "number":47,
+            "name":"Independent Buddha, Arhatship",
+            "description":"The solitary yogi attaisn an Awakened state. This is the \"fifth path,\" called \"no more study.\" Because of this arhat's solitary habits, he has neither the courage nor the ability to teach others the way to nirvana. His attainment is nonetheless substantial, and he is considered worthy of worship by the world, having transcended it.",
+            "paths":{
+                "One":52,
+                "Two":48,
+                "Three":30,
+                "Four":37,
+                "Five or Six":47
+            }
+        },
+        {
+            "number":48,
+            "name":"Cessation (Nirodha)",
+            "description":"The Arhat has previously attained nirvana during his life, called the \"nirvana with residue,\" for although all the defiling elements were eliminated, the physical and mental substtrate remained. Now, at the time of death, he enters the \"nirvana without residue.\" Nirvana as an entity is unlike most others, for it is independent and not impermanent; it is deathless, peaceful and \"fearless\" or secure. Unfortunately, this is not the proper goal. This is termed \"stationary nirvana\"; it is opposed to the \"nirvana in motion\" of the bodhisattva. Lacking the compassion that motivates a bodhisattva, the Arhat in cessation can only be roused by a mircale. This is accomplished by the Buddha Amitābha, whose boundless light reaches even into this state.",
+            "paths":{
+                "accum: 1 + 2 x 2 + 3 x 3 + 4 x 4 + 5 x 5 + 6 x 6" : 52,
+                "waiting":48
+            }
+        },
 
         {
             "number":52,
