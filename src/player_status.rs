@@ -24,22 +24,7 @@ impl PlayerStatus {
     }
 
     pub fn from_persistent_data(psd : PlayerStatusPersistentData, g : &graph::Graph) -> Self {
-        let mut ps = PlayerStatus{data:psd, remaining_reqs_for_each_edge : Vec::<RemainingRequirementsForEdge>::new()};
-
-        let original_edges = g.edges_for_node(&ps.data.current_square);
-
-        /*if original_edges.is_none() {
-            return Err(KarmicCatastrophe{message:"No edges found for node -- that's a programming error. Aborting.".to_string()});
-        }*/
-
-        for orig_edge in original_edges.unwrap_or(&Vec::<graph::Edge>::new()) {
-            ps.remaining_reqs_for_each_edge.push(RemainingRequirementsForEdge{remaining: clone_box(&*orig_edge.requirement)});
-        }
-
-        for val in &ps.data.rolls_on_current_square {
-            ps.remaining_reqs_for_each_edge.iter_mut().position(|reqs| reqs.remaining.fullfill_with(&val) );
-        }
-        
+        let ps = PlayerStatus{data:psd, remaining_reqs_for_each_edge : Vec::<RemainingRequirementsForEdge>::new()};
         ps
     }
 }

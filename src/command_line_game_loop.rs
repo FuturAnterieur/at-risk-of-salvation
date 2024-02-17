@@ -107,11 +107,14 @@ pub fn game_loop(ps : &mut PlayerStatus, sakya_pandita : &game_loader::Game, g :
         }
 
         ps.remaining_reqs_for_each_edge.clear();
-        ps.data.rolls_on_current_square.clear();
+        
         for orig_edge in original_edges.unwrap_or(&Vec::<graph::Edge>::new()) {
             ps.remaining_reqs_for_each_edge.push(RemainingRequirementsForEdge{remaining: clone_box(&*orig_edge.requirement)});
         }
         
+        for val in &ps.data.rolls_on_current_square {
+            ps.remaining_reqs_for_each_edge.iter_mut().position(|reqs| reqs.remaining.fullfill_with(&val) );
+        }
         
         let mut choice = String::new();
         loop {
@@ -140,7 +143,7 @@ pub fn game_loop(ps : &mut PlayerStatus, sakya_pandita : &game_loader::Game, g :
 
             let maybe_next_node = determine_next_node(ps, original_edges.unwrap(), &true_choice);
             match maybe_next_node {
-                Some(next_node) => {next_square_num = next_node.clone(); break;},
+                Some(next_node) => {next_square_num = next_node.clone(); ps.data.rolls_on_current_square.clear(); break;},
                 None => {choice.clear(); println!("Your voice resounds loudly, but your wishes sound in the void.");}
             }
         }
