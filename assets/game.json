@@ -37,6 +37,21 @@
             }
         },
         {
+            "number":12,
+            "name" : "Divine Animals",
+            "description" : "One is born a mythological beast endowed with supernatural powers. These aninals are \"divine\" because their birht is miraculous, like that of a god, and not from a womb or an egg. Some are pets of the gods. These live in a state of radiance, enjoying the pleasures of the heavens but without any sharp intelligence, and are said to be former sculptors and painters who donated their services to the community.",
+            "paths" : 
+            {
+                "One" : 28,
+                "Two":  27,
+                "Three":15,
+                "Four": 21,
+                "Five": 11,
+                "Six":  10
+            }
+        },
+
+        {
             "number": 13,
             "name" : "World of the Nāgas",
             "description" : "These water serpents are human from the waist up, rather like mer creatures. They store great treasures of wealth and precious stones, and sometimes books of secret teachings in underwater palaces. Like other wealthy beings, however, they are dangerous and volatile.",
@@ -147,7 +162,7 @@
         {
             "number":26,
             "name":"Wheel-Turning King (Cakravartin)",
-            "description":"The great monarch of manking unites the entire world under a righteous government. The wheel of authority appears like the sun in the eastern sky of his youth. The dynasty of the wheel-turning king appears just after the golden age of the world, which is harmonious anarchym with no need of government. The Cakravartin has great physical strenght as well as the \"divine eye\" : the vision of past and future lives.",
+            "description":"The great monarch of mankind unites the entire world under a righteous government. The wheel of authority appears like the sun in the eastern sky of his youth. The dynasty of the wheel-turning king appears just after the golden age of the world, which is harmonious anarchy with no need of government. The Cakravartin has great physical strenght as well as the \"divine eye\" : the vision of past and future lives.",
             "paths":{
                 "One":29,
                 "Two":28,
@@ -428,6 +443,26 @@
             "paths":{
                 "accum: 1 + 2 x 2 + 3 x 3 + 4 x 4 + 5 x 5 + 6 x 6" : 52,
                 "waiting":48
+            }
+        },
+        {
+            "number":49,
+            "name":"Tantra, Path of Application : \"Heat\"",
+            "description":"With permission from the lama, one is qualified to receive the transmission of particular texts. Four initiations in all will sow the seeds for the yogi's eventual transformation. The first empowerment is called \"the flask\"; it will grow into the Emanation body of the Buddha. The flask is filled with amṛta, which purifies the body. If nonduality has not been attained by the flask initiation, one should contemplate at least that emptiness and bliss have been realized.",
+            "paths":{
+                "One":50,
+                "Two":57,
+                "Three to Six":49
+            }
+        },
+        {
+            "number":50,
+            "name":"Tantra, Path of Application : \"Climax\"",
+            "description":"One receives the \"secret initiation\" into the supreme tantra, which will bear fruit as the great Enjoyment body ofthe Buddha. After drawing the deities of the mandala into his own body, the lama permofms the \"action seal\" (karma-mudrā). He unites with wisdomm (vidyā) in the form of a woman. Whether a concrete or imagined action is effected, the bodhicitta istransferred to the yogi, who at this point in his career is quite expert in the mental creation of events. The term \"secret initiation\" comes from the tasting of the secret substance.",
+            "paths":{
+                "One":57,
+                "Two":66,
+                "Three to Six":50
             }
         },
 
