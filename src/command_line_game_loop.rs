@@ -74,6 +74,8 @@ pub fn game_loop(ps : &mut PlayerStatus, sakya_pandita : &game_loader::Game, g :
     
     let mut next_square_num = ps.data.current_square.clone();
 
+    println!("Welcome to the game. At any point you may type Save to save your game, or Quit to exit.");
+
     loop {
         let current_square_opt = sakya_pandita.squares.iter().find(|square| square.number == next_square_num);
         if current_square_opt.is_none() {
@@ -116,6 +118,7 @@ pub fn game_loop(ps : &mut PlayerStatus, sakya_pandita : &game_loader::Game, g :
             println!("Your choices are :");
             println!("{}", show_edges_choices(original_edges.unwrap()));
         
+            choice.clear();
             loop {
                 match io::stdin().read_line(&mut choice) {
                     Ok(_size) => break,
@@ -126,6 +129,13 @@ pub fn game_loop(ps : &mut PlayerStatus, sakya_pandita : &game_loader::Game, g :
             let true_choice = choice.trim().to_string();
             if true_choice == "Quit" {
                 return Ok(());
+            }
+
+            if true_choice == "Save" {
+                match save_player_status_menu(ps) {
+                    Ok(()) => {println!("Game saved successfully"); continue; },
+                    Err(_why) => continue,
+                }
             }
 
             let maybe_next_node = determine_next_node(ps, original_edges.unwrap(), &true_choice);

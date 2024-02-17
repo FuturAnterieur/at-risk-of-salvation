@@ -27,11 +27,12 @@ pub fn menu_for_load_game() -> Option<player_status::PlayerStatusPersistentData>
     let maybe_saved_games_files = std::fs::read_dir(saved_games_folder);
     match maybe_saved_games_files {
         Ok(saved_games_files) => {
-            let i : usize = 1;
+            let mut i : usize = 1;
             let mut sgf = Vec::<String>::new();
             for file in saved_games_files {
                 sgf.push(String::from(file.unwrap().path().to_str().unwrap()));
                 println!("{} : {}", i.to_string(), sgf.last().unwrap());
+                i = i + 1;
             }
 
             //let vec : Vec<fs::DirEntry>=  saved_games_files.collect();
@@ -63,7 +64,7 @@ pub fn menu_for_load_game() -> Option<player_status::PlayerStatusPersistentData>
 
                 let chosen_file = &sgf[chosen_val];
 
-                let maybe_content = fs::read_to_string(format!("{}/{}", saved_games_folder, chosen_file));
+                let maybe_content = fs::read_to_string(chosen_file);
                 match maybe_content {
                     Err(_why) => continue,
                     Ok(content) => {
@@ -93,34 +94,45 @@ impl Interface for CommandLineInterface {
         loop {
             println!("Welcome to the main menu. Your choices are\nNew,\nLoad,\nQuit.");
 
-            let mut ps = player_status::PlayerStatus::new("Neo", sakya_pandita.starting_square);
             let mut choice = String::new();
-
+            
+            choice.clear();
             loop {
-                choice.clear();
-                loop {
-                    match io::stdin().read_line(&mut choice) {
-                        Ok(_size) => break,
-                        Err(_why) => println!("An error impeded the transmission of thought. Please type something, as long as it is different.")
+                match io::stdin().read_line(&mut choice) {
+                    Ok(_size) => break,
+                    Err(_why) => println!("An error impeded the transmission of thought. Please type something, as long as it is different.")
+                }
+            }
+            
+            let true_choice = choice.trim();
+            match true_choice {
+                "New" => {
+                    let mut ps = player_status::PlayerStatus::new("Neo", sakya_pandita.starting_square);
+                    let result = command_line_game_loop::game_loop(&mut ps, &sakya_pandita, &g);
+                    match result {
+                        Ok(()) => {continue;},
+                        Err(why) => {return Err(why);}
                     }
-                }
-                
-                let true_choice = choice.trim();
-                match true_choice {
-                    "New" => {break;},
-                    "Load" => {ps.data.current_square = 9; break;},
-                    "Quit" => {return Ok(());},
-                    _ => {continue;}
-                }
-            }
 
-            println!("Welcome to the game. At any point you may type Quit to exit.");
-
-            let result = command_line_game_loop::game_loop(&mut ps, &sakya_pandita, &g);
-            match result {
-                Ok(()) => {continue;},
-                Err(why) => {return Err(why);}
+                },
+                "Load" => {
+                    let maybe_psd = menu_for_load_game();
+                    match maybe_psd {
+                        None => continue,
+                        Some(psd) => {
+                            let mut ps = player_status::PlayerStatus::from_persistent_data(psd, &g);
+                            let result = command_line_game_loop::game_loop(&mut ps, &sakya_pandita, &g);
+                            match result {
+                                Ok(()) => {continue;},
+                                Err(why) => {return Err(why);}
+                            }
+                        }
+                    }
+                },
+                "Quit" => {return Ok(());},
+                _ => {continue;}
             }
+            
         }
     }
 }
