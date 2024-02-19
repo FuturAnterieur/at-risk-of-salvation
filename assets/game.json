@@ -465,7 +465,17 @@
                 "Three to Six":50
             }
         },
-
+        {
+            "number":51,
+            "name":"Disciples, Arhatship",
+            "description":"After many liftetimes of practice one has encountered the Teacher and by his instructions become enlightened. Thus one becomes a Buddhist saint, one who has \"slain the enemies\" (ari-han) of attachment, aversion, and bewilderment. By spiritual understanding one has broken the eggshell of ignorance. The blue sky and the palm of one's hand are to one's mind the same.\nAlthough there is suffering, no one is afflicted,\nNo agent, but activity is a fact;\nNirvana exists, but the nivanized is not,\nThere is a path but no one passing on it.\n\nOne has done what can be done by menas of this vehicle.",
+            "paths":{
+                "One":52,
+                "Two":48,
+                "Three":37,
+                "Four to Six":50
+            }
+        },
         {
             "number":52,
             "name" : "Mahāyāna, Lesser Path of Accumulation",
@@ -490,6 +500,28 @@
                 "Four":40,
                 "Five":15,
                 "Six":8
+            }
+        },
+        {
+            "number":54,
+            "name":"Mahāyāna, Greater Path of Accumulation",
+            "description":"Congratulations! You are irreversible! From this point you cannot fall back to a lower destiny. Several benefits accrue from the attainment of calm and concentration. First, one develops the four bases of psychic power. Upon these bases one develops the higher awarenesses : the divine eye, divine ear, knowledge of other's thoughts, knowledge of the past lives of oneself and others, and psychic powers.",
+            "paths":{
+                "One":63,
+                "Two":55,
+                "Three":60,
+                "Four":59,
+                "Five or Six":54
+            }
+        },
+        {
+            "number":55,
+            "name":"Mahāyāna, Path of Application : \"Heat\" (Ūsmān)",
+            "description":"Turning one's concentrated attention to the empty nature of reality, one develops the first of the \"wholesome roots conducive to penetration,\" designated as \"heat.\"\n\nThis rebirth has arisen from discursive thought,\nIts very essence (ātman) is discursive thought;\nSo to eliminate discursiveness completely,\nIs the very excellent nirvana.\n",
+            "paths":{
+                "One":63,
+                "Two":56,
+                "Three to Six":55
             }
         },
         {
