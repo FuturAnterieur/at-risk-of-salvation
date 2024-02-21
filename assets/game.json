@@ -525,6 +525,41 @@
             }
         },
         {
+            "number":56,
+            "name":"Mahāyāna, Path of Application : \"Climax\" (Mūrdhan)",
+            "description":"One's exertions on the path of yoga, giving rise to experiences of heat and light, reach their peak. The duality of subject and object has disappeared, and one is established inthe understanding of \"thought only.\" Things are none other than reflections of mind. Not only is one's own rebirth derived from the twelvefold chain, but so also is the existence of the whole world. In terms of his relationships with others, the yogi is not only purified, generous and moral himself, but able to teach others to be so as well.",
+            "paths":{
+                "One":64,
+                "Two":63,
+                "Three to Six":56
+            }
+        },
+        {
+            "number":57,
+            "name":"Tantra, Path of Application : \"Receptivity\"",
+            "description":"The yogi takes the third initiation, known as \"wisdom-understanding\" (prajñā-jñāna), into the supreme tantra. Here the lama, disciple, and wisdom-lady (vidyā) accomplish the initiation of the disciple. By the internal union of the two symbols into the \"god of love\", all duality comes to an end, and bliss-emptiness is achieved. Bliss and emptiness merge together, like the pouring of water into water.\nEven if the bliss is not attained, the initiation implants seeds that, with later meditation on the Clear Light, will grow into the Buddha in his form as knowledge, the Dharma body, and the direct experience of emptiness.\nOnce in the realm that's full of joy\nThe seeing mind becomes enriched\nAnd thereby for this and that most useful;\neven when it runs\nAfter objects it is not alienated from itself.\n\nThe buds of joy and pleasure\nAnd the leaves of glory grow.\nIf nothing flows out anywhere\nThe bliss unspeakable will fruit.\n",
+            "paths":{
+                "One":66,
+                "Two":73,
+                "Three":58,
+                "Four":77,
+                "Five or Six":57
+            }
+        },
+        {
+            "number":58,
+            "name":"Tantra, Path of Application : \"Highest Teachings\"",
+            "description":"The final initiation of the disciple is termed \"the word\", for here the guru explains to him how to understand the act of unification which was performed in the \"wisdom-understanding\" initiation. Such is the highest worldly dharma of the tantric path. It is still \"worldly\" because it has been learned on the level of instruction or initiation, and has yet to be realized in practice.",
+            "paths":{
+                "One":73,
+                "Two":74,
+                "Three":66,
+                "Four":85,
+                "Five or Six":58
+            }
+        },
+
+        {
             "number":72,
             "name" : "Wisdom-Holder of the Eight Siddhis",
             "description" : "One has taken the path of siddhi, magical attainment, as opposed to that of study. Some lamas consider these siddhi as equivalent to the Path of Accumulation. Others insist that one follow the orthodox tantric path.",
