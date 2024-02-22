@@ -527,7 +527,7 @@
         {
             "number":56,
             "name":"Mahāyāna, Path of Application : \"Climax\" (Mūrdhan)",
-            "description":"One's exertions on the path of yoga, giving rise to experiences of heat and light, reach their peak. The duality of subject and object has disappeared, and one is established inthe understanding of \"thought only.\" Things are none other than reflections of mind. Not only is one's own rebirth derived from the twelvefold chain, but so also is the existence of the whole world. In terms of his relationships with others, the yogi is not only purified, generous and moral himself, but able to teach others to be so as well.",
+            "description":"One's exertions on the path of yoga, giving rise to experiences of heat and light, reach their peak. The duality of subject and object has disappeared, and one is established in the understanding of \"thought only.\" Things are none other than reflections of mind. Not only is one's own rebirth derived from the twelvefold chain, but so also is the existence of the whole world. In terms of his relationships with others, the yogi is not only purified, generous and moral himself, but able to teach others to be so as well.",
             "paths":{
                 "One":64,
                 "Two":63,
@@ -558,6 +558,19 @@
                 "Five or Six":58
             }
         },
+        {
+            "number":59,
+            "name":"Shambhala",
+            "description":"Ruled by a dynasty of tantric masters, Shambhala was originally converted by fierce bodhisattvas. The city is home of the Kālacakra tantra, which propounds a system of liberation based on astrology. Among tantras, it is most heavily imbued with external magic, for Shambhala is continually threatened by Turkish Muslims. For yogis Shambhala is, with Urgyan and Potāla, a source of inspiration, a mystic land of the Dharma that is not so far away as to be unattainable. One pilgrim, however, seeking the way to Shambhala through trackless wastes, encountered a cave-dwelling yogi who asked him, \"Where are you going through these deserts of snow?\"\n\"I want to see Shambhala,\" the pilgrim replied.\n\"Then don't go far; in your own heart is the kingdom of Shambhala.\"",
+            "paths":{
+                "One":63,
+                "Two":50,
+                "Three":60,
+                "Four":49,
+                "Five":42,
+                "Six":55
+            }
+        },
 
         {
             "number":72,
@@ -568,6 +581,15 @@
                 "Two":41,
                 "Three":33,
                 "Four to Six":72
+            }
+        },
+        {
+            "number":84,
+            "name" : "Supreme Heaven (Akaniṣṭha)",
+            "description" : "One has attained the highest place in the world and the most exalted Buddha field. Inside gather the Buddhas of all directions with their retinue of hight bodhisattvas, whom they guide into the blissful-empty state of the supreme tantra. The aim of yogis on earth is to merge with these bodhisattvas, identifying themselves with the mysterious body, speech and mind of the Buddhas by means of ritual gesture (mudrā), mantra and concentration, respectively.\nThis realm is pictured in a lotus, the symbol of timeless purity.",
+            "paths":{
+                "One":93,
+                "Two to Six":84
             }
         }
     ]

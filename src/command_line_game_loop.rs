@@ -18,6 +18,19 @@ fn show_edges_choices(edges : &Vec::<graph::Edge>) -> String {
     all_names.join(", ")
 }
 
+fn show_cheat_edge_choices(square : &game_loader::Square, game : &game_loader::Game) -> String {
+    let pairs : Vec<(&String, &u32)> = square.paths.iter().collect();
+    let mut choices = Vec::<String>::new();
+    for pair in pairs {
+        let maybe_dest = game.squares.iter().find(|square| &square.number == pair.1);
+        match maybe_dest {
+            Some(dest) => choices.push(format!("{} : go to {}", pair.0, dest.name)),
+            None => choices.push(format!("{} : go to {} (not written yet)", pair.0, pair.1))
+        }
+    }
+    choices.join("\n")
+}
+
 fn determine_next_node(ps: &mut PlayerStatus, remaining_reqs_for_each_edge : &mut Vec::<RemainingRequirementsForEdge>, original_edges : &Vec::<graph::Edge>, selected_option : &str) -> Option<u32> {
     let selected_option_value = NumParser::new().parse(selected_option);
     match selected_option_value {
@@ -119,7 +132,8 @@ pub fn game_loop(ps : &mut PlayerStatus, sakya_pandita : &game_loader::Game, g :
         let mut choice = String::new();
         loop {
             println!("Your choices are :");
-            println!("{}", show_edges_choices(original_edges.unwrap()));
+            //println!("{}", show_edges_choices(original_edges.unwrap()));
+            println!("{}", show_cheat_edge_choices(current_square, sakya_pandita));
         
             choice.clear();
             loop {
