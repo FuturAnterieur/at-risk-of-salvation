@@ -133,7 +133,7 @@ pub fn game_loop(ps : &mut PlayerStatus, sakya_pandita : &game_loader::Game, g :
         loop {
             println!("Your choices are :");
             //println!("{}", show_edges_choices(original_edges.unwrap()));
-            println!("{}", show_cheat_edge_choices(current_square, sakya_pandita));
+            println!("{}", show_edges_choices(original_edges.unwrap()));
         
             choice.clear();
             loop {

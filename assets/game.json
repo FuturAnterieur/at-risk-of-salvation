@@ -1,7 +1,7 @@
 {
     "die_faces":6,
     "starting_square":24,
-    "winning_square":34,
+    "winning_square":84,
     "squares": [
         {
             "number": 1,
@@ -571,7 +571,28 @@
                 "Six":55
             }
         },
-
+        {
+            "number":60,
+            "name":"Potāla",
+            "description":"Visiting this island paradise off the South Indian coast, one encounters the high bodhisattvas Tārā and Avalokiteśvara. The great pilgrim-scholar Hsüan Tsang described the dangerous passes and sttep cliffs of the mountain retreat. Geography is not the only barrier to Potāla; it seems that one's religious practice plays some role in gaining access. Avalokiteśvara and Tārā are the patorn bodhisattvas of Tibet, the former embodied in the lineage of the Dalai Lamas. Thus the mountain palace in Lhasa, which was their residence, is called the Potāla.",
+            "paths":{
+                "One":64,
+                "Two":63,
+                "Three":42,
+                "Four to Six":60
+            }
+        },
+        {
+            "number":61,
+            "name":"Urgyan (Uḍḍiyāna)",
+            "description":"The magic land of the dakinis is located in the upper reaches of the modern Swat River valley in Pakistan. A breeding ground for tantric Buddhism, it is identified especially with the supreme tantric cycle known as the Secret Assembly (guhya-samāja).\nBy the enjoyment of all sense desires,\nAnd gratification just as one pleases,\nBy just such yoga as this,\nOne may quickly gain Buddhahood.\nThis is twilight language, indicating in conventional terms the mystic transmutation effected by yogic practice. By such promises, couched in symbolism, the ignorant are attached to the Dharma.",
+            "paths":{
+                "One":89,
+                "Two":84,
+                "Three":83,
+                "Four to Six":61
+            }
+        },
         {
             "number":72,
             "name" : "Wisdom-Holder of the Eight Siddhis",
@@ -586,7 +607,7 @@
         {
             "number":84,
             "name" : "Supreme Heaven (Akaniṣṭha)",
-            "description" : "One has attained the highest place in the world and the most exalted Buddha field. Inside gather the Buddhas of all directions with their retinue of hight bodhisattvas, whom they guide into the blissful-empty state of the supreme tantra. The aim of yogis on earth is to merge with these bodhisattvas, identifying themselves with the mysterious body, speech and mind of the Buddhas by means of ritual gesture (mudrā), mantra and concentration, respectively.\nThis realm is pictured in a lotus, the symbol of timeless purity.",
+            "description" : "One has attained the highest place in the world and the most exalted Buddha field. Inside gather the Buddhas of all directions with their retinue of high bodhisattvas, whom they guide into the blissful-empty state of the supreme tantra. The aim of yogis on earth is to merge with these bodhisattvas, identifying themselves with the mysterious body, speech and mind of the Buddhas by means of ritual gesture (mudrā), mantra and concentration, respectively.\nThis realm is pictured in a lotus, the symbol of timeless purity.",
             "paths":{
                 "One":93,
                 "Two to Six":84

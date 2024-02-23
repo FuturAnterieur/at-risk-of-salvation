@@ -5,7 +5,7 @@ pub struct RemainingRequirementsForEdge {
     pub remaining : Box<dyn dice_event::FulfillableRequirement>,
 }
 
-#[derive(Deserialize, Serialize)]
+#[derive(Deserialize, Serialize, Clone)]
 pub struct PlayerStatusPersistentData {
     pub name : String,
     pub current_square : u32,

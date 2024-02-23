@@ -28,10 +28,16 @@ pub fn menu_for_load_game() -> Option<player_status::PlayerStatusPersistentData>
     match maybe_saved_games_files {
         Ok(saved_games_files) => {
             let mut i : usize = 1;
-            let mut sgf = Vec::<String>::new();
+            let mut sgf = Vec::<player_status::PlayerStatusPersistentData>::new();
             for file in saved_games_files {
-                sgf.push(String::from(file.unwrap().path().to_str().unwrap()));
-                println!("{} : {}", i.to_string(), sgf.last().unwrap());
+                let file_path = file.unwrap().path().to_str().unwrap().to_string();
+                let file_contents = fs::read_to_string(&file_path[..]).unwrap_or_default();
+                let maybe_player_data : serde_json::Result<player_status::PlayerStatusPersistentData> = serde_json::from_str(file_contents.as_str());
+                match maybe_player_data {
+                    Err(_why) => continue,
+                    Ok(player_data) => sgf.push(player_data)
+                }
+                println!("{} : {} -- {}, square {}", i.to_string(), file_path, sgf[sgf.len() -1].name, sgf[sgf.len() -1].current_square);
                 i = i + 1;
             }
 
@@ -62,19 +68,8 @@ pub fn menu_for_load_game() -> Option<player_status::PlayerStatusPersistentData>
                     continue;
                 }
 
-                let chosen_file = &sgf[chosen_val];
-
-                let maybe_content = fs::read_to_string(chosen_file);
-                match maybe_content {
-                    Err(_why) => continue,
-                    Ok(content) => {
-                        let maybe_player_data : serde_json::Result<player_status::PlayerStatusPersistentData> = serde_json::from_str(content.as_str());
-                        match maybe_player_data {
-                            Err(_why) => continue,
-                            Ok(player_data) => return Some(player_data)
-                        }
-                    }
-                }
+                return Some(sgf[chosen_val].clone());
+            
             }
         },
         Err(_why) => None,
