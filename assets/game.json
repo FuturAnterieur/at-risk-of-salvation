@@ -133,6 +133,20 @@
             }
         },
         {
+            "number" : 18,
+            "name" : "The Western continent - Enjoyment of Cattle (Apara-Godānīya)",
+            "description" : "Here is the fortunate human existence and great enjoyment of wealth in a land of lakes and pastures. The Dharma is present here but it does not flourish, for the inhabitants are rough and live only by eating meat. Certain traditions record that the people here experience synesthesia. Godānīya has a red tone in its skies and waters, the reflection of ruby western walls of Mount Meru.",
+            "paths":
+            {       
+                    "One":38,
+                    "Two":27,
+                    "Three":13,
+                    "Four":21,
+                    "Five":11,
+                    "Six":10
+            }
+        },
+        {
             "number" : 21,
             "name" : "Barbarism",
             "description" : "One is born a human being, but in an uncivilized and materialistic society in which warfare is considered a legitimate mode of human interaction.",
@@ -158,6 +172,20 @@
                     "Four":15,
                     "Five":11,
                     "Six":3
+            }
+        },
+        {
+            "number" : 23,
+            "name" : "Bön",
+            "description" : "Bön (pronounced \"pern\") is shamanism or sorcery in a highly developed form. In Tibet it represents the alternative to Buddhism. Bön antedates the Dharma, having come from the direction of Persia in the early centuries A.D. There are close analogies with other shamanic traditions, such as Taoism. Modern Bön, on the other hand, has adopted Buddhist scriptures to its own system. But the bön-po reerse the Buddhist auspicious emblem, the swastika, and circumnambulate sacred places counterclockwise, which causes their fellow Tibetans no end of merriment.",
+            "paths":
+            {       
+                    "One":52,
+                    "Two":65,
+                    "Three":29,
+                    "Four":27,
+                    "Five":14,
+                    "Six":4
             }
         },
 
@@ -467,7 +495,7 @@
         {
             "number":48,
             "name":"Cessation (Nirodha)",
-            "description":"The Arhat has previously attained nirvana during his life, called the \"nirvana with residue,\" for although all the defiling elements were eliminated, the physical and mental substtrate remained. Now, at the time of death, he enters the \"nirvana without residue.\" Nirvana as an entity is unlike most others, for it is independent and not impermanent; it is deathless, peaceful and \"fearless\" or secure. Unfortunately, this is not the proper goal. This is termed \"stationary nirvana\"; it is opposed to the \"nirvana in motion\" of the bodhisattva. Lacking the compassion that motivates a bodhisattva, the Arhat in cessation can only be roused by a mircale. This is accomplished by the Buddha Amitābha, whose boundless light reaches even into this state.",
+            "description":"The Arhat has previously attained nirvana during his life, called the \"nirvana with residue,\" for although all the defiling elements were eliminated, the physical and mental substrate remained. Now, at the time of death, he enters the \"nirvana without residue.\" Nirvana as an entity is unlike most others, for it is independent and not impermanent; it is deathless, peaceful and \"fearless\" or secure. Unfortunately, this is not the proper goal. This is termed \"stationary nirvana\"; it is opposed to the \"nirvana in motion\" of the bodhisattva. Lacking the compassion that motivates a bodhisattva, the Arhat in cessation can only be roused by a miracle. This is accomplished by the Buddha Amitābha, whose boundless light reaches even into this state.",
             "paths":{
                 "accum: 1 + 2 x 2 + 3 x 3 + 4 x 4 + 5 x 5 + 6 x 6" : 52,
                 "waiting":48
@@ -651,6 +679,29 @@
                 "Two":49,
                 "Three to Four or Six":64,
                 "Five":77
+            }
+        },
+        {
+            "number":65,
+            "name":"Wisdom-Holder of the Bön tradition (Bön Vidyādhara)",
+            "description":"One has accomplished the way of the primeval Shen, the sorcerer o old who brought Bön doctrine to Tibet. The \"wisdom\" one holds is the companion with whom one attains Awakening. Grasping this perfect woman in ceremonial meditation one attains the vidyā, \"original knowledge\", by which creation was orginally emanated from mind. One also obtains psychic skill (nyamsrtsal), the equivalent of Buddhist siddhi. In short, the Shen, the master of Bön, is a Taoist sage with tantic overlay, and this is the highest point of the non-Buddhist paths.",
+            "paths":{
+                "One":52,
+                "Two":43,
+                "Three or Four":65,
+                "Five":15,
+                "Six":8
+            }
+        },
+        {
+            "number":66,
+            "name":"First Tantra Stage",
+            "description":"Upon one is now conferred the first initiation of a vajra-master (vajrā-cārya). Having gone through the course of the tantras as a disciple, one will now be made qualified as a teacher. First is conferred the initiation by water, cleansing the remaining defilements of physical activity that obstruct the way to full Buddhahood.\nThe ten bodhisattva stages on the tantric path are likened to the process of death and rebirth. One's previous practice on the paths of Accumulation and Application are the past karma giving rise to the supreme accomplishment of emergence into the full Awakening, and the ten initiations are its maturation in the womb.",
+            "paths":{
+                "One":74,
+                "Two":75,
+                "Three":73,
+                "Four to Six":66
             }
         },
         {
