@@ -23,6 +23,20 @@
             }
         },
         {
+            "number":10,
+            "name" : "Hungry Ghosts (Preta)",
+            "description" : "Just under the earth - and roving upon it - are these creatures, tormented by greed. Their senses are distorted, and the earth seems without sustenance. They have mouths like pins, bellies like mountains, and throats that turn food to fire. Preta can only be nourished by faith - that is, by offerings made in the course of a religious ceremony and then consigned to them.",
+            "paths" : 
+            {
+                "One" : 19,
+                "Two":  13,
+                "Three":14,
+                "Four": 11,
+                "Five": 8,
+                "Six":  4
+            }
+        },
+        {
             "number":11,
             "name" : "Animals",
             "description" : "Residing mostly in the great oceans, animals are created as a result pf previous stupidity -- intentional ignorance. The serpent is said to be born from anger, the lion from pride, the dog from arrogance... and the horse from unpaid debts.",
@@ -615,6 +629,28 @@
                 "One":52,
                 "Two":38,
                 "Three to Six":62
+            }
+        },
+        {
+            "number":63,
+            "name":"Mahāyāna, Path of Application : \"Receptivity\" (Kṣānti)",
+            "description":"One approaches a direct and personal experience of the highest truths, firmly positioned in one's acceptance of the Four Noble Truths and one's commitment to the welfare of others. The yogi obtains the concentration that \"enters partially into the meaning of reality (tattvārthaika-de-śānupraveśa). This stage represents the dispersion of the \"subject\" side of the subject-object duality. As a film projector creates the appearance of objects that do not really exist, so should one experience reality.",
+            "paths":{
+                "One":85,
+                "Two":42,
+                "Three":64,
+                "Four to Six":77
+            }
+        },
+        {
+            "number":64,
+            "name":"Mahāyāna, Path of Application : \"Highest Teachings\" (Laukikāgra-Dharma)",
+            "description":"One arrives at the stage of \"unimpeded thought\", (ānantarya-citta-samādhi). Immeditaely upon its release from subject-object dichotomizing, the mind rises to a direct and unhindered confrontation with the emptiness of all dharmas. The stage of \"coursing in faith\" (adhimukti-caryā) is completed. Ahead is the activity of the bodhisattva to alleviate the misery of others : skillful means conjoined with wisdom in the great mission.",
+            "paths":{
+                "One":71,
+                "Two":49,
+                "Three to Four or Six":64,
+                "Five":77
             }
         },
         {
