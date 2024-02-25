@@ -134,7 +134,7 @@
         },
         {
             "number" : 18,
-            "name" : "The Western continent - Enjoyment of Cattle (Apara-Godānīya)",
+            "name" : "The Western Continent - Enjoyment of Cattle (Apara-Godānīya)",
             "description" : "Here is the fortunate human existence and great enjoyment of wealth in a land of lakes and pastures. The Dharma is present here but it does not flourish, for the inhabitants are rough and live only by eating meat. Certain traditions record that the people here experience synesthesia. Godānīya has a red tone in its skies and waters, the reflection of ruby western walls of Mount Meru.",
             "paths":
             {       
@@ -146,6 +146,35 @@
                     "Six":10
             }
         },
+        {
+            "number" : 19,
+            "name" : "The Eastern Continent - Noble Figure (Pūrva-Videha)",
+            "description" : "One has an espcecially fine and noble human form on the continent east of Mount Meru. Here the light is bright and clear from the crystal wall of the mountain, and the people tranquil and mild.",
+            "paths":
+            {       
+                    "One":43,
+                    "Two":38,
+                    "Three or Five":13,
+                    "Four":15,
+                    "Six":11
+            }
+        },
+        {
+            "number" : 20,
+            "name" : "The Northern Continent - Kuru",
+            "description" : "This continent, shaded green by the emerald north face of Mount Meru, is the happiest of the four human islands. The people lead a wholesome communal existence, without private property nor marriage. Because they are not in the habit of declaring \"This is mine,\" and so forth, these people are incapable of the worst crimes and suffer no untimely death, living out their full life spans of a thousand years. Nonetheless, no saints develop here, for they never come to understand the initial postulate of the Dharma : Life is basically suffering. They create no bad karma, but neither do they make progress toward liberation from saṃsāra.",
+            "paths":
+            {       
+                    "One":28,
+                    "Two":27,
+                    "Three":17,
+                    "Four":19,
+                    "Five":15,
+                    "Six":20
+            }
+        },
+
+        
         {
             "number" : 21,
             "name" : "Barbarism",
@@ -702,6 +731,40 @@
                 "Two":75,
                 "Three":73,
                 "Four to Six":66
+            }
+        },
+        {
+            "number":67,
+            "name":"Wisdom-Holder Among the Gods of Sense Desire (Kāmadeva-Vidyādhara)",
+            "description":"One becomes a vidyādhara equal in accomplishment (siddhi) with the gods of the Realm of Sense Desire. One's body appears like that of a sixteen-year-old, and all one's desire appear from the sky. The vidyā, simply speaking, is a female mantra. Its holders are known in Indian literature from several centures B.C. They live in ciites in the snowy mountains north of India. They can fly and change shapes, and occasionally come down to intermarry with ordinary people. Tibetan historians consider them the original tantra masters among humanity; it is said the vidyādharas kep their wisdom secret until society had been prepared for its reception by the acceptance of the sutras of the Greater Vehicle.\nThe vidyādharas ae described as \"not quite peaceful and not quite wrathful ... impressive, overpowering, majestic.\" Their monarch is a tantric Wheel-Turning King.",
+            "paths":{
+                "One":41,
+                "Two":42,
+                "Three":68,
+                "Four":69,
+                "Five or Six":67
+            }
+        },
+        {
+            "number":68,
+            "name":"Wisdom-Holder of the Realm of Form (Rūpa-Dhātu-Vidyādhara)",
+            "description":"These radiant and powerful figures have mastered all the magic of the long-lived gods. Their abode is called the \"Pure (land) of the Astronauts\" (dag-pa mkha'-spyod). Like the yogi in a high state of trance or the gods of the Realm of Form, they are aloof from the world and far beyond the enjoyment of objects of sense, which is gained from the lower siddhis by worldly vidyādharas. From the practice of tantric \"yoga-without-images,\" dwelling in the sound of the mantra without specific visualization, they attain a state of pure calm and insight.",
+            "paths":{
+                "One":42,
+                "Two":49,
+                "Three or Five":68,
+                "Four":59,
+                "Six":41
+            }
+        },
+        {
+            "number":69,
+            "name":"Tantric Wheel-Turning King (Mantra-Cakravartin)",
+            "description":"As emperor of the vidyādharas, one has attained the highest of worldy siddhis : universal sovereignty and recognition. This is the state of the ordinary Wheel-Turning King raised to a spiritual plane. Here the distinction between \"path of graduation\" and \"path of study\" ceases to be effective, for whatever is studied is immediately realized.\nHe combines doctrine and meditaton in his teachings, and demonstrates the path in the example of his own attainments. With occult powers he converts those who have faith in demonstration of miracles.",
+            "paths":{
+                "One":75,
+                "Two":81,
+                "Three to Six":69
             }
         },
         {
