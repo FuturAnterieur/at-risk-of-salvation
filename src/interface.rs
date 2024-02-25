@@ -23,6 +23,8 @@ impl CommandLineInterface {
 }
 
 pub fn menu_for_load_game() -> Option<player_status::PlayerStatusPersistentData> {
+    println!("Enter the number of the saved game you wish to load, or type Cancel to return to the main menu.");
+
     let saved_games_folder = "./assets/saved_games";
     let maybe_saved_games_files = std::fs::read_dir(saved_games_folder);
     match maybe_saved_games_files {
