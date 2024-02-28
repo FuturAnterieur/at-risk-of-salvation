@@ -13,6 +13,20 @@
             }   
         },
         {
+            "number":8,
+            "name" : "The Temporary Hells, or \"Hell for a Day\"",
+            "description" : "This is hell on earth - isolated places such as a river, mountain, or desert. Whereas the lower hells have been created by the collective karma of all living beings, these are innumerable and individualized, created by individual or group activities.",
+            "paths" : 
+            {
+                "One" : 27,
+                "Two":  19,
+                "Three":14,
+                "Four": 11,
+                "Five": 7,
+                "Six":  6
+            }
+        },
+        {
             "number": 9,
             "name":"Lord of the Dead (Yama)",
             "description": "With great power and cruelty one has become Yama (or his sister Yamī), lord and judge of the dead, or one of his police demons (rākṣasas). Ordinary persons must confront him when they die, gazing into his mirror of karma.\nYama himself has a subjective aspect, and a concealed aspect in that he is inherent in consciousness that is defiled by desire, hatred and ignorance.",
@@ -173,8 +187,6 @@
                     "Six":20
             }
         },
-
-        
         {
             "number" : 21,
             "name" : "Barbarism",
@@ -436,7 +448,7 @@
         {
             "number":41,
             "name":"Tantra, Middle Path of Accumulation",
-            "description":"This second class of the tantras is known as the \"the practice of both\" (ubhaya-caryā-tantra), for it combines outer and inner yoga. The chief text of this class is the Mahā-vairocana, which is the basis of tantric practice in China and Japan.\nDon<t concentrate on yourself, restricting your breath.\nFie, yogin, don't squint at the end of your nose.\nO fool, hold fast to the Innate,\nAnd abandon the clinging bonds of existence.\nBring together in thought the restless waves of breath.\nThen know the rue nature of the Innate.\nAnd this becomes still of itself.",
+            "description":"This second class of the tantras is known as the \"the practice of both\" (ubhaya-caryā-tantra), for it combines outer and inner yoga. The chief text of this class is the Mahā-vairocana, which is the basis of tantric practice in China and Japan.\nDon't concentrate on yourself, restricting your breath.\nFie, yogin, don't squint at the end of your nose.\nO fool, hold fast to the Innate,\nAnd abandon the clinging bonds of existence.\nBring together in thought the restless waves of breath.\nThen know the true nature of the Innate.\nAnd this becomes still of itself.",
             "paths":{
                 "One":60,
                 "Two":42,
@@ -449,7 +461,7 @@
         {
             "number":42,
             "name":"Tantra, Greater Path of Accumulation",
-            "description":"The yoga tantra i =s wholly internalized practice. The yogi creates mandalas and complex visuzalizations involving the Buddhas of the five tantric families. During the meditation one's own being becomes identical with the deity, which has been sealed with five seals. So one is now without possibility of falling back into a lower path or unhappy destiny.",
+            "description":"The yoga tantra is wholly internalized practice. The yogi creates mandalas and complex visuzalizations involving the Buddhas of the five tantric families. During the meditation one's own being becomes identical with the deity, which has been sealed with five seals. So one is now without possibility of falling back into a lower path or unhappy destiny.",
             "paths":{
                 "One":49,
                 "Two":50,
@@ -768,6 +780,30 @@
             }
         },
         {
+            "number":70,
+            "name":"Realm of Action-Completion (Karma-Paripūraṇa)",
+            "description":"One visits the realm of Amogasiddhi, \"effective attainment\", the northern Buddha field. This is the karma family of tantric practice. Here the forces of passionate activity are turned toward effecting the destruction of hindrances and attaining the ends of Dharma. Action is precise, powerful, and complete. Amogasiddhi's element is wind. He holds a multicolored total vajra and makes the gesture of protection. His consort is Faithful Tārā, who guarantees one's tantric vows (samaya-tārā).",
+            "paths":{
+                "One":86,
+                "Two":73,
+                "Three":70,
+                "Four":34,
+                "Five":74,
+                "Six":71
+            }
+        },
+        {
+            "number":71,
+            "name":"First Sutra Stage (Bhūmi)",
+            "description":"One enters the ten stages of the bodhisattva path, as elaborated in the sutras, the scriptures of the Greater Vehicle. \"Rejoicing\" (pramuditā) is the name given to the first level, for here the bodhisattva sees that enlightenment is not far distant, and with it the welfare of all. \"Rejoicing\" is the bodhisattva's equivalent to the Path of Vision. There is no thought for oneself; he makes a great renunciation of worldly matters and is no longer distracted by the five common fears :  concern for livelihood, reputation, death, future rebirth, and shyness at gatherings.",
+            "paths":{
+                "One":79,
+                "Two":80,
+                "Three":74,
+                "Four to Six":71
+            }
+        },
+        {
             "number":72,
             "name" : "Wisdom-Holder of the Eight Siddhis",
             "description" : "One has taken the path of siddhi, magical attainment, as opposed to that of study. Some lamas consider these siddhi as equivalent to the Path of Accumulation. Others insist that one follow the orthodox tantric path.",
@@ -776,6 +812,49 @@
                 "Two":41,
                 "Three":33,
                 "Four to Six":72
+            }
+        },
+        {
+            "number":73,
+            "name" : "Second Tantra Stage",
+            "description" : "Rising to the second stage of the path to becoming a vajra master, one takes the initiation of the jewel-studded crown. One is thereby purified of physical karma, of misfortune, disease, deadening demons, and impediments to meditation. Indifferent to worldy gain and honor, yet filled with compassion, one is suited to become a universal ruler.",
+            "paths":{
+                "One":75,
+                "Two":81,
+                "Three to Five":73,
+                "Six":69
+            }
+        },
+        {
+            "number":74,
+            "name" : "Third Tantra Stage",
+            "description" : "One receives the vajra initiation of a tantric master, which accomplishes the nondiscursive understanding that is characteristic of the Buddha's mind. One is freed from all traces of belief in an ego (ātman) and is more than a match for the rival teachers of other traditions.",
+            "paths":{
+                "One":75,
+                "Two":81,
+                "Three to Six":74
+            }
+        },
+        {
+            "number":75,
+            "name" : "Fourth Tantra Stage",
+            "description" : "The initiation of the bell, female energy topped by a vajra, fulfills in one the ability to teach all the eighty-four thousand ways of practicing the Dharma, particular to all the types of living beings in all their situations. One is now authorized to perform the verbal functions of a Buddha and to have one's instructions regarded as those of the fully Awakened.",
+            "paths":{
+                "One":82,
+                "Two":83,
+                "Three":81,
+                "Four to Six":75
+            }
+        },
+        {
+            "number":76,
+            "name" : "Realm of Jeweled Peaks (Ratna-Kūṭa)",
+            "description" : "The southern pure land is that created by Ratnasambhava, \"source of jewels.\" Heis the lord of the wish-granting gem, and fulfills the Buddha's function of giving what is needed. The understanding associated with this state is that of \"equality\", for all things are equal on the broad earth; it counteracts pride and cupidity. Ratnasambhava is embraced by Māmakī, who represents fertilizing water; his bhodisattvas are named element of Space (ākāśa-garbha) and Wholly Benevolent (samanta-bhadra).",
+            "paths":{
+                "One":78,
+                "Two":74,
+                "Three":73,
+                "Four to Six":76
             }
         },
         {
