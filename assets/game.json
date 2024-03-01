@@ -858,6 +858,36 @@
             }
         },
         {
+            "number":77,
+            "name" : "Land of Bliss (Sukhāvatī)",
+            "description" : "You have reached the pure land of Amitābha, \"boundless light,\" the land of lotus ponds and magnificent palaces in which one's ordinary needs are fulfilled and one is able to hear while seated in a lotus, the teachings of Buddhas, at the merest wish. Amitābha Buddha descends to the believer at the time of death so that he can be reborn in his realm. Amitābha's mount is the peacock, his consort the White-robed Lady (pāṇḍara-vāsinī); the chief bodhisattvas of his family are Avalokiteśvara, the great compassionate lord who looks over Tibet, and Mahā-sthāma-prāpta, \"one who attained great strength.\"",
+            "paths":{
+                "One":71,
+                "Two":74,
+                "Three to Six":77
+            }
+        },
+        {
+            "number":78,
+            "name" : "Fourth Sutra Stage",
+            "description" : "At this stage, called \"The Flaming\" (arciṣ-matī), the various factors of enlightenment shine with great heat, burning off the remaining emotional and intellectual mist. By ascetic warmth (tapas), the bodhisattva stils his desires and learns to be content with whatever exists. Nurturing a disgust for sense desires, he is purified by a stringent mode of life. There is no attachment to the literary and artistic forms of the Dharma. He holds firmly to the middle way, rejecting the twin notions that everything is unreal and that everything truly exists. Intensive meditation grants incredible supernatural powers, yet he is humble and pleasant to be with, mild and soft-spoken, splendid by nature, a shining example of his own teachings.",
+            "paths":{
+                "One":87,
+                "Two":88,
+                "Three to Six":78
+            }
+        },
+        {
+            "number":79,
+            "name" : "Third Sutra Stage",
+            "description" : "At the stage called \"Illuminating\" (prabhā-karī), the bodhisattva combines patience with the perfection of wisdom. That is to say, he will endure anything for the sake of the Dharma. He will walk through a thousand fires to hear the doctrine, and be patient enough to remain in saṃsāra to teach. He truly lives in the Dharma, day and night; he is elated by a well-turned phrase as though he had found a jewel. Lord of the Realm of Desire, he can grasp the sun and moon or shake the earth, become one or many, appear and disappear, fly while seated cross-legged, walk on water, and blaze like fire.",
+            "paths":{
+                "One":88,
+                "Two":78,
+                "Three to Six":79
+            }
+        },
+        {
             "number":84,
             "name" : "Supreme Heaven (Akaniṣṭha)",
             "description" : "One has attained the highest place in the world and the most exalted Buddha field. Inside gather the Buddhas of all directions with their retinue of high bodhisattvas, whom they guide into the blissful-empty state of the supreme tantra. The aim of yogis on earth is to merge with these bodhisattvas, identifying themselves with the mysterious body, speech and mind of the Buddhas by means of ritual gesture (mudrā), mantra and concentration, respectively.\nThis realm is pictured in a lotus, the symbol of timeless purity.",
