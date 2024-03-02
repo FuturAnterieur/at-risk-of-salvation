@@ -13,6 +13,20 @@
             }   
         },
         {
+            "number":7,
+            "name" : "The Cold Hells",
+            "description" : "One suffers now in the Cold Hells beneath the earth, parallel to the infernos. As with all hellish states, this is the result of hateful activity - in particular, of crimes against the Dharma from within. There are eight cold hells, their names being sufficient indication of their nature.",
+            "paths" : 
+            {
+                "One" : 15,
+                "Two":  18,
+                "Three":11,
+                "Four": 10,
+                "Five": 6,
+                "Six":  5
+            }
+        },
+        {
             "number":8,
             "name" : "The Temporary Hells, or \"Hell for a Day\"",
             "description" : "This is hell on earth - isolated places such as a river, mountain, or desert. Whereas the lower hells have been created by the collective karma of all living beings, these are innumerable and individualized, created by individual or group activities.",
@@ -934,6 +948,27 @@
             "paths":{
                 "One":93,
                 "Two to Six":84
+            }
+        },
+        {
+            "number":85,
+            "name" : "Realm of Superjoy (Abhirati)",
+            "description" : "One visits the eastern land of the Buddha Akṣobhya, the \"unshakable one.\" Surrounded by mountains, this realm is filled with lovely lakes, hills and knolls, waterfalls, and ponds whose banks are sprinkled with gold dust. Akṣobhya is depicted in full lotus; he might be said to embody the Buddha's conquest of Māra under the bodhi tree (No. 100). He is imperturbable; he touches the earth to witness his conquest of the hindrances. His consort is Buddha-locanā, \"Eye of Awakening.\" The bodhisattva of this space is Vajrasattva, the \"adamantine being,\" the tantric form of a bodhisattva.",
+            "paths":{
+                "One":71,
+                "Two":73,
+                "Three":76,
+                "Four to Six":85
+            }
+        },
+        {
+            "number":86,
+            "name" : "Seventh Sutra Stage",
+            "description" : "On this level, called \"Far Reaching\" (dūraṁgamā), the bodhisattva does immense work for the welfare of others. He creates pure fields in which living beings can thrive and develop their spiritual lives. The perfection of the Far Reaching stage is skill in means. He entersinto nirvana and returns in every moment;while remaining within saṃsāra he experiences its transcendence. This is the \"nirvana-in-motion,\" infinitely greater than the \"Cessation\" of the Lesser Vehicle (No. 48) because it continues to function in the world for the sake of multitudes.\nYet the bodhisattva strives for further greatness.",
+            "paths":{
+                "One":95,
+                "Two":96,
+                "Three to Six":86
             }
         }
     ]
