@@ -555,7 +555,7 @@
         {
             "number":50,
             "name":"Tantra, Path of Application : \"Climax\"",
-            "description":"One receives the \"secret initiation\" into the supreme tantra, which will bear fruit as the great Enjoyment body of the Buddha. After drawing the deities of the mandala into his own body, the lama permofms the \"action seal\" (karma-mudrā). He unites with wisdomm (vidyā) in the form of a woman. Whether a concrete or imagined action is effected, the bodhicitta is transferred to the yogi, who at this point in his career is quite expert in the mental creation of events. The term \"secret initiation\" comes from the tasting of the secret substance.",
+            "description":"One receives the \"secret initiation\" into the supreme tantra, which will bear fruit as the great Enjoyment body of the Buddha. After drawing the deities of the mandala into his own body, the lama performs the \"action seal\" (karma-mudrā). He unites with wisdomm (vidyā) in the form of a woman. Whether a concrete or imagined action is effected, the bodhicitta is transferred to the yogi, who at this point in his career is quite expert in the mental creation of events. The term \"secret initiation\" comes from the tasting of the secret substance.",
             "paths":{
                 "One":57,
                 "Two":66,
@@ -885,6 +885,46 @@
                 "One":88,
                 "Two":78,
                 "Three to Six":79
+            }
+        },
+        {
+            "number":80,
+            "name" : "Second Sutra Stage",
+            "description" : "On the \"Immaculate\" (vimalā) ground the bodhisattva is freed from all the stains of ethical violations. Thus he abstains from the ten unwholesome actions - killing, stealing and so forth - and substitutes their opposites with a life-giving, generously compasionnate attitude combined with the most skillful of means. The bodhisattva at this stage can produce a thousand concentrations, emanations, and miracles as others before, but now all in a single moment.",
+            "paths":{
+                "One":78,
+                "Two":79,
+                "Three to Six":80
+            }
+        },
+        {
+            "number":81,
+            "name" : "Fifth Tantra Stage",
+            "description" : "The yogi receives the initiation of permission (anujña), and the name he or she will bear upon reaching Buddhahood. One has completed the \"Path of Maturation\" and is free to teach and confer initiations in accordance with one's vows and the rules surrounding transmission of the Dharma. The next bodhisattva stages are those of the \"liberated path.\"",
+            "paths":{
+                "One":83,
+                "Two":89,
+                "Three to Six":81
+            }
+        },
+        {
+            "number":82,
+            "name" : "Sixth Tantra Stage",
+            "description" : "Having learned in previous stages to convert phenomenal existence into the forms of Buddhahood, one now brings to fulfillment, by intensive meditation, the four initiations of the supreme tantra. Concentration is centered in the heart focal point. When the heart knot is unraveled, the process of fulfillment will unfold itself.\nI have visited in my wanderings shrines and other places of pilgrimage,\nBut I have not seen another shrine blissful like my own body.",
+            "paths":{
+                "One":89,
+                "Two":90,
+                "Three to Six":82
+            }
+        },
+        {
+            "number":83,
+            "name" : "Seventh Tantra Stage",
+            "description" : "The secret mind, which is equivalent to that of the Buddha in its understanding of emptiness, comes to experience bliss and emptiness in union. Guided by yoga in accord with previous initiations, it realizes a facsimile of the Clear Light. The process is known in three steps as \"the light,\" \"the spread of light,\" and \"the culmination of light.\"\nIt is pure and bright as a flower,\nIt is like the feeling of staring into the vast and empty sky,\nThe awareness of Nothingness is limpid and transparent, yet vivid.",
+            "paths":{
+                "One":84,
+                "Two":91,
+                "Three to Six":83
             }
         },
         {
