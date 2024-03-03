@@ -964,11 +964,41 @@
         {
             "number":86,
             "name" : "Seventh Sutra Stage",
-            "description" : "On this level, called \"Far Reaching\" (dūraṁgamā), the bodhisattva does immense work for the welfare of others. He creates pure fields in which living beings can thrive and develop their spiritual lives. The perfection of the Far Reaching stage is skill in means. He entersinto nirvana and returns in every moment;while remaining within saṃsāra he experiences its transcendence. This is the \"nirvana-in-motion,\" infinitely greater than the \"Cessation\" of the Lesser Vehicle (No. 48) because it continues to function in the world for the sake of multitudes.\nYet the bodhisattva strives for further greatness.",
+            "description" : "On this level, called \"Far Reaching\" (dūraṁgamā), the bodhisattva does immense work for the welfare of others. He creates pure fields in which living beings can thrive and develop their spiritual lives. The perfection of the Far Reaching stage is skill in means. He enters into nirvana and returns in every moment; while remaining within saṃsāra he experiences its transcendence. This is the \"nirvana-in-motion,\" infinitely greater than the \"Cessation\" of the Lesser Vehicle (No. 48) because it continues to function in the world for the sake of multitudes.\nYet the bodhisattva strives for further greatness.",
             "paths":{
                 "One":95,
                 "Two":96,
                 "Three to Six":86
+            }
+        },
+        {
+            "number":87,
+            "name" : "Sixth Sutra Stage",
+            "description" : "\"Face to Face\" (abhimuktī) with reality, the bodhisattva stands neither in saṃsāra nor in nirvana. \"When coming intentionally into birth he is protected there against the subtlest defilements (the saṁkleśas).\" Wisdom perfects all the other practices of the bodhisattva; it is defined as understanding the principle of dependent origination. Without attachment to the self, there would be no ordinary and miserable existence. He understands that the world is mind only. Seeing further that this aggregate, or tree, of suffering grows without a real doer or experiencer, he meditates on the emptiness of all phenomena.",
+            "paths":{
+                "One":96,
+                "Two":86,
+                "Three to Six":87
+            }
+        },
+        {
+            "number":88,
+            "name" : "Fifth Sutra Stage",
+            "description" : "At this stage, \"Very Difficult to Conquer\" (sudurjayā), the bodhisattva accomplishes what is truly hard to do : He becomes a guide for living beings without becoming affected by their intractability. His memory is infallible, he composes treatises on the arts and sciences, provides gardens and theatrical entertainments, and refutes the wrong views of less fruitful religious traditions. But he also knows the essential principle of reality, and for him there is no causality. The bodhisattva is now generally a monk or nun; in associating with householders, he pities their bewilderment and confusion, but without arrogance or conceit, for the knows all streams of consciousness to be ultimately equal.",
+            "paths":{
+                "One":95,
+                "Two":87,
+                "Three to Six":88
+            }
+        },
+        {
+            "number":89,
+            "name" : "Eighth Tantra Stage",
+            "description" : "From the psychic winds and the understanding of \"mind only\"is produced the apparitional body, still impure because it is not immersed in the Clear Light and directly confronting the innate emptiness of mind.\nThe impure illusory body of the womb-gate\nAnd the pure form of Budhha's body\nAre one in the great light of Bardo.\nSon, this is the Bardo of Accomplishment!",
+            "paths":{
+                "One":84,
+                "Two":90,
+                "Three to Six":89
             }
         }
     ]
