@@ -1000,6 +1000,16 @@
                 "Two":90,
                 "Three to Six":89
             }
+        },
+        {
+            "number":90,
+            "name" : "Ninth Tantra Stage",
+            "description" : "The illusory body is purified by two trances : the contraction of winds in the heart, and their expansion into the Clear Light, which illumines the direct understanding of emptiness. He entered the gate [of initiation] and began to contemplate, and he gained possession of a body of form which was \"appearance and Emptiness.\" From the moment he gained this appearance and Emptiness he penetrated it as the Clear Light, unconstrued, unfathomable, empty of arising, abiding and perishing. From then on he knew that whatever occurred - at the very momentof its appearance - was itslef light and itself clarity, unfathomable, unproduced, the nature of Great Bliss, self-sprung, self-erected.",
+            "paths":{
+                "One":84,
+                "Two":91,
+                "Three to Six":90
+            }
         }
     ]
 }
