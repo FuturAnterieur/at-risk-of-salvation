@@ -1,7 +1,7 @@
 {
     "die_faces":6,
     "starting_square":24,
-    "winning_square":84,
+    "winning_square":93,
     "squares": [
         {
             "number": 1,
@@ -11,6 +11,21 @@
                 "accum: 1 + 2 x 2 + 3 x 3 + 4 x 4 + 5 x 5 + 6 x 6" : 9,
                 "waiting":1
             }   
+        },
+
+        {
+            "number":6,
+            "name" : "Reviving Hell",
+            "description" : "One has fallen into the first of eight hot hells, this one reserved for killers. A string of people murder one another, ten are revived by a cool wind to kill and be killed again until their karma is exhausted. \nPeople who kill living beings,\nout of greed, stupidity, anger, or fear,\nor raisem them for the slaughter,\nmust go to Reviving Hell.",
+            "paths" : 
+            {
+                "One" : 17,
+                "Two":  12,
+                "Three":10,
+                "Four": 8,
+                "Five": 5,
+                "Six":  4
+            }
         },
         {
             "number":7,
@@ -974,7 +989,7 @@
         {
             "number":87,
             "name" : "Sixth Sutra Stage",
-            "description" : "\"Face to Face\" (abhimuktī) with reality, the bodhisattva stands neither in saṃsāra nor in nirvana. \"When coming intentionally into birth he is protected there against the subtlest defilements (the saṁkleśas).\" Wisdom perfects all the other practices of the bodhisattva; it is defined as understanding the principle of dependent origination. Without attachment to the self, there would be no ordinary and miserable existence. He understands that the world is mind only. Seeing further that this aggregate, or tree, of suffering grows without a real doer or experiencer, he meditates on the emptiness of all phenomena.",
+            "description" : "\"Face to Face\" (abhimuktī) with reality, the bodhisattva stands neither in saṃsāra nor in nirvana. He does not desire the peace of the Arhat or of the Independent Buddha, yet he is freed from rebirth. Wisdom perfects all the other practices of the bodhisattva; it is defined as understanding the principle of dependent origination. Without attachment to the self, there would be no ordinary and miserable existence. He understands that the world is mind only. Seeing further that this aggregate, or tree, of suffering grows without a real doer or experiencer, he meditates on the emptiness of all phenomena.",
             "paths":{
                 "One":96,
                 "Two":86,
@@ -1004,11 +1019,39 @@
         {
             "number":90,
             "name" : "Ninth Tantra Stage",
-            "description" : "The illusory body is purified by two trances : the contraction of winds in the heart, and their expansion into the Clear Light, which illumines the direct understanding of emptiness. He entered the gate [of initiation] and began to contemplate, and he gained possession of a body of form which was \"appearance and Emptiness.\" From the moment he gained this appearance and Emptiness he penetrated it as the Clear Light, unconstrued, unfathomable, empty of arising, abiding and perishing. From then on he knew that whatever occurred - at the very momentof its appearance - was itslef light and itself clarity, unfathomable, unproduced, the nature of Great Bliss, self-sprung, self-erected.",
+            "description" : "The illusory body is purified by two trances : the contraction of winds in the heart, and their expansion into the Clear Light, which illumines the direct understanding of emptiness. He entered the gate [of initiation] and began to contemplate, and he gained possession of a body of form which was \"appearance and Emptiness.\" From the moment he gained this appearance and Emptiness he penetrated it as the Clear Light, unconstrued, unfathomable, empty of arising, abiding and perishing. From then on he knew that whatever occurred - at the very moment of its appearance - was itslef light and itself clarity, unfathomable, unproduced, the nature of Great Bliss, self-sprung, self-erected.",
             "paths":{
                 "One":84,
                 "Two":91,
                 "Three to Six":90
+            }
+        },
+        {
+            "number":91,
+            "name" : "Tenth Tantra Stage",
+            "description" : "Contemplating the Clear Light whose substance is emptiness, one now achieves the real and wll-learned unification (yuganaddha) of the body - the illusory, mind-made body - and the mind that is Clear Light. The yogi, because he or she is impelled by compassion for others, remains in the world to manifest in the activities of a fully qualified vajra teacher. \"The trees of thought and Void spring from one seed,\nAnd for that reason there is but one fruit.\nAnd who thinks of them thus indistinguishable,\nIs released from Nirvana and Saṃsāra.",
+            "paths":{
+                "One":84,
+                "Two":93,
+                "Three to Six":91
+            }
+        },
+        {
+            "number":92,
+            "name" : "Great Enjoyment Body (Sambhoga-Kāya)",
+            "description" : "Now one performs the functions of the Buddha on the highest level, initiating tenth-stage bodhisattva great-heroes into the highest levelsof truth. This form of the Buddha is called the \"communal\" or \"meeting\" body (sku sprod-pa), or the \"enjoyment\" body, for it represents the fruit of the lengthy accumulation of merit and understanding. In this form the Buddha teaches only the doctrines of the Greater Vehicle, sutras and tantras, and only in a purified field, the Supreme Heaven Akaniṣṭha. Bu tlike the sun and its rays, the enjoyment body radiates other forms, called emanation bodies, which are adapted to the ways of the world.",
+            "paths":{
+                "One":97,
+                "Two to Six":92
+            }
+        },
+        {
+            "number":93,
+            "name" : "Great Dharma Body (Dharma-Kāya)",
+            "description" : "Like the sun, the Dharma body appears from behind the obscurations, produced from the path of Dharma. This is the Great Awakening, the essence of Buddhahood. Yet these terms for the Dharma Body are only descriptive, for it is beyond names; it is unborn and ineffable; it is not really produced, for it has always been all-pervading and needs only be realized. The Dharma body does not exist, for its essence is as empty as that of all other dharmas; it does not nonexist, because this nature of emptiness is real. \n\n\"Shall I praise you with such praises or rather, what is such praise?\nIn the emptiness of all dharmas, who is the praiser? Who is praised?\n\nHow can I praise such a one, who has no middle or ends,\nWho abandons both birth and destruction? there are no subject and object.\n\n",
+            "paths":{
+                "One":92,
+                "Two to Six":93
             }
         }
     ]
