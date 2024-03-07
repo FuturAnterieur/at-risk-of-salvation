@@ -12,7 +12,20 @@
                 "waiting":1
             }   
         },
-
+        {
+            "number":5,
+            "name" : "The Black Rope and Crushing Hells",
+            "description" : "These two hot hells are created by those who violate the second and third guides to lay conduct : stealing and improper sexuality. The offense must have been compounded with murder, for all the hellish states have malice as their cause, whether against life or the killing of spiritual possibilites. The Black Rope Hell is for thieves; the \"Crushing\" or \"Crowded\" Hell is for malicious sexual offenders. Tempted by the vision of a lover from the past, blinded by desire born from ignorance, these victims of delusion never cease pursuing and being torn.",
+            "paths" : 
+            {
+                "One" : 13,
+                "Two":  11,
+                "Three":10,
+                "Four": 7,
+                "Five": 4,
+                "Six":  3
+            }
+        },
         {
             "number":6,
             "name" : "Reviving Hell",
@@ -1053,7 +1066,38 @@
                 "One":92,
                 "Two to Six":93
             }
+        },
+        {
+            "number":94,
+            "name" : "Tenth Sutra Stage",
+            "description" : "The bodhisattva has become a \"cloud of Dharma\" (Dharma-megha); this body is clothed with countless concentrations and magical formulas as the sky is filled with clouds. He lets fall a rain of Dharma to exinguish the glow of defilement still burning creatures below. So the great bodhisattvas of this stage are pictured with golden ornaments on their bodies. The length of their course on the path is tremendous; all of this has taken three \"countless ages,\" each comprising 10^59 years. The first age reaches to the first bodhisattva stage, the second stage through the seventh. Now these great heroes are fitted to assume the Dharma body, or to join the Buddha's retinue in the highest heaven.",
+            "paths":{
+                "One":93,
+                "Two":84,
+                "Three to Six":94
+            }
+        },
+        {
+            "number":95,
+            "name" : "Ninth Sutra Stage",
+            "description" : "This plane is called \"right intellect\" (sādhu-matī); one acquires the ability to teach the Dharma appropriate to all the aspects of a situation. The bodhisattava teaches like a Buddha. He can speak in several languages and tones of voice simultaneously, making direct explanations suited to the various capacities of the members of his audience, and answer several questions at the same time.",
+            "paths":{
+                "One":94,
+                "Two":84,
+                "Three to Six":95
+            }
+        },
+        {
+            "number":96,
+            "name" : "Eighth Sutra Stage",
+            "description" : "At the \"unshakeable\" (acalā) level, the bodhisattva ceases conscious striving for perfection. He enters the effortless state of the Dharma realm,no longer distinguishing states of mind that perceive the characteristics of things from those that perceive their sameness. Like a sleeping man who was dreaming that he had fallen into a river and was struggling to get out, and then awakes, the bodhisattva is suddenly relieved of all striving and anxiety.\nEven if the the state of peace and liberation has been attained, he must continue to act for the benefit of others. So the Buddhas intervene to remind him of his vows; they confer upon him the prediction of his Buddhahood and its time and place.",
+            "paths":{
+                "One":94,
+                "Two":95,
+                "Three to Six":96
+            }
         }
+
     ]
 }
 
