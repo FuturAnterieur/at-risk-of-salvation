@@ -13,6 +13,20 @@
             }   
         },
         {
+            "number":4,
+            "name" : "The Howling and Great Howling Hells",
+            "description" : "The sins of these two hells both involve misuse of the mouth : the improper use of intoxicants and lying. In consequence, demons fill one's mouth with molten copper, which destroys one's insides.\nDrunkenness is not of itself a misdeed, but by becoming so intoxicated with alcohol that one breaks another of the vows - by killing, stealing, or abusing sexuality - one falls laughing, it is said, into the Howling Hell.\nThe Great Howling Hell arises from lying or harsh speech with spiteful intention : perjury, bribery, betrayal of trust, false advertising, and venal government or justice.",
+            "paths" : 
+            {
+                "One" : 13,
+                "Two":  10,
+                "Three":8,
+                "Four": 6,
+                "Five": 5,
+                "Six":  3
+            }
+        },
+        {
             "number":5,
             "name" : "The Black Rope and Crushing Hells",
             "description" : "These two hot hells are created by those who violate the second and third guides to lay conduct : stealing and improper sexuality. The offense must have been compounded with murder, for all the hellish states have malice as their cause, whether against life or the killing of spiritual possibilites. The Black Rope Hell is for thieves; the \"Crushing\" or \"Crowded\" Hell is for malicious sexual offenders. Tempted by the vision of a lover from the past, blinded by desire born from ignorance, these victims of delusion never cease pursuing and being torn.",
@@ -1095,6 +1109,24 @@
                 "One":94,
                 "Two":95,
                 "Three to Six":96
+            }
+        },
+        {
+            "number":97,
+            "name" : "Adopting a Physical Form",
+            "description" : "The emanated forms of Buddhas and bodhisattvas are known in Tibetan as tulku (sprul-sku, in Sanskrit nirmāṇa-kāya). When these are recognized among humanity, they are designated by the title rin-po-che, \"very precious one.\"\nDescending into the world system, the Emanation body enters his mother's womb on Jambu Island. His mother, a queen of the Śākya tribe, dreams of this event; ten lunar months later, the bodhisattva emerges painlessly from her side. There is no martyrdom in the las tlife of a fully Awakened one; he is lord of the world, master of his fate, with infinite skill and patience in dealing with obstacles. Surrounded in the palace by a circle of women and the pleasures of a crown prince of the world, he truly lives at the peak of human existence.",
+            "paths":{
+                "One or Two":98,
+                "Three to Six":97
+            }
+        },
+        {
+            "number":98,
+            "name" : "The Setting Forth (Pravrajita)",
+            "description" : "At the age of twenty-nine, the bodhisattva shows himself disgusted with palace life and leaves home to seek liberation from saṃsāra. On some four occasions the young man, on taking the road toward his gardens, is confronted by vision sent by gods of the Pure Abodes. He sees an old man leaning painfully on a staff, a sick man, and a corpse being borne to cremation. Each time he returns home to brood over the vision. On the fourth occasion he encounters a mendicant monk, clam and self-possessed, and is told of his disciplined life and his search for tranquility.\nThe bodhisattva resolves to follow this example. He looks in at his wife and son - born that very day - but is afraid to wake them to say good-bye. Indra, lord of the devas, opens the palace gate, and he rides forth on his horse in company of his faithful charioteer.",
+            "paths":{
+                "One or Two":99,
+                "Three to Six":98
             }
         }
 
