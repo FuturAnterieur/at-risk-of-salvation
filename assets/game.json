@@ -13,6 +13,32 @@
             }   
         },
         {
+            "number":2,
+            "name" : "Interminable Hell",
+            "description" : "Falling upside down for two thousand years, one reaches the deepest and hottest of the hells. The others seem idyllic by comparison, for the sufferings here follow one another without intermission. The Avīci Hell is a prison of incandescent iron. It represents the complete pollution of the world by malicious confusion and perverse, ego-centered drive. Especially, it is the punisment for destruction of Dharma or the Buddhis community, for this is a blow to the chances of others for spiritual advancement - the worst of crimes, and the very opposite of a bodhisattva's conduct.",
+            "paths" : 
+            {
+                "One" : 17,
+                "Two":  10,
+                "Three":3,
+                "Four to Six" : 2
+            }
+        },
+        {
+            "number":3,
+            "name" : "The Hot and Very Hot Hells",
+            "description" : "In these adjoining torture chambers, one suffers the tortures of intense heat. THe ordinary Hot Hell is the karmic creation of those who have committed crimes involving fire, such as incendiary action or killing living creatures in a forest fire.\nThe very Hot Hell is a result of the general acrivities of the milder hells - killing, stealing, sexual abuse, and lying - associated with the intentional perversion of truth. This is also the special destiny of offenders against spiritual practice. In the main hall of this hell, fierce demons with huge black bellies, flaming eyes, and hooked fangs drag the offender into lakes of fire studded with iron spikes.",
+            "paths" : 
+            {
+                "One" : 11,
+                "Two":  10,
+                "Three":8,
+                "Four": 7,
+                "Five": 5,
+                "Six":  2
+            }
+        },
+        {
             "number":4,
             "name" : "The Howling and Great Howling Hells",
             "description" : "The sins of these two hells both involve misuse of the mouth : the improper use of intoxicants and lying. In consequence, demons fill one's mouth with molten copper, which destroys one's insides.\nDrunkenness is not of itself a misdeed, but by becoming so intoxicated with alcohol that one breaks another of the vows - by killing, stealing, or abusing sexuality - one falls laughing, it is said, into the Howling Hell.\nThe Great Howling Hell arises from lying or harsh speech with spiteful intention : perjury, bribery, betrayal of trust, false advertising, and venal government or justice.",
@@ -1066,7 +1092,7 @@
         {
             "number":92,
             "name" : "Great Enjoyment Body (Sambhoga-Kāya)",
-            "description" : "Now one performs the functions of the Buddha on the highest level, initiating tenth-stage bodhisattva great-heroes into the highest levelsof truth. This form of the Buddha is called the \"communal\" or \"meeting\" body (sku sprod-pa), or the \"enjoyment\" body, for it represents the fruit of the lengthy accumulation of merit and understanding. In this form the Buddha teaches only the doctrines of the Greater Vehicle, sutras and tantras, and only in a purified field, the Supreme Heaven Akaniṣṭha. Bu tlike the sun and its rays, the enjoyment body radiates other forms, called emanation bodies, which are adapted to the ways of the world.",
+            "description" : "Now one performs the functions of the Buddha on the highest level, initiating tenth-stage bodhisattva great-heroes into the highest levels of truth. This form of the Buddha is called the \"communal\" or \"meeting\" body (sku sprod-pa), or the \"enjoyment\" body, for it represents the fruit of the lengthy accumulation of merit and understanding. In this form the Buddha teaches only the doctrines of the Greater Vehicle, sutras and tantras, and only in a purified field, the Supreme Heaven Akaniṣṭha. But like the sun and its rays, the enjoyment body radiates other forms, called emanation bodies, which are adapted to the ways of the world.",
             "paths":{
                 "One":97,
                 "Two to Six":92
@@ -1075,7 +1101,7 @@
         {
             "number":93,
             "name" : "Great Dharma Body (Dharma-Kāya)",
-            "description" : "Like the sun, the Dharma body appears from behind the obscurations, produced from the path of Dharma. This is the Great Awakening, the essence of Buddhahood. Yet these terms for the Dharma Body are only descriptive, for it is beyond names; it is unborn and ineffable; it is not really produced, for it has always been all-pervading and needs only be realized. The Dharma body does not exist, for its essence is as empty as that of all other dharmas; it does not nonexist, because this nature of emptiness is real. \n\n\"Shall I praise you with such praises or rather, what is such praise?\nIn the emptiness of all dharmas, who is the praiser? Who is praised?\n\nHow can I praise such a one, who has no middle or ends,\nWho abandons both birth and destruction? there are no subject and object.\n\n",
+            "description" : "Like the sun, the Dharma body appears from behind the obscurations, produced from the path of Dharma. This is the Great Awakening, the essence of Buddhahood. Yet these terms for the Dharma Body are only descriptive, for it is beyond names; it is unborn and ineffable; it is not really produced, for it has always been all-pervading and needs only be realized. The Dharma body does not exist, for its essence is as empty as that of all other dharmas; it does not nonexist, because this nature of emptiness is real. \n\n\"Shall I praise you with such praises or rather, what is such praise?\nIn the emptiness of all dharmas, who is the praiser? Who is praised?\n\n",
             "paths":{
                 "One":92,
                 "Two to Six":93
@@ -1128,8 +1154,16 @@
                 "One or Two":99,
                 "Three to Six":98
             }
+        },
+        {
+            "number":99,
+            "name" : "Ascetic Practices (Tapas)",
+            "description" : "In various forest retreats the bodhisattva encounters the foremost religious teachers of his day. He finds yogis practicing strange forms of painful meditation, and Brahmanical masters seeking the liberation of the Supreme Self from the body. But he finds their pursuits senseless. Joined by five ascetics, he endeavours to remove false views by truly intense ascetic practice. For six years he abides in \"space-pervading concentration,\" suspending his breath, slowing his vital functions, and feeding on a grain of rice or sesame each day.\nFinally his mother, from the heaven of the Thirty-three, begs him not to die without fulfilling his destiny. Perceiving that asceticism is not the way to liberation, he abandons it, washes himself in the river, and advances to the great Sāl, the tree of Awakening, to sit in meditation.",
+            "paths":{
+                "One or Two":100,
+                "Three to Six":99
+            }
         }
-
     ]
 }
 
