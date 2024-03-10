@@ -79,7 +79,19 @@ pub fn menu_for_load_game() -> Option<player_status::PlayerStatusPersistentData>
 
 }
 
-
+pub fn name_new_player() -> String {
+    let mut name = String::new();
+            
+    println!("Please enter your name. It doesn't have to be the real one.");  
+    loop {
+        name.clear();
+        match io::stdin().read_line(&mut name) {
+            Ok(_size) => break,
+            Err(_why) => println!("An error impeded the transmission of thought. Please type something, as long as it is different.")
+        }
+    }
+    name.trim().to_string()
+}
 
 impl Interface for CommandLineInterface {
     fn run(&mut self) -> Result<(), KarmicCatastrophe> {
@@ -104,7 +116,7 @@ impl Interface for CommandLineInterface {
             let true_choice = choice.trim();
             match true_choice {
                 "New" => {
-                    let mut ps = player_status::PlayerStatus::new("Neo", sakya_pandita.starting_square);
+                    let mut ps = player_status::PlayerStatus::new(name_new_player().as_str(), sakya_pandita.starting_square);
                     let result = command_line_game_loop::game_loop(&mut ps, &sakya_pandita, &g);
                     match result {
                         Ok(()) => {continue;},
