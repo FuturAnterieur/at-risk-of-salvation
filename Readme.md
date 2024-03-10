@@ -18,6 +18,6 @@ To make things more interesting, the program is also configured to calculate pro
 
 ## In the future
 
-The project isn't over yet! There's still some implementing and tidying up on the code, mostly for stuff I considered optional, like improving probability calculations for the board's trap squares. Also, I'll eventually have to finish filling up the assets/game.json data for all of the 104 squares.
+The project isn't over yet! There's still some implementing and tidying up on the code, mostly for stuff I considered optional, like improving probability calculations for the board's trap squares. At least now all the squares are added to the game's JSON file.
 
 Finally, if someone ever gives me 1 million dollars (more or less), I'll consider that as a stretch goal reached for implementing an online multiplayer feature.

@@ -1163,6 +1163,59 @@
                 "One or Two":100,
                 "Three to Six":99
             }
+        },
+        {
+            "number":100,
+            "name" : "Conquest of Māra",
+            "description" : "The bodhisattva overcomes the force and seductions of Māra, chief among all the gods of the Realm of Sense Desire. Approaching the Bodhi tree at dusk, the bodhisattva vows not to leave it untilhe has accomplished the Great Awakening. At that time Māra comes to know that his authority is threatened, for here is one on the point of escaping the confines of his realm, and of showing the way to others. The word māra means \"deadener\"; he may be considered the personification of all sensory fears and distractions that obstruct success in meditation. Māra attempts to tempt the bodhisattva away from his goal, but the bodhisattva calls the earth goddess as his witness. Showing half her body and folding her hands with reverence, the goddess rises half out of the earth to attest his fitness for enlightenment. Māra and his hosts flee like smaller animals before the lion's roar.",
+            "paths":{
+                "One or Two":101,
+                "Three to Six":100
+            }
+        },
+        {
+            "number":101,
+            "name" : "Buddhahood",
+            "description" : "In the course of a night's meditation the bodhisattva attains the mystic illumination. The results of his meditations are formulated in the Four Noble Truths : The round of rebirth is basically suffering, its causes thirst and ignorance; nirvana would be its transcendence,and there is a means to attain it. With the removal of ignorant activity, karma is not formed. Then consciousness will not arise, nor the body-mind complex, and on through rebirth and death. Wisdom arises instantaneously, and he utters a song of triumph : \nThrough many divers birth I passed\nSeeking in vain the builder of the house.\nBut O framer of houses, thou art found -\nNever again shalt thou fashion a house for me!",
+            "paths":{
+                "One or Two":102,
+                "Three to Six":101
+            }
+        },
+        {
+            "number":102,
+            "name" : "Turning the Wheel of Dharma",
+            "description" : "Out of compassion for others, the Buddha leaves his forest abode in order to teach the doctrine. In different stages, he preaches the Dharma.\nIn reality the Buddha never speaks a word from the time he becomes enlightened, for he has no discursive thought. Nonetheless, his voice arises in response to the needs and dispositions of the various living beings who are his audience. From the Awakening of the Buddha streams the whole corpus of Buddhist doctrine, devdeloped and elaborated over the course of centuries, which enables those who read it to eradicate false views and to attain Buddhahood.",
+            "paths":{
+                "One or Two":103,
+                "Three to Six":102
+            }
+        },
+        {
+            "number":103,
+            "name" : "Demonstration of Miracles",
+            "description" : "To impress those for whom verbal teachings are insufficient, the Buddha performs miracles. In all, some thirty-five hundred miracles are required to convert a school of Brahmanical ascetics, who are not easily impressed. After converting them at last, the Buddha disappears for three weeks, vacationing in the heaven of the Thirty-three gods, where he instructs his mother in the Dharma.",
+            "paths":{
+                "One or Two":104,
+                "Three to Six":103
+            }
+        },
+        {
+            "number":104,
+            "name" : "Nirvana",
+            "description" : "In its final act, the Emanation body demonstrates the passing into nirvana. On his deathbed, he gives advice to his disciples, and makes his famous last statement : \n\"Karmic composites are subject to the law of dissolution, coming and going they are impermanent; indeed, all phenomena that are born of causes and conditions are impermanent. Do notlament, but attain your goal without negligence, because by vigilance we come to full Awakening and the other fruits of the path.\"\n Arising, descending, and rising again through the stages of trance, the buddha enters nirvana. The earth shakes, stars fall, and rainbows and music fill all the quarters of space.",
+            "paths":{
+                "One or Two":105,
+                "Three to Six":104
+            }
+        },
+        {
+            "number":105,
+            "name" : "The End",
+            "description" : "Pass your relics into the stupa above and become an object of reverence for the rest of the age - pervading the universe with your emanations.",
+            "paths":{
+                "One to Six" : 105
+            }
         }
     ]
 }
