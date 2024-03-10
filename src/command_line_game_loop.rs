@@ -112,7 +112,7 @@ pub fn game_loop(ps : &mut PlayerStatus, sakya_pandita : &game_loader::Game, g :
         predecessors.reverse();
         predecessors.push(sakya_pandita.winning_square);
         let chances_of_reaching_end = g.path_probability(&predecessors);
-        println!("Your odds of following the shortest path to the end are {:.7}%.", chances_of_reaching_end*100_f64);
+        println!("Your odds of following the shortest path to the end are {:.12}%.", chances_of_reaching_end*100_f64);
         let original_edges = g.edges_for_node(&current_square.number);
 
         if original_edges.is_none() {
